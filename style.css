@@ -1434,36 +1434,83 @@ section {
     color: var(--gray-500);
 }
 
-.logos-container {
-
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    /* flex-wrap: wrap; */
+/* Logo Carousel */
+.logo-slider-container {
     margin-bottom: 4rem;
     padding: 2rem 0;
     border-top: 1px solid var(--gray-200);
     border-bottom: 1px solid var(--gray-200);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
 }
 
-.logo-placeholder {
-    width: 150px;
-    height: 60px;
-    background: var(--gray-100);
-    border-radius: var(--radius);
+.logo-slider-container::before,
+.logo-slider-container::after {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+    pointer-events: none;
+}
+
+.logo-slider-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--white), transparent);
+}
+
+.logo-slider-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--white), transparent);
+}
+
+.logo-slide-track {
+    display: flex;
+    width: calc(200px * 20);
+    animation: scroll 50s linear infinite;
+}
+
+.logo-slider-container:hover .logo-slide-track {
+    animation-play-state: paused;
+}
+
+.slide {
+    width: 200px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--gray-400);
-    transition: var(--transition);
+    padding: 0 1rem;
 }
 
-.logo-placeholder:hover {
-    background: var(--gray-200);
-    color: var(--gray-600);
+.slide img {
+    max-width: 150px;
+    max-height: 80px;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.slide img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Move exactly half the track width (10 slides * 200px) */
+        transform: translateX(calc(-200px * 10));
+    }
 }
 
 .testimonials-grid {
@@ -1858,10 +1905,13 @@ section {
 }
 
 .logos-container a {
-    display: inline-block; /* Hoặc block */
-    line-height: 0;        /* Loại bỏ khoảng trống dòng */
+    display: inline-block;
+    /* Hoặc block */
+    line-height: 0;
+    /* Loại bỏ khoảng trống dòng */
     vertical-align: middle;
 }
+
 .animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
