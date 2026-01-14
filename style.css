@@ -863,24 +863,23 @@ section {
     box-shadow: var(--shadow-md);
 }
 
-/* Comparison Table Section */
+/* Comparison Table Section - New Image Match Style */
 .comparison-section {
+    background: transparent;
+    padding: 2rem 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.comparison-table-wrapper.simple-style {
     background: var(--white);
-    border-radius: var(--radius-xl);
-    padding: 2rem;
-    box-shadow: var(--shadow);
-}
-
-.comparison-title {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--gray-800);
-    margin-bottom: 2rem;
-}
-
-.comparison-table-wrapper {
-    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    /* Soft shadow like image */
+    overflow: hidden;
+    /* For rounded corners on headers */
+    padding: 0;
+    /* Let table fill */
 }
 
 .comparison-table {
@@ -889,67 +888,86 @@ section {
     font-size: 0.95rem;
 }
 
+/* Header Styles */
 .comparison-table thead {
-    background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
-    color: var(--white);
+    background: transparent;
+    /* Reset default gradient */
 }
 
 .comparison-table th {
-    padding: 1rem 1.5rem;
-    text-align: left;
+    padding: 1.5rem 1rem;
     font-weight: 600;
-}
-
-.comparison-table th:first-child {
-    border-radius: var(--radius-lg) 0 0 0;
-}
-
-.comparison-table th:last-child {
-    border-radius: 0 var(--radius-lg) 0 0;
-}
-
-.comparison-table td {
-    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    text-align: center;
     border-bottom: 1px solid var(--gray-100);
 }
 
-.comparison-table tbody tr:hover {
+.criteria-header {
     background: var(--gray-50);
+    /* Or very light gray to differentiate */
+    background: #fdfdfd;
+    /* Almost white */
+    width: 25%;
+}
+
+.traditional-header {
+    background: #FEE2E2;
+    /* Light Red */
+    color: #DC2626;
+    /* Red 600 */
+    width: 37.5%;
+}
+
+.digital-header {
+    background: #D1FAE5;
+    /* Light Green */
+    color: #059669;
+    /* Green 600 */
+    width: 37.5%;
+}
+
+.header-icon {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Body Styles */
+.comparison-table td {
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid #f3f4f6;
+    /* Very light gray border */
+    vertical-align: middle;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table tbody tr:hover {
+    background: #fafafa;
+    /* Very subtle hover */
 }
 
 .criteria-cell {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--gray-800);
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.criteria-icon {
-    font-size: 1.25rem;
+    text-align: left;
+    padding-left: 2rem;
+    /* Indent slightly */
 }
 
 .traditional-cell {
     color: var(--gray-500);
+    background-color: rgb(255, 200, 200, 0.15);
+    text-align: center;
 }
 
 .digital-cell {
-    color: var(--gray-700);
-}
-
-.digital-cell.highlight {
-    background: var(--success-light);
-    color: var(--gray-800);
-    font-weight: 500;
-}
-
-.criteria-col {
-    width: 25%;
-}
-
-.traditional-col,
-.digital-col {
-    width: 37.5%;
+    color: #10B981;
+    /* Green color for text */
+    font-weight: 600;
+    background-color: rgba(151, 255, 186, 0.15);
+    text-align: center;
 }
 
 /* ========================================
@@ -1508,180 +1526,90 @@ section {
     background: var(--gray-50);
 }
 
-/* Pricing Explanation */
-.pricing-explanation {
-    margin-bottom: 3rem;
-}
-
-.pricing-info-cards {
+.pricing-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
+    align-items: start;
 }
 
-.pricing-info-card {
+.pricing-card {
     background: var(--white);
-    padding: 1.5rem;
-    border-radius: var(--radius-lg);
-    text-align: center;
+    border-radius: var(--radius-xl);
+    padding: 2rem;
     border: 1px solid var(--gray-200);
+    transition: var(--transition);
+    position: relative;
 }
 
-.info-icon {
-    font-size: 2rem;
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.pricing-card.popular {
+    border: 2px solid var(--primary-500);
+    transform: scale(1.05);
+}
+
+.pricing-card.popular:hover {
+    transform: scale(1.05) translateY(-8px);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+}
+
+.pricing-header {
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray-200);
+    margin-bottom: 1.5rem;
+}
+
+.pricing-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--gray-800);
     margin-bottom: 1rem;
 }
 
-.pricing-info-card h4 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--gray-800);
-    margin-bottom: 0.5rem;
-}
-
-.pricing-info-card p {
-    font-size: 0.875rem;
-    color: var(--gray-500);
-}
-
-/* Pricing Table */
-.pricing-table-container {
-    margin-bottom: 3rem;
-}
-
-.pricing-table-wrapper {
-    overflow-x: auto;
-    background: var(--white);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow);
-}
-
-.pricing-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.pricing-table thead {
-    background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
-    color: var(--white);
-}
-
-.pricing-table th {
-    padding: 1.25rem 1rem;
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-
-.pricing-table th:first-child {
-    text-align: left;
-    padding-left: 2rem;
-    border-radius: var(--radius-xl) 0 0 0;
-}
-
-.pricing-table th:last-child {
-    border-radius: 0 var(--radius-xl) 0 0;
-}
-
-.size-desc {
-    font-size: 0.75rem;
-    font-weight: 400;
-    opacity: 0.8;
-}
-
-.package-name-col {
-    width: 25%;
-}
-
-.package-row {
-    transition: var(--transition);
-}
-
-.package-row:hover {
-    background: var(--gray-50);
-}
-
-.package-row td {
-    padding: 1.25rem 1rem;
-    border-bottom: 1px solid var(--gray-100);
-}
-
-.package-name {
-    padding-left: 2rem !important;
-}
-
-.package-name strong {
-    display: block;
-    font-size: 1rem;
-    color: var(--gray-800);
-}
-
-.package-desc {
-    display: block;
-    font-size: 0.8rem;
-    color: var(--gray-500);
-    margin-top: 0.25rem;
-}
-
-.popular-tag {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.25rem 0.75rem;
-    background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
-    color: var(--white);
-    border-radius: var(--radius-full);
-    font-size: 0.7rem;
-    font-weight: 600;
-}
-
-.price-cell {
-    text-align: center;
-    vertical-align: middle;
-}
-
-.price-range {
-    display: block;
-    font-size: 1rem;
-    font-weight: 700;
+.price-amount {
+    font-size: 2.5rem;
+    font-weight: 800;
     color: var(--primary-600);
 }
 
-.price-unit {
-    display: block;
-    font-size: 0.75rem;
+.price-period {
+    font-size: 1rem;
     color: var(--gray-500);
-    margin-top: 0.25rem;
 }
 
-.highlight-row {
-    background: var(--primary-50);
+.pricing-features {
+    list-style: none;
+    margin-bottom: 2rem;
 }
 
-.highlight-row:hover {
-    background: var(--primary-100);
+.pricing-features li {
+    padding: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--gray-600);
 }
 
-.enterprise-row td {
-    border-bottom: none;
-}
-
-.enterprise-cell {
-    background: linear-gradient(135deg, var(--gray-800), var(--gray-900));
-    color: var(--white);
-    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
-}
-
-.price-contact {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 800;
-}
-
-.price-note {
-    display: block;
-    font-size: 0.85rem;
-    opacity: 0.8;
-    margin-top: 0.25rem;
+.pricing-features .check {
+    color: var(--success);
+    font-weight: bold;
 }
 
 /* Package Recommendations */
