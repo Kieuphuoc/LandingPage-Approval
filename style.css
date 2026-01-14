@@ -1434,10 +1434,62 @@ section {
     color: var(--gray-500);
 }
 
+/* Trusted By Section (New) */
+.trusted-by-section {
+    padding: 2rem 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-100);
+    overflow: hidden;
+}
+
+.trusted-title {
+    text-align: center;
+    color: var(--gray-500);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Success Stories Grid (Static List) */
+.success-stories-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin: 2rem 0 ;
+}
+
+.success-stories-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+    padding: 1rem;
+    border-radius: var(--radius);
+    background: var(--white);
+}
+
+.success-stories-grid a:hover {
+    transform: translateY(-5px);
+    filter: grayscale(0%);
+    opacity: 1;
+    box-shadow: var(--shadow-md);
+}
+
+.success-stories-grid img {
+    max-height: 50px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+}
+
 /* Logo Carousel */
 .logo-slider-container {
-    margin-bottom: 4rem;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     border-top: 1px solid var(--gray-200);
     border-bottom: 1px solid var(--gray-200);
     overflow: hidden;
@@ -1489,7 +1541,7 @@ section {
 }
 
 .slide img {
-    max-width: 150px;
+    max-width: 120px;
     max-height: 80px;
     object-fit: contain;
     opacity: 0.7;
@@ -1497,7 +1549,6 @@ section {
 }
 
 .slide img:hover {
-    filter: grayscale(0%);
     opacity: 1;
     transform: scale(1.1);
 }
