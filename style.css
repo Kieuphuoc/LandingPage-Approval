@@ -1435,10 +1435,12 @@ section {
 }
 
 .logos-container {
+
+    align-items: center;
     display: flex;
     justify-content: center;
     gap: 2rem;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin-bottom: 4rem;
     padding: 2rem 0;
     border-top: 1px solid var(--gray-200);
@@ -1845,6 +1847,21 @@ section {
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.client-logo {
+    height: auto;
+    object-fit: contain;
+}
+
+.logos-container .client-logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.logos-container a {
+    display: inline-block; /* Hoặc block */
+    line-height: 0;        /* Loại bỏ khoảng trống dòng */
+    vertical-align: middle;
+}
 .animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
