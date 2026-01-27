@@ -14,10 +14,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chatbot.css">
   <link rel="icon" href="/logo_a.webp" type="image/webp">
+  <script src="translations.js"></script>
 </head>
 
 <body>
+
+  <script src="https://servicehub.arito.net/embed.js" public-token="7cd208575e5579df73406be0ff30d2b79f583734cd244e2a"
+    async></script>
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
@@ -25,15 +30,35 @@
         <img src="images/logo.webp" style="width: 180px;" alt="Arito Approval Logo" class="logo-icon">
       </a>
       <div class="nav-links" id="navLinks">
-        <a href="#problem-solution">Vấn đề & Giải pháp</a>
-        <a href="#benefits">Lợi ích</a>
-        <a href="#features">Tính năng</a>
-        <a href="#how-it-works">Quy trình</a>
-        <a href="#pricing">Bảng giá</a>
+        <a href="#problem-solution" data-i18n="nav.problemSolution">Vấn đề & Giải pháp</a>
+        <a href="#benefits" data-i18n="nav.benefits">Lợi ích</a>
+        <a href="#features" data-i18n="nav.features">Tính năng</a>
+        <a href="#how-it-works" data-i18n="nav.howItWorks">Quy trình</a>
+        <a href="#pricing" data-i18n="nav.pricing">Bảng giá</a>
       </div>
       <div class="nav-buttons">
-        <a href="#" class="btn btn-secondary">Đăng nhập</a>
-        <a href="#" class="btn btn-primary">Dùng thử miễn phí</a>
+        <div class="language-switcher">
+          <button class="lang-btn" id="langBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            <span id="currentLang">VI</span>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-option" data-lang="vi">
+              <span class="lang-flag">🇻🇳</span>
+              <span>Tiếng Việt</span>
+            </button>
+            <button class="lang-option" data-lang="en">
+              <span class="lang-flag">🇬🇧</span>
+              <span>English</span>
+            </button>
+          </div>
+        </div>
+        <a href="#" class="btn btn-secondary" data-i18n="nav.login">Đăng nhập</a>
+        <a href="#" class="btn btn-primary" data-i18n="nav.freeTrial">Dùng thử miễn phí</a>
       </div>
       <button class="mobile-menu-btn" id="mobileMenuBtn">
         <span></span><span></span><span></span>
@@ -52,35 +77,35 @@
       <div class="hero-content">
         <div class="hero-badge animate-fade-in">
           <span class="badge-icon">📋</span>
-          <span>Nền tảng quản lý hợp đồng điện tử & hồ sơ nhân sự</span>
+          <span data-i18n="hero.badge">Nền tảng quản lý hợp đồng lao động & hồ sơ nhân sự</span>
         </div>
-        <h1 class="hero-title animate-slide-up">
-          Quản lý <span class="gradient-text">hợp đồng điện tử</span><br>
+        <h1 class="hero-title animate-slide-up" data-i18n="hero.title">
+          Quản lý <span class="gradient-text">hợp đồng lao động</span><br>
           Tập trung & Chuyên nghiệp
         </h1>
-        <p class="hero-subtitle animate-slide-up delay-1">
-          Tạo, ký kết và lưu trữ hợp đồng điện tử. Quản lý toàn bộ hồ sơ nhân sự tập trung, an toàn và tuân thủ
+        <p class="hero-subtitle animate-slide-up delay-1" data-i18n="hero.subtitle">
+          Tạo, ký kết và lưu trữ hợp đồng lao động. Quản lý toàn bộ hồ sơ nhân sự tập trung, an toàn và tuân thủ
           Bộ luật Lao động Việt Nam.
         </p>
         <div class="hero-cta animate-slide-up delay-2">
           <a href="#pricing" class="btn btn-primary btn-lg">
-            <span>Bắt đầu dùng thử miễn phí</span>
+            <span data-i18n="hero.ctaPrimary">Bắt đầu dùng thử miễn phí</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </a>
           <a href="#contact" class="btn btn-outline btn-lg">
-            <span>Liên hệ tư vấn</span>
+            <span data-i18n="hero.ctaSecondary">Liên hệ tư vấn</span>
           </a>
         </div>
         <div class="trust-indicators animate-fade-in delay-3">
           <div class="trust-item">
             <span class="trust-icon">⚖️</span>
-            <span>Tuân thủ Bộ luật Lao động</span>
+            <span data-i18n="hero.trustLabor">Tuân thủ Bộ luật Lao động</span>
           </div>
           <div class="trust-item">
             <span class="trust-icon">🔒</span>
-            <span>Bảo mật ISO 27001</span>
+            <span data-i18n="hero.trustSecurity">Bảo mật ISO 27001</span>
           </div>
         </div>
       </div>
@@ -90,10 +115,10 @@
             <div class="phone-screen">
               <div class="app-header">
                 <span class="app-logo">Arito Approval</span>
-                <span class="app-status">Hồ sơ HR</span>
+                <span class="app-status" data-i18n="hero.appStatus">Hồ sơ HR</span>
               </div>
               <div class="document-preview">
-                <div class="doc-header-label">HỢP ĐỒNG ĐIỆN TỬ</div>
+                <div class="doc-header-label" data-i18n="hero.docHeader">HỢP ĐỒNG LAO ĐỘNG</div>
                 <div class="doc-line"></div>
                 <div class="doc-line short"></div>
                 <div class="doc-line"></div>
@@ -105,35 +130,35 @@
                         stroke="#1e40af" stroke-width="3" />
                     </svg>
                   </div>
-                  <span class="signature-label">Chữ ký người lao động</span>
+                  <span class="signature-label" data-i18n="hero.signatureLabel">Chữ ký người lao động</span>
                 </div>
               </div>
               <div class="app-footer">
-                <button class="sign-btn pulse">Xác nhận ký hợp đồng</button>
+                <button class="sign-btn pulse" data-i18n="hero.signButton">Xác nhận ký hợp đồng</button>
               </div>
             </div>
           </div>
           <div class="floating-badge badge-1">
             <span class="fb-icon">✓</span>
-            <span>eKYC xác thực</span>
+            <span data-i18n="hero.badgeEkyc">eKYC xác thực</span>
           </div>
           <div class="floating-badge badge-2">
             <span class="fb-icon">📄</span>
-            <span>HĐĐT hợp lệ</span>
+            <span data-i18n="hero.badgeContract">HĐLĐ hợp lệ</span>
           </div>
         </div>
       </div>
     </div>
     <div class="hero-scroll-indicator">
       <div class="scroll-mouse"></div>
-      <span>Tìm hiểu thêm</span>
+      <span data-i18n="hero.scrollMore">Tìm hiểu thêm</span>
     </div>
   </section>
 
   <!-- Trusted By Section (Moved here) -->
   <section class="trusted-by-section">
     <div class="container-fluid">
-      <h4 class="trusted-title">3000+ doanh nghiệp đã lựa chọn ARITO</h4>
+      <h4 class="trusted-title" data-i18n="trustedBy.title">3000+ doanh nghiệp đã lựa chọn ARITO</h4>
       <div class="logo-slider-container">
         <div class="logo-slide-track">
           <div class="slide"><img src="/images/BNC.webp" alt="BNC Logo"></div>
@@ -176,9 +201,11 @@
   <section class="problem-solution" id="problem-solution">
     <div class="container">
       <div class="section-header animate-on-scroll">
-        <span class="section-badge">Vấn đề & Giải pháp</span>
-        <h2 class="section-title">Quy trình quản lý hợp đồng truyền thống đang tốn rất nhiều thời gian và chi phí</h2>
-        <p class="section-desc">Chuyển đổi từ quy trình thủ công sang quản lý hợp đồng tập trung, chuyên nghiệp</p>
+        <span class="section-badge" data-i18n="problemSolution.badge">Vấn đề & Giải pháp</span>
+        <h2 class="section-title" data-i18n="problemSolution.title">Quy trình quản lý hợp đồng truyền thống đang tốn rất
+          nhiều thời gian và chi phí</h2>
+        <p class="section-desc" data-i18n="problemSolution.desc">Chuyển đổi từ quy trình thủ công sang quản lý hợp đồng
+          tập trung, chuyên nghiệp</p>
       </div>
 
       <!-- Problem/Solution Cards -->
@@ -186,41 +213,46 @@
         <div class="ps-column problem-column">
           <div class="ps-column-header problem-header">
             <span class="ps-icon">❌</span>
-            <h3>Quy trình truyền thống</h3>
+            <h3 data-i18n="problemSolution.problemTitle">Quy trình truyền thống</h3>
           </div>
           <div class="ps-card problem-card">
             <div class="ps-card-icon">📝</div>
             <div class="ps-card-content">
-              <h4>Soạn thảo thủ công, rời rạc</h4>
-              <p>Hợp đồng điện tử được soạn bằng Word, lưu file cá nhân, không có mẫu chuẩn</p>
+              <h4 data-i18n="problemSolution.problems.0.title">Soạn thảo thủ công, rời rạc</h4>
+              <p data-i18n="problemSolution.problems.0.desc">Hợp đồng điện tử được soạn bằng Word, lưu file cá nhân,
+                không có mẫu chuẩn</p>
             </div>
           </div>
           <div class="ps-card problem-card">
             <div class="ps-card-icon">⏰</div>
             <div class="ps-card-content">
-              <h4>Ký kết mất thời gian</h4>
-              <p>Đặc biệt với nhân sự từ xa, phải in – gửi bưu điện – chờ ký – scan lại</p>
+              <h4 data-i18n="problemSolution.problems.1.title">Ký kết mất thời gian</h4>
+              <p data-i18n="problemSolution.problems.1.desc">Đặc biệt với nhân sự từ xa, phải in – gửi bưu điện – chờ ký
+                – scan lại</p>
             </div>
           </div>
           <div class="ps-card problem-card">
             <div class="ps-card-icon">📦</div>
             <div class="ps-card-content">
-              <h4>Lưu trữ giấy hoặc file rời</h4>
-              <p>Hồ sơ nhân sự nằm rải rác trong tủ, folder, khó tìm kiếm khi cần</p>
+              <h4 data-i18n="problemSolution.problems.2.title">Lưu trữ giấy hoặc file rời</h4>
+              <p data-i18n="problemSolution.problems.2.desc">Hồ sơ nhân sự nằm rải rác trong tủ, folder, khó tìm kiếm
+                khi cần</p>
             </div>
           </div>
           <div class="ps-card problem-card">
             <div class="ps-card-icon">🔄</div>
             <div class="ps-card-content">
-              <h4>Khó kiểm soát phiên bản</h4>
-              <p>Không rõ phiên bản hợp đồng nào mới nhất, thời hạn gia hạn, phụ lục đã ký</p>
+              <h4 data-i18n="problemSolution.problems.3.title">Khó kiểm soát phiên bản</h4>
+              <p data-i18n="problemSolution.problems.3.desc">Không rõ phiên bản hợp đồng nào mới nhất, thời hạn gia hạn,
+                phụ lục đã ký</p>
             </div>
           </div>
           <div class="ps-card problem-card">
             <div class="ps-card-icon">⚠️</div>
             <div class="ps-card-content">
-              <h4>Rủi ro pháp lý & thất lạc</h4>
-              <p>Sai sót nội dung, mất hồ sơ, không đủ căn cứ khi có tranh chấp lao động</p>
+              <h4 data-i18n="problemSolution.problems.4.title">Rủi ro pháp lý & thất lạc</h4>
+              <p data-i18n="problemSolution.problems.4.desc">Sai sót nội dung, mất hồ sơ, không đủ căn cứ khi có tranh
+                chấp lao động</p>
             </div>
           </div>
         </div>
@@ -234,41 +266,46 @@
         <div class="ps-column solution-column">
           <div class="ps-column-header solution-header">
             <span class="ps-icon">✅</span>
-            <h3>Arito Approval</h3>
+            <h3 data-i18n="problemSolution.solutionTitle">Arito Approval</h3>
           </div>
           <div class="ps-card solution-card">
             <div class="ps-card-icon">📋</div>
             <div class="ps-card-content">
-              <h4>Khởi tạo & quản lý tập trung</h4>
-              <p>Mẫu hợp đồng điện tử chuẩn, tạo nhanh, quản lý trên một nền tảng duy nhất</p>
+              <h4 data-i18n="problemSolution.solutions.0.title">Khởi tạo & quản lý tập trung</h4>
+              <p data-i18n="problemSolution.solutions.0.desc">Mẫu hợp đồng điện tử chuẩn, tạo nhanh, quản lý trên một
+                nền tảng duy nhất</p>
             </div>
           </div>
           <div class="ps-card solution-card">
             <div class="ps-card-icon">✍️</div>
             <div class="ps-card-content">
-              <h4>Hỗ trợ ký kết điện tử</h4>
-              <p>Tích hợp trong quy trình HR, ký mọi lúc mọi nơi qua Email, SMS, hệ thống</p>
+              <h4 data-i18n="problemSolution.solutions.1.title">Hỗ trợ ký kết điện tử</h4>
+              <p data-i18n="problemSolution.solutions.1.desc">Tích hợp trong quy trình HR, ký mọi lúc mọi nơi qua Email,
+                SMS, hệ thống</p>
             </div>
           </div>
           <div class="ps-card solution-card">
             <div class="ps-card-icon">🔐</div>
             <div class="ps-card-content">
-              <h4>Lưu trữ an toàn, dễ tra cứu</h4>
-              <p>Hồ sơ nhân sự được mã hóa, lưu trữ cloud, tìm kiếm tức thì theo nhiều tiêu chí</p>
+              <h4 data-i18n="problemSolution.solutions.2.title">Lưu trữ an toàn, dễ tra cứu</h4>
+              <p data-i18n="problemSolution.solutions.2.desc">Hồ sơ nhân sự được mã hóa, lưu trữ cloud, tìm kiếm tức thì
+                theo nhiều tiêu chí</p>
             </div>
           </div>
           <div class="ps-card solution-card">
             <div class="ps-card-icon">🔄</div>
             <div class="ps-card-content">
-              <h4>Quản lý vòng đời hợp đồng</h4>
-              <p>Tạo → Phê duyệt → Ký kết → Lưu trữ → Tái sử dụng & Gia hạn tự động nhắc nhở</p>
+              <h4 data-i18n="problemSolution.solutions.3.title">Quản lý vòng đời hợp đồng</h4>
+              <p data-i18n="problemSolution.solutions.3.desc">Tạo → Phê duyệt → Ký kết → Lưu trữ → Tái sử dụng & Gia hạn
+                tự động nhắc nhở</p>
             </div>
           </div>
           <div class="ps-card solution-card">
             <div class="ps-card-icon">🔗</div>
             <div class="ps-card-content">
-              <h4>Kết nối hệ thống HR/ERP</h4>
-              <p>Tích hợp liền mạch với HRM, ERP, CRM doanh nghiệp qua API chuẩn</p>
+              <h4 data-i18n="problemSolution.solutions.4.title">Kết nối hệ thống HR/ERP</h4>
+              <p data-i18n="problemSolution.solutions.4.desc">Tích hợp liền mạch với HRM, ERP, CRM doanh nghiệp qua API
+                chuẩn</p>
             </div>
           </div>
         </div>
@@ -283,41 +320,45 @@
   <section class="benefits" id="benefits">
     <div class="container">
       <div class="section-header animate-on-scroll">
-        <span class="section-badge">Lợi ích</span>
-        <h2 class="section-title">Tại sao chọn Arito Approval?</h2>
-        <p class="section-desc">Giải pháp quản lý hợp đồng điện tử & hồ sơ nhân sự toàn diện cho doanh nghiệp Việt Nam
+        <span class="section-badge" data-i18n="benefits.badge">Lợi ích</span>
+        <h2 class="section-title" data-i18n="benefits.title">Tại sao chọn Arito Approval?</h2>
+        <p class="section-desc" data-i18n="benefits.desc">Giải pháp quản lý hợp đồng lao động & hồ sơ nhân sự toàn diện
+          cho doanh nghiệp Việt Nam
         </p>
       </div>
       <div class="benefits-grid">
         <div class="benefit-card animate-on-scroll">
           <div class="benefit-icon"><span>💰</span></div>
-          <h3>Giảm ~80% chi phí xử lý hồ sơ</h3>
-          <p>Loại bỏ in ấn, vận chuyển, lưu kho. Tối ưu chi phí nhân sự ngay từ tháng đầu.</p>
+          <h3 data-i18n="benefits.items.0.title">Giảm ~80% chi phí xử lý hồ sơ</h3>
+          <p data-i18n="benefits.items.0.desc">Loại bỏ in ấn, vận chuyển, lưu kho. Tối ưu chi phí nhân sự ngay từ tháng
+            đầu.</p>
         </div>
         <div class="benefit-card animate-on-scroll">
           <div class="benefit-icon"><span>⚡</span></div>
-          <h3>Rút ngắn thời gian ký HĐĐT</h3>
-          <p>Từ vài ngày xuống vài phút. Ký ngay khi gửi offer, không cần gặp mặt.</p>
+          <h3 data-i18n="benefits.items.1.title">Rút ngắn thời gian ký HĐLĐ</h3>
+          <p data-i18n="benefits.items.1.desc">Từ vài ngày xuống vài phút. Ký ngay khi gửi offer, không cần gặp mặt.</p>
         </div>
         <div class="benefit-card animate-on-scroll">
           <div class="benefit-icon"><span>🌍</span></div>
-          <h3>Ký kết linh hoạt mọi nơi</h3>
-          <p>Ký trên điện thoại, máy tính, tablet qua Email, SMS hoặc trực tiếp trên hệ thống.</p>
+          <h3 data-i18n="benefits.items.2.title">Ký kết linh hoạt mọi nơi</h3>
+          <p data-i18n="benefits.items.2.desc">Ký trên điện thoại, máy tính, tablet qua Email, SMS hoặc trực tiếp trên
+            hệ thống.</p>
         </div>
         <div class="benefit-card animate-on-scroll">
           <div class="benefit-icon"><span>🔒</span></div>
-          <h3>An toàn & Bảo mật dữ liệu</h3>
-          <p>ISO 27001, xác thực eKYC. Lưu trữ hồ sơ an toàn ≥ 10 năm.</p>
+          <h3 data-i18n="benefits.items.3.title">An toàn & Bảo mật dữ liệu</h3>
+          <p data-i18n="benefits.items.3.desc">ISO 27001, xác thực eKYC. Lưu trữ hồ sơ an toàn ≥ 10 năm.</p>
         </div>
         <div class="benefit-card animate-on-scroll">
           <div class="benefit-icon"><span>📁</span></div>
-          <h3>Hồ sơ nhân sự tập trung</h3>
-          <p>Quản lý HĐĐT, phụ lục, đơn từ trên một nền tảng. Tìm kiếm nhanh, dễ kiểm soát.</p>
+          <h3 data-i18n="benefits.items.4.title">Hồ sơ nhân sự tập trung</h3>
+          <p data-i18n="benefits.items.4.desc">Quản lý HĐLĐ, phụ lục, đơn từ trên một nền tảng. Tìm kiếm nhanh, dễ kiểm
+            soát.</p>
         </div>
         <div class="benefit-card animate-on-scroll">
           <div class="benefit-icon"><span>⚖️</span></div>
-          <h3>Giá trị pháp lý đầy đủ</h3>
-          <p>HĐĐT có giá trị pháp lý tương đương hợp đồng giấy theo quy định.</p>
+          <h3 data-i18n="benefits.items.5.title">Giá trị pháp lý đầy đủ</h3>
+          <p data-i18n="benefits.items.5.desc">HĐLĐ có giá trị pháp lý tương đương hợp đồng giấy theo quy định.</p>
         </div>
       </div>
     </div>
@@ -327,44 +368,49 @@
   <section class="features" id="features">
     <div class="container">
       <div class="section-header animate-on-scroll">
-        <span class="section-badge">Tính năng</span>
-        <h2 class="section-title">Công cụ quản lý hồ sơ nhân sự chuyên nghiệp</h2>
-        <p class="section-desc">Tạo, chỉnh sửa và theo dõi toàn bộ HĐĐT, phụ lục trên một nền tảng. Nhắc gia hạn tự
+        <span class="section-badge" data-i18n="features.badge">Tính năng</span>
+        <h2 class="section-title" data-i18n="features.title">Công cụ quản lý hồ sơ nhân sự chuyên nghiệp</h2>
+        <p class="section-desc" data-i18n="features.desc">Tạo, chỉnh sửa và theo dõi toàn bộ HĐLĐ, phụ lục trên một nền
+          tảng. Nhắc gia hạn tự
           động.</p>
       </div>
       <div class="features-grid">
         <div class="feature-item animate-on-scroll">
           <div class="feature-icon">📋</div>
-          <h4>Quản lý HĐĐT & Phụ lục</h4>
-          <p>Tạo, chỉnh sửa, quản lý tất cả hợp đồng điện tử và phụ lục trên một nền tảng. Theo dõi thời hạn, nhắc gia
+          <h4 data-i18n="features.items.0.title">Quản lý HĐLĐ & Phụ lục</h4>
+          <p data-i18n="features.items.0.desc">Tạo, chỉnh sửa, quản lý tất cả hợp đồng lao động và phụ lục trên một nền
+            tảng. Theo dõi thời hạn, nhắc gia
             hạn tự động.</p>
         </div>
         <div class="feature-item animate-on-scroll">
           <div class="feature-icon">🔐</div>
-          <h4>Hỗ trợ nhiều hình thức ký</h4>
-          <p>Hỗ trợ xác thực eKYC, VNeID, ký ảnh, USB Token, HSM và ký điện tử theo đúng quy định pháp luật, linh hoạt
+          <h4 data-i18n="features.items.1.title">Hỗ trợ nhiều hình thức ký</h4>
+          <p data-i18n="features.items.1.desc">Hỗ trợ xác thực eKYC, VNeID, ký ảnh, USB Token, HSM và ký điện tử theo
+            đúng quy định pháp luật, linh hoạt
             tích hợp vào quy trình nhân sự.</p>
         </div>
         <div class="feature-item animate-on-scroll">
           <div class="feature-icon">🔄</div>
-          <h4>Thiết lập luồng HR</h4>
-          <p>Tùy chỉnh quy trình: Soạn thảo → Phê duyệt → Ký kết (HR & NLĐ).</p>
+          <h4 data-i18n="features.items.2.title">Thiết lập luồng HR</h4>
+          <p data-i18n="features.items.2.desc">Tùy chỉnh quy trình: Soạn thảo → Phê duyệt → Ký kết (HR & NLĐ).</p>
         </div>
         <div class="feature-item animate-on-scroll">
           <div class="feature-icon">🔗</div>
-          <h4>Tích hợp hệ thống</h4>
-          <p>Kết nối HRM, ERP, CRM qua API. Đồng bộ dữ liệu, giảm nhập liệu thủ công.
+          <h4 data-i18n="features.items.3.title">Tích hợp hệ thống</h4>
+          <p data-i18n="features.items.3.desc">Kết nối HRM, ERP, CRM qua API. Đồng bộ dữ liệu, giảm nhập liệu thủ công.
           </p>
         </div>
         <div class="feature-item animate-on-scroll">
           <div class="feature-icon">🌐</div>
-          <h4>Nền tảng web, không cài đặt</h4>
-          <p>Truy cập qua trình duyệt, hỗ trợ đa thiết bị. Sử dụng ngay, không cần cài app.</p>
+          <h4 data-i18n="features.items.4.title">Nền tảng web, không cài đặt</h4>
+          <p data-i18n="features.items.4.desc">Truy cập qua trình duyệt, hỗ trợ đa thiết bị. Sử dụng ngay, không cần cài
+            app.</p>
         </div>
         <div class="feature-item animate-on-scroll">
           <div class="feature-icon">👥</div>
-          <h4>Phân quyền chi tiết</h4>
-          <p>Phân quyền theo vai trò. Kiểm soát rõ ai được xem, sửa, ký từng tài liệu.</p>
+          <h4 data-i18n="features.items.5.title">Phân quyền chi tiết</h4>
+          <p data-i18n="features.items.5.desc">Phân quyền theo vai trò. Kiểm soát rõ ai được xem, sửa, ký từng tài liệu.
+          </p>
         </div>
       </div>
     </div>
@@ -374,9 +420,11 @@
   <section class="features" id="features">
     <div class="container">
       <div class="section-header animate-on-scroll">
-        <span class="section-badge">Tính năng nổi bật</span>
-        <h2 class="section-title">Một lần đăng ký. Ký mọi nơi<br>Liên mạch toàn hệ thống</h2>
-        <p class="section-desc">Signpanel giúp doanh nghiệp nâng cao hiệu quả và giảm thiểu thời gian cho các quy trình
+        <span class="section-badge" data-i18n="highlightedFeatures.badge">Tính năng nổi bật</span>
+        <h2 class="section-title" data-i18n="highlightedFeatures.title">Một lần đăng ký. Ký mọi nơi<br>Liên mạch toàn hệ
+          thống</h2>
+        <p class="section-desc" data-i18n="highlightedFeatures.desc">Arito Approval giúp doanh nghiệp nâng cao hiệu quả
+          và giảm thiểu thời gian cho các quy trình
           làm việc có liên quan đến việc ký kết</p>
       </div>
 
@@ -389,63 +437,76 @@
           </div>
         </div>
         <div class="feature-highlight-content">
-          <h3>Đăng ký và tích hợp chữ ký điện tử</h3>
-          <p class="feature-desc">Dễ dàng nhập số thẻ đăng ký chữ ký điện tử từ đơn vị cung cấp và tích hợp chữ ký vào
-            hệ thống của Signpanel</p>
+          <h3 data-i18n="highlightedFeatures.feature1.title">Đăng ký và tích hợp chữ ký điện tử</h3>
+          <p class="feature-desc" data-i18n="highlightedFeatures.feature1.desc">Dễ dàng nhập số thẻ đăng ký chữ ký điện
+            tử từ đơn vị cung cấp và tích hợp chữ ký vào
+            hệ thống của Arito Approval</p>
           <ul class="feature-list">
             <li>
               <span class="feature-arrow">➜</span>
               <div>
-                <strong>Đăng ký chữ ký đơn giản:</strong> Khách hàng đăng ký chữ ký điện tử từ các đơn vị cung cấp và
-                tích hợp chữ ký vào hệ thống của Signpanel
+                <strong data-i18n="highlightedFeatures.feature1.points.0.title">Đăng ký chữ ký đơn giản:</strong> <span
+                  data-i18n="highlightedFeatures.feature1.points.0.desc">Khách hàng đăng ký chữ ký điện tử từ các đơn vị
+                  cung cấp và
+                  tích hợp chữ ký vào hệ thống của Arito Approval</span>
               </div>
             </li>
             <li>
               <span class="feature-arrow">➜</span>
               <div>
-                <strong>Tích hợp chữ ký dễ dàng:</strong> Chỉ cần tích hợp dễ dàng đăng ký trên hệ thống của Signpanel
+                <strong data-i18n="highlightedFeatures.feature1.points.1.title">Tích hợp chữ ký dễ dàng:</strong> <span
+                  data-i18n="highlightedFeatures.feature1.points.1.desc">Chỉ cần tích hợp dễ dàng đăng ký trên hệ thống
+                  của Arito Approval</span>
               </div>
             </li>
             <li>
               <span class="feature-arrow">➜</span>
               <div>
-                <strong>Quản lý chữ ký thuận tiện:</strong> Dễ dàng quản lý các chữ ký điện tử mà doanh nghiệp đăng ký
+                <strong data-i18n="highlightedFeatures.feature1.points.2.title">Quản lý chữ ký thuận tiện:</strong>
+                <span data-i18n="highlightedFeatures.feature1.points.2.desc">Dễ dàng quản lý các chữ ký điện tử mà doanh
+                  nghiệp đăng ký</span>
               </div>
             </li>
           </ul>
-          <a href="#" class="btn btn-primary">Đăng ký Demo</a>
+          <a href="#" class="btn btn-primary" data-i18n="highlightedFeatures.feature1.cta">Đăng ký Demo</a>
         </div>
       </div>
 
       <!-- Feature 2: Fast and Secure Document Signing -->
       <div class="feature-highlight feature-highlight-reverse animate-on-scroll">
         <div class="feature-highlight-content">
-          <h3>Ký văn bản nhanh chóng, bảo mật cao</h3>
-          <p class="feature-desc">Người ký có thể ký chữ ký điện tử ngay trên ứng dụng một cách thuận tiện</p>
+          <h3 data-i18n="highlightedFeatures.feature2.title">Ký văn bản nhanh chóng, bảo mật cao</h3>
+          <p class="feature-desc" data-i18n="highlightedFeatures.feature2.desc">Người ký có thể ký chữ ký điện tử ngay
+            trên ứng dụng một cách thuận tiện</p>
           <ul class="feature-list">
             <li>
               <span class="feature-arrow">➜</span>
               <div>
-                <strong>Thao tác ký tiện lợi:</strong> Thao tác ký văn bản nhanh chóng, có ký kết tự xa thuận tiện, trên
-                máy tính hoặc điện thoại
+                <strong data-i18n="highlightedFeatures.feature2.points.0.title">Thao tác ký tiện lợi:</strong> <span
+                  data-i18n="highlightedFeatures.feature2.points.0.desc">Thao tác ký văn bản nhanh chóng, có ký kết từ
+                  xa thuận tiện, trên máy tính hoặc điện thoại</span>
               </div>
             </li>
             <li>
               <span class="feature-arrow">➜</span>
               <div>
-                <strong>Tính bảo mật cao, an toàn khi sử dụng:</strong> Signpanel cài đặt cơ chế xác thực người ký chặt
-                chẽ bằng mã khiếu, mã OTP...
+                <strong data-i18n="highlightedFeatures.feature2.points.1.title">Tính bảo mật cao, an toàn khi sử
+                  dụng:</strong> <span data-i18n="highlightedFeatures.feature2.points.1.desc">Arito Approval cài đặt cơ
+                  chế xác thực người ký chặt
+                  chẽ bằng mã khiếu, mã OTP...</span>
               </div>
             </li>
             <li>
               <span class="feature-arrow">➜</span>
               <div>
-                <strong>Dễ dàng xem và quản lý lịch sử ký:</strong> Người dùng có thể dễ dàng xem lịch sử ký và quản lý
-                sự vận bản
+                <strong data-i18n="highlightedFeatures.feature2.points.2.title">Dễ dàng xem và quản lý lịch sử
+                  ký:</strong> <span data-i18n="highlightedFeatures.feature2.points.2.desc">Người dùng có thể dễ dàng
+                  xem lịch sử ký và quản lý
+                  sự vận bản</span>
               </div>
             </li>
           </ul>
-          <a href="#" class="btn btn-primary">Đăng ký Demo</a>
+          <a href="#" class="btn btn-primary" data-i18n="highlightedFeatures.feature2.cta">Đăng ký Demo</a>
         </div>
         <div class="feature-highlight-image">
           <div class="feature-mockup">
@@ -462,75 +523,76 @@
     <div class="container">
       <div class="legal-content">
         <div class="legal-text animate-on-scroll">
-          <span class="section-badge">Pháp lý & Bảo mật</span>
-          <h2 class="section-title">Tuân thủ Bộ luật Lao động & Luật GDĐT Việt Nam</h2>
-          <p class="legal-desc">Arito Approval được thiết kế để đáp ứng đầy đủ các quy định pháp luật về hợp đồng lao
+          <span class="section-badge" data-i18n="legal.badge">Pháp lý & Bảo mật</span>
+          <h2 class="section-title" data-i18n="legal.title">Tuân thủ Bộ luật Lao động & Luật GDĐT Việt Nam</h2>
+          <p class="legal-desc" data-i18n="legal.desc">Arito Approval được thiết kế để đáp ứng đầy đủ các quy định pháp
+            luật về hợp đồng lao
             động điện tử tại Việt Nam.</p>
 
           <div class="legal-columns">
             <div class="legal-column">
-              <h4 class="legal-column-title">📜 Tuân thủ pháp luật</h4>
+              <h4 class="legal-column-title" data-i18n="legal.complianceTitle">📜 Tuân thủ pháp luật</h4>
               <div class="legal-items">
                 <div class="legal-item">
                   <div class="legal-icon">⚖️</div>
                   <div>
-                    <h5>Bộ luật Lao động</h5>
-                    <p>Đảm bảo nội dung HĐĐT đầy đủ theo quy định</p>
+                    <h5 data-i18n="legal.compliance.0.title">Bộ luật Lao động</h5>
+                    <p data-i18n="legal.compliance.0.desc">Đảm bảo nội dung HĐLĐ đầy đủ theo quy định</p>
                   </div>
                 </div>
                 <div class="legal-item">
                   <div class="legal-icon">📋</div>
                   <div>
-                    <h5>Luật Giao dịch điện tử 2023</h5>
-                    <p>Chữ ký điện tử có giá trị pháp lý tương đương chữ ký tay</p>
+                    <h5 data-i18n="legal.compliance.1.title">Luật Giao dịch điện tử 2023</h5>
+                    <p data-i18n="legal.compliance.1.desc">Chữ ký điện tử có giá trị pháp lý tương đương chữ ký tay</p>
                   </div>
                 </div>
                 <div class="legal-item">
                   <div class="legal-icon">📖</div>
                   <div>
-                    <h5>Bộ luật Dân sự 2015</h5>
-                    <p>Hợp đồng điện tử được công nhận và bảo vệ</p>
+                    <h5 data-i18n="legal.compliance.2.title">Bộ luật Dân sự 2015</h5>
+                    <p data-i18n="legal.compliance.2.desc">Hợp đồng điện tử được công nhận và bảo vệ</p>
                   </div>
                 </div>
                 <div class="legal-item">
                   <div class="legal-icon">🏛️</div>
                   <div>
-                    <h5>Luật Thương mại 2005</h5>
-                    <p>Giao dịch điện tử trong quan hệ thương mại</p>
+                    <h5 data-i18n="legal.compliance.3.title">Luật Thương mại 2005</h5>
+                    <p data-i18n="legal.compliance.3.desc">Giao dịch điện tử trong quan hệ thương mại</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="legal-column">
-              <h4 class="legal-column-title">🔒 Bảo mật thông tin</h4>
+              <h4 class="legal-column-title" data-i18n="legal.securityTitle">🔒 Bảo mật thông tin</h4>
               <div class="legal-items">
                 <div class="legal-item">
                   <div class="legal-icon">🛡️</div>
                   <div>
-                    <h5>Chứng nhận ISO 27001</h5>
-                    <p>Tiêu chuẩn quốc tế về quản lý an ninh thông tin</p>
+                    <h5 data-i18n="legal.security.0.title">Chứng nhận ISO 27001</h5>
+                    <p data-i18n="legal.security.0.desc">Tiêu chuẩn quốc tế về quản lý an ninh thông tin</p>
                   </div>
                 </div>
                 <div class="legal-item">
                   <div class="legal-icon">🔐</div>
                   <div>
-                    <h5>eKYC xác thực danh tính</h5>
-                    <p>Xác minh chính xác người lao động trước khi ký</p>
+                    <h5 data-i18n="legal.security.1.title">eKYC xác thực danh tính</h5>
+                    <p data-i18n="legal.security.1.desc">Xác minh chính xác người lao động trước khi ký</p>
                   </div>
                 </div>
                 <div class="legal-item">
                   <div class="legal-icon">📁</div>
                   <div>
-                    <h5>Lưu trữ hồ sơ ≥ 10 năm</h5>
-                    <p>Đáp ứng yêu cầu lưu trữ hồ sơ lao động theo quy định</p>
+                    <h5 data-i18n="legal.security.2.title">Lưu trữ hồ sơ ≥ 10 năm</h5>
+                    <p data-i18n="legal.security.2.desc">Đáp ứng yêu cầu lưu trữ hồ sơ lao động theo quy định</p>
                   </div>
                 </div>
                 <div class="legal-item">
                   <div class="legal-icon">🔑</div>
                   <div>
-                    <h5>Kiểm soát truy cập</h5>
-                    <p>Phân quyền chi tiết, audit log đầy đủ</p>
+                    <h5 data-i18n="legal.security.3.title">Kiểm soát truy cập</h5>
+                    <p data-i18n="legal.security.3.desc">Phân quyền chi tiết, audit log đầy đủ</p>
                   </div>
                 </div>
               </div>
@@ -559,9 +621,10 @@
   <section class="how-it-works" id="how-it-works">
     <div class="container">
       <div class="section-header animate-on-scroll">
-        <span class="section-badge">Quy trình</span>
-        <h2 class="section-title">4 bước quản lý hợp đồng điện tử</h2>
-        <p class="section-desc">Quy trình đơn giản, tích hợp vào workflow HR hiện tại của doanh nghiệp</p>
+        <span class="section-badge" data-i18n="howItWorks.badge">Quy trình</span>
+        <h2 class="section-title" data-i18n="howItWorks.title">4 bước quản lý hợp đồng lao động</h2>
+        <p class="section-desc" data-i18n="howItWorks.desc">Quy trình đơn giản, tích hợp vào workflow HR hiện tại của
+          doanh nghiệp</p>
       </div>
       <div class="steps-container">
         <div class="steps-line"></div>
@@ -569,24 +632,25 @@
           <div class="step-number">1</div>
           <div class="step-content">
             <div class="step-icon">📤</div>
-            <h4>Tạo / Upload hợp đồng điện tử</h4>
-            <p>Sử dụng mẫu HĐĐT có sẵn hoặc upload file PDF/Word.</p>
+            <h4 data-i18n="howItWorks.steps.0.title">Tạo / Upload hợp đồng lao động</h4>
+            <p data-i18n="howItWorks.steps.0.desc">Sử dụng mẫu HĐLĐ có sẵn hoặc upload file PDF/Word.</p>
           </div>
         </div>
         <div class="step animate-on-scroll" data-step="2">
           <div class="step-number">2</div>
           <div class="step-content">
             <div class="step-icon">🔄</div>
-            <h4>Thiết lập luồng phê duyệt</h4>
-            <p>Tùy chỉnh quy trình theo cơ cấu tổ chức.</p>
+            <h4 data-i18n="howItWorks.steps.1.title">Thiết lập luồng phê duyệt</h4>
+            <p data-i18n="howItWorks.steps.1.desc">Tùy chỉnh quy trình theo cơ cấu tổ chức.</p>
           </div>
         </div>
         <div class="step animate-on-scroll" data-step="3">
           <div class="step-number">3</div>
           <div class="step-content">
             <div class="step-icon">✍️</div>
-            <h4>Ký kết hợp đồng</h4>
-            <p>Gửi link ký qua Email, SMS hoặc ký trực tiếp trên hệ thống. Hỗ trợ eKYC, VNeID xác thực danh tính người
+            <h4 data-i18n="howItWorks.steps.2.title">Ký kết hợp đồng</h4>
+            <p data-i18n="howItWorks.steps.2.desc">Gửi link ký qua Email, SMS hoặc ký trực tiếp trên hệ thống. Hỗ trợ
+              eKYC, VNeID xác thực danh tính người
               lao động.</p>
             <div class="step-tags">
               <span class="step-tag">Email</span>
@@ -599,8 +663,9 @@
           <div class="step-number">4</div>
           <div class="step-content">
             <div class="step-icon">📁</div>
-            <h4>Lưu trữ & Quản lý hồ sơ nhân sự</h4>
-            <p>Hồ sơ lưu trữ an toàn, tra cứu nhanh đa tiêu chí; quản lý tập trung, tái sử dụng mẫu và nhắc gia hạn tự
+            <h4 data-i18n="howItWorks.steps.3.title">Lưu trữ & Quản lý hồ sơ nhân sự</h4>
+            <p data-i18n="howItWorks.steps.3.desc">Hồ sơ lưu trữ an toàn, tra cứu nhanh đa tiêu chí; quản lý tập trung,
+              tái sử dụng mẫu và nhắc gia hạn tự
               động.</p>
           </div>
         </div>
@@ -612,41 +677,48 @@
   <section class="use-cases" id="use-cases">
     <div class="container">
       <div class="section-header animate-on-scroll">
-        <span class="section-badge">Đối tượng phù hợp</span>
-        <h2 class="section-title">Doanh nghiệp nào cần Arito Approval?</h2>
-        <p class="section-desc">Giải pháp phù hợp cho mọi quy mô doanh nghiệp có nhu cầu quản lý hồ sơ lao động chuyên
+        <span class="section-badge" data-i18n="useCases.badge">Đối tượng phù hợp</span>
+        <h2 class="section-title" data-i18n="useCases.title">Doanh nghiệp nào cần Arito Approval?</h2>
+        <p class="section-desc" data-i18n="useCases.desc">Giải pháp phù hợp cho mọi quy mô doanh nghiệp có nhu cầu quản
+          lý hồ sơ lao động chuyên
           nghiệp</p>
       </div>
       <div class="use-cases-grid">
         <div class="use-case-card animate-on-scroll">
           <div class="uc-icon">🌍</div>
-          <h4>Doanh nghiệp có nhân sự từ xa</h4>
-          <p>Ký hợp đồng điện tử với ứng viên ở bất kỳ đâu, không cần gặp mặt trực tiếp hay gửi bưu điện.</p>
+          <h4 data-i18n="useCases.items.0.title">Doanh nghiệp có nhân sự từ xa</h4>
+          <p data-i18n="useCases.items.0.desc">Ký hợp đồng lao động với ứng viên ở bất kỳ đâu, không cần gặp mặt trực
+            tiếp hay gửi bưu điện.</p>
         </div>
         <div class="use-case-card animate-on-scroll">
           <div class="uc-icon">🛒</div>
-          <h4>E-commerce & Chuỗi bán lẻ</h4>
-          <p>Quản lý hợp đồng cho đội ngũ bán hàng, kho vận, vận chuyển phân tán nhiều địa điểm.</p>
+          <h4 data-i18n="useCases.items.1.title">E-commerce & Chuỗi bán lẻ</h4>
+          <p data-i18n="useCases.items.1.desc">Quản lý hợp đồng cho đội ngũ bán hàng, kho vận, vận chuyển phân tán nhiều
+            địa điểm.</p>
         </div>
         <div class="use-case-card animate-on-scroll">
           <div class="uc-icon">📈</div>
-          <h4>Doanh nghiệp tăng trưởng nhanh</h4>
-          <p>Tuyển dụng hàng loạt, onboarding nhanh không bị nghẽn bởi quy trình ký kết thủ công.</p>
+          <h4 data-i18n="useCases.items.2.title">Doanh nghiệp tăng trưởng nhanh</h4>
+          <p data-i18n="useCases.items.2.desc">Tuyển dụng hàng loạt, onboarding nhanh không bị nghẽn bởi quy trình ký
+            kết thủ công.</p>
         </div>
         <div class="use-case-card animate-on-scroll">
           <div class="uc-icon">🏭</div>
-          <h4>Sản xuất & Khu công nghiệp</h4>
-          <p>Quản lý hợp đồng điện tử cho hàng nghìn công nhân, theo dõi thời hạn, gia hạn tự động.</p>
+          <h4 data-i18n="useCases.items.3.title">Sản xuất & Khu công nghiệp</h4>
+          <p data-i18n="useCases.items.3.desc">Quản lý hợp đồng lao động cho hàng nghìn công nhân, theo dõi thời hạn,
+            gia hạn tự động.</p>
         </div>
         <div class="use-case-card animate-on-scroll">
           <div class="uc-icon">🏗️</div>
-          <h4>Bất động sản & Xây dựng</h4>
-          <p>Ký kết với đội ngũ thi công, kỹ sư làm việc tại công trường các tỉnh thành khác nhau.</p>
+          <h4 data-i18n="useCases.items.4.title">Bất động sản & Xây dựng</h4>
+          <p data-i18n="useCases.items.4.desc">Ký kết với đội ngũ thi công, kỹ sư làm việc tại công trường các tỉnh
+            thành khác nhau.</p>
         </div>
         <div class="use-case-card animate-on-scroll">
           <div class="uc-icon">🏢</div>
-          <h4>Doanh nghiệp mọi quy mô</h4>
-          <p>Từ SME đến tập đoàn lớn, tất cả đều cần quản lý hồ sơ lao động chuyên nghiệp, tuân thủ pháp luật.</p>
+          <h4 data-i18n="useCases.items.5.title">Doanh nghiệp mọi quy mô</h4>
+          <p data-i18n="useCases.items.5.desc">Từ SME đến tập đoàn lớn, tất cả đều cần quản lý hồ sơ lao động chuyên
+            nghiệp, tuân thủ pháp luật.</p>
         </div>
       </div>
     </div>
@@ -656,25 +728,25 @@
   <section class="social-proof" id="testimonials">
     <div class="container">
       <div class="section-header animate-on-scroll">
-        <span class="section-badge">Khách hàng</span>
-        <h2 class="section-title">Được doanh nghiệp Việt Nam tin dùng</h2>
+        <span class="section-badge" data-i18n="socialProof.badge">Khách hàng</span>
+        <h2 class="section-title" data-i18n="socialProof.title">Được doanh nghiệp Việt Nam tin dùng</h2>
       </div>
       <div class="stats-grid animate-on-scroll">
         <div class="stat-item">
           <div class="stat-number" data-count="500">500+</div>
-          <div class="stat-label">Doanh nghiệp sử dụng</div>
+          <div class="stat-label" data-i18n="socialProof.stats.0.label">Doanh nghiệp sử dụng</div>
         </div>
         <div class="stat-item">
           <div class="stat-number" data-count="50000">50,000+</div>
-          <div class="stat-label">Hợp đồng điện tử đã xử lý</div>
+          <div class="stat-label" data-i18n="socialProof.stats.1.label">Hợp đồng lao động đã xử lý</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">80%</div>
-          <div class="stat-label">Giảm thời gian xử lý</div>
+          <div class="stat-label" data-i18n="socialProof.stats.2.label">Giảm thời gian xử lý</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">24/7</div>
-          <div class="stat-label">Hỗ trợ kỹ thuật</div>
+          <div class="stat-label" data-i18n="socialProof.stats.3.label">Hỗ trợ kỹ thuật</div>
         </div>
       </div>
       <div class="section-header animate-on-scroll">
@@ -683,7 +755,7 @@
     font-weight: 600;
     font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 1px;">Doanh nghiệp đã triển khai thành công cùng ARITO</h3>
+    letter-spacing: 1px;" data-i18n="socialProof.successTitle">Doanh nghiệp đã triển khai thành công cùng ARITO</h3>
       </div>
       <div class="success-stories-grid animate-on-scroll">
         <a href="https://arito.vn/arito-hr2b-kickoff-du-an-phan-mem-quan-tri-doanh-nghiep/" target="_blank"
@@ -707,35 +779,38 @@
       </div>
       <div class="testimonials-grid">
         <div class="testimonial-card animate-on-scroll">
-          <div class="testimonial-quote">"Giảm mạnh thời gian xử lý hợp đồng điện tử. Trước đây mất 3-5 ngày để ký xong
-            HĐĐT với ứng viên ở tỉnh, giờ chỉ còn vài giờ."</div>
+          <div class="testimonial-quote" data-i18n="socialProof.testimonials.0.quote">"Giảm mạnh thời gian xử lý hợp
+            đồng lao động. Trước đây mất 3-5 ngày để ký xong
+            HĐLĐ với ứng viên ở tỉnh, giờ chỉ còn vài giờ."</div>
           <div class="testimonial-author">
             <div class="author-avatar">TH</div>
             <div class="author-info">
-              <strong>HR Manager</strong>
-              <span>Công ty [Placeholder]</span>
+              <strong data-i18n="socialProof.testimonials.0.author">HR Manager</strong>
+              <span data-i18n="socialProof.testimonials.0.company">Công ty [Placeholder]</span>
             </div>
           </div>
         </div>
         <div class="testimonial-card animate-on-scroll">
-          <div class="testimonial-quote">"Quản lý hồ sơ nhân sự tập trung, rõ ràng. Không còn lo thất lạc hợp đồng hay
-            quên gia hạn HĐĐT như trước."</div>
+          <div class="testimonial-quote" data-i18n="socialProof.testimonials.1.quote">"Quản lý hồ sơ nhân sự tập trung,
+            rõ ràng. Không còn lo thất lạc hợp đồng hay
+            quên gia hạn HĐLĐ như trước."</div>
           <div class="testimonial-author">
             <div class="author-avatar">NL</div>
             <div class="author-info">
-              <strong>Head of People</strong>
-              <span>Công ty [Placeholder]</span>
+              <strong data-i18n="socialProof.testimonials.1.author">Head of People</strong>
+              <span data-i18n="socialProof.testimonials.1.company">Công ty [Placeholder]</span>
             </div>
           </div>
         </div>
         <div class="testimonial-card animate-on-scroll">
-          <div class="testimonial-quote">"Onboarding nhân sự nhanh hơn nhiều. Ứng viên ký offer, ký HĐĐT ngay trên điện
+          <div class="testimonial-quote" data-i18n="socialProof.testimonials.2.quote">"Onboarding nhân sự nhanh hơn
+            nhiều. Ứng viên ký offer, ký HĐLĐ ngay trên điện
             thoại, không cần đến văn phòng."</div>
           <div class="testimonial-author">
             <div class="author-avatar">MT</div>
             <div class="author-info">
-              <strong>Operations Manager</strong>
-              <span>Công ty [Placeholder]</span>
+              <strong data-i18n="socialProof.testimonials.2.author">Operations Manager</strong>
+              <span data-i18n="socialProof.testimonials.2.company">Công ty [Placeholder]</span>
             </div>
           </div>
         </div>
@@ -747,16 +822,16 @@
   <section class="pricing" id="pricing">
     <div class="container">
       <div class="section-header animate-on-scroll">
-        <span class="section-badge">Bảng giá</span>
-        <h2 class="section-title">Chọn gói phù hợp với bạn</h2>
-        <p class="section-desc">Dùng thử miễn phí 14 ngày, không cần thẻ tín dụng</p>
+        <span class="section-badge" data-i18n="pricing.badge">Bảng giá</span>
+        <h2 class="section-title" data-i18n="pricing.title">Chọn gói phù hợp với bạn</h2>
+        <p class="section-desc" data-i18n="pricing.desc">Dùng thử miễn phí 14 ngày, không cần thẻ tín dụng</p>
       </div>
       <div class="pricing-grid">
         <div class="pricing-card animate-on-scroll">
           <div class="pricing-header">
-            <h3>Cá nhân</h3>
+            <h3 data-i18n="pricing.plans.0.name">Cá nhân</h3>
             <div class="pricing-price">
-              <span class="price-amount">Miễn phí</span>
+              <span class="price-amount" data-i18n="pricing.plans.0.price">Miễn phí</span>
             </div>
           </div>
           <ul class="pricing-features">
@@ -765,15 +840,15 @@
             <li><span class="check">✓</span> Xác thực Email</li>
             <li><span class="check">✓</span> Lưu trữ 1GB</li>
           </ul>
-          <a href="#" class="btn btn-outline btn-block">Bắt đầu miễn phí</a>
+          <a href="#" class="btn btn-outline btn-block" data-i18n="pricing.plans.0.cta">Bắt đầu miễn phí</a>
         </div>
         <div class="pricing-card popular animate-on-scroll">
-          <div class="popular-badge">Phổ biến</div>
+          <div class="popular-badge" data-i18n="pricing.plans.1.popularLabel">Phổ biến</div>
           <div class="pricing-header">
-            <h3>Doanh nghiệp</h3>
+            <h3 data-i18n="pricing.plans.1.name">Doanh nghiệp</h3>
             <div class="pricing-price">
-              <span class="price-amount">499K</span>
-              <span class="price-period">/tháng</span>
+              <span class="price-amount" data-i18n="pricing.plans.1.price">499K</span>
+              <span class="price-period" data-i18n="pricing.plans.1.period">/tháng</span>
             </div>
           </div>
           <ul class="pricing-features">
@@ -783,13 +858,13 @@
             <li><span class="check">✓</span> Lưu trữ 50GB</li>
             <li><span class="check">✓</span> Hỗ trợ ưu tiên</li>
           </ul>
-          <a href="#" class="btn btn-primary btn-block">Dùng thử miễn phí</a>
+          <a href="#" class="btn btn-primary btn-block" data-i18n="pricing.plans.1.cta">Dùng thử miễn phí</a>
         </div>
         <div class="pricing-card animate-on-scroll">
           <div class="pricing-header">
-            <h3>Enterprise</h3>
+            <h3 data-i18n="pricing.plans.2.name">Enterprise</h3>
             <div class="pricing-price">
-              <span class="price-amount">Liên hệ</span>
+              <span class="price-amount" data-i18n="pricing.plans.2.price">Liên hệ</span>
             </div>
           </div>
           <ul class="pricing-features">
@@ -799,7 +874,7 @@
             <li><span class="check">✓</span> Lưu trữ không giới hạn</li>
             <li><span class="check">✓</span> Account Manager riêng</li>
           </ul>
-          <a href="#" class="btn btn-outline btn-block">Liên hệ tư vấn</a>
+          <a href="#" class="btn btn-outline btn-block" data-i18n="pricing.plans.2.cta">Liên hệ tư vấn</a>
         </div>
       </div>
     </div>
@@ -809,19 +884,20 @@
   <section class="final-cta" id="contact">
     <div class="container">
       <div class="cta-content animate-on-scroll">
-        <h2>Sẵn sàng số hóa quản lý hợp đồng điện tử?</h2>
-        <p>Bắt đầu dùng thử miễn phí 14 ngày. Không cần thẻ tín dụng. Hỗ trợ triển khai từ đội ngũ chuyên gia HR Tech.
+        <h2 data-i18n="finalCta.title">Sẵn sàng số hóa quản lý hợp đồng lao động?</h2>
+        <p data-i18n="finalCta.desc">Bắt đầu dùng thử miễn phí 14 ngày. Không cần thẻ tín dụng. Hỗ trợ triển khai từ đội
+          ngũ chuyên gia HR Tech.
         </p>
         <div class="cta-buttons">
           <a href="#" class="btn btn-white btn-lg">
-            <span>Dùng thử miễn phí</span>
+            <span data-i18n="finalCta.ctaPrimary">Dùng thử miễn phí</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </a>
-          <a href="#" class="btn btn-outline-white btn-lg">Đặt lịch demo</a>
+          <a href="#" class="btn btn-outline-white btn-lg" data-i18n="finalCta.ctaSecondary">Đặt lịch demo</a>
         </div>
-        <p class="cta-note">Hoặc gọi ngay: <strong>028 7101 2288</strong></p>
+        <p class="cta-note"><span data-i18n="finalCta.callText">Hoặc gọi ngay:</span> <strong>028 7101 2288</strong></p>
       </div>
     </div>
   </section>
@@ -834,7 +910,8 @@
           <a href="#" class="logo">
             <img src="white.webp" style="width: 190px;" alt="Arito Approval Logo" class="logo-icon">
           </a>
-          <p>Nền tảng quản lý hợp đồng điện tử & hồ sơ nhân sự điện tử hàng đầu Việt Nam. An toàn, tuân thủ pháp luật,
+          <p data-i18n="footer.brandDesc">Nền tảng quản lý hợp đồng lao động & hồ sơ nhân sự hàng đầu Việt Nam. An toàn,
+            tuân thủ pháp luật,
             tiện lợi.</p>
           <div class="social-links">
             <a href="#" aria-label="Facebook">📘</a>
@@ -843,36 +920,36 @@
           </div>
         </div>
         <div class="footer-links">
-          <h4>Sản phẩm</h4>
-          <a href="#features">Tính năng</a>
-          <a href="#pricing">Bảng giá</a>
+          <h4 data-i18n="footer.productTitle">Sản phẩm</h4>
+          <a href="#features" data-i18n="footer.productFeatures">Tính năng</a>
+          <a href="#pricing" data-i18n="footer.productPricing">Bảng giá</a>
           <a href="#">API Documentation</a>
-          <a href="#">Tích hợp HRM/ERP</a>
+          <a href="#" data-i18n="footer.productIntegration">Tích hợp HRM/ERP</a>
         </div>
         <div class="footer-links">
-          <h4>Hỗ trợ</h4>
-          <a href="#">Hướng dẫn sử dụng</a>
+          <h4 data-i18n="footer.supportTitle">Hỗ trợ</h4>
+          <a href="#" data-i18n="footer.supportGuide">Hướng dẫn sử dụng</a>
           <a href="#">FAQ</a>
-          <a href="#">Blog HR</a>
-          <a href="#contact">Liên hệ</a>
+          <a href="#" data-i18n="footer.supportBlog">Blog HR</a>
+          <a href="#contact" data-i18n="footer.supportContact">Liên hệ</a>
         </div>
         <div class="footer-links">
-          <h4>Pháp lý</h4>
-          <a href="#">Điều khoản sử dụng</a>
-          <a href="#">Chính sách bảo mật</a>
-          <a href="#legal">Giá trị pháp lý HĐĐT điện tử</a>
-          <a href="#">Chứng nhận ISO 27001</a>
+          <h4 data-i18n="footer.legalTitle">Pháp lý</h4>
+          <a href="#" data-i18n="footer.legalTerms">Điều khoản sử dụng</a>
+          <a href="#" data-i18n="footer.legalPrivacy">Chính sách bảo mật</a>
+          <a href="#legal" data-i18n="footer.legalValue">Giá trị pháp lý HĐLĐ</a>
+          <a href="#" data-i18n="footer.legalISO">Chứng nhận ISO 27001</a>
         </div>
         <div class="footer-contact">
-          <h4>Liên hệ</h4>
+          <h4 data-i18n="footer.contactTitle">Liên hệ</h4>
           <p>📞 028 7101 2288</p>
           <p>📧 contact@arito.vn</p>
           <p>📍 597m Đ. Tên Lửa, Bình Trị Đông B, Bình Tân, TP. Hồ Chí Minh</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 Arito Approval. Bảo lưu mọi quyền.</p>
-        <p>Tuân thủ Bộ luật Lao động & Luật Giao dịch điện tử Việt Nam 2023</p>
+        <p data-i18n="footer.copyright">&copy; 2024 Arito Approval. Bảo lưu mọi quyền.</p>
+        <p data-i18n="footer.compliance">Tuân thủ Bộ luật Lao động & Luật Giao dịch điện tử Việt Nam 2023</p>
       </div>
     </div>
   </footer>
