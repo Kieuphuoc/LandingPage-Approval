@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Language switcher
     initLanguageSwitcher();
+
+    // Pricing carousel
+    initPricingCarousel();
 });
 
 /**
@@ -328,3 +331,108 @@ function initLanguageSwitcher() {
 // Uncomment to enable:
 // initParallax();
 // initRippleEffect();
+
+/**
+ * Pricing Carousel - Navigate through pricing packages
+ */
+function initPricingCarousel() {
+    const carousel = document.getElementById('pricingCarousel');
+    const track = document.getElementById('pricingTrack');
+    const prevBtn = document.getElementById('pricingPrev');
+    const nextBtn = document.getElementById('pricingNext');
+
+    if (!carousel || !track || !prevBtn || !nextBtn) return;
+
+    const cards = track.querySelectorAll('.pricing-card-item');
+    if (cards.length === 0) return;
+
+    let currentIndex = 0;
+    const cardsToShow = 5;
+    const totalCards = cards.length;
+    const maxIndex = Math.max(0, totalCards - cardsToShow);
+
+    // Calculate card width dynamically
+    function getCardWidth() {
+        const card = cards[0];
+        const style = getComputedStyle(card);
+        const marginRight = parseFloat(style.marginRight) || 0;
+        return card.offsetWidth + marginRight + 20; // 20px is the gap
+    }
+
+    function updateCarousel() {
+        const cardWidth = getCardWidth();
+        const translateX = -currentIndex * cardWidth;
+        track.style.transform = `translateX(${translateX}px)`;
+
+        // Update button states
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= maxIndex;
+
+        // Visual feedback for disabled state
+        prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+        nextBtn.style.opacity = currentIndex >= maxIndex ? '0.5' : '1';
+    }
+
+    function nextSlide() {
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+            updateCarousel();
+        }
+    }
+
+    function prevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    }
+
+    // Event listeners
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Keyboard navigation
+    carousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
+        }
+    });
+
+    // Touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+
+        if (diff > swipeThreshold) {
+            nextSlide();
+        } else if (diff < -swipeThreshold) {
+            prevSlide();
+        }
+    }
+
+    // Handle window resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            updateCarousel();
+        }, 100);
+    });
+
+    // Initial state
+    updateCarousel();
+}

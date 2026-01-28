@@ -823,59 +823,204 @@
     <div class="container">
       <div class="section-header animate-on-scroll">
         <span class="section-badge" data-i18n="pricing.badge">Bảng giá</span>
-        <h2 class="section-title" data-i18n="pricing.title">Chọn gói phù hợp với bạn</h2>
-        <p class="section-desc" data-i18n="pricing.desc">Dùng thử miễn phí 14 ngày, không cần thẻ tín dụng</p>
+        <h2 class="section-title" data-i18n="pricing.title">Báo giá sản phẩm Tài liệu điện tử</h2>
+        <p class="section-desc" data-i18n="pricing.desc">Phí dịch vụ phần mềm: 1.000.000đ/Năm khi sử dụng chính thức</p>
       </div>
-      <div class="pricing-grid">
-        <div class="pricing-card animate-on-scroll">
-          <div class="pricing-header">
-            <h3 data-i18n="pricing.plans.0.name">Cá nhân</h3>
-            <div class="pricing-price">
-              <span class="price-amount" data-i18n="pricing.plans.0.price">Miễn phí</span>
+
+      <!-- Pricing Carousel -->
+      <div class="pricing-carousel-wrapper animate-on-scroll">
+        <button class="pricing-nav-btn pricing-nav-prev" id="pricingPrev" aria-label="Previous packages">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+
+        <div class="pricing-carousel" id="pricingCarousel">
+          <div class="pricing-cards-track" id="pricingTrack">
+
+            <!-- Package 1: 100 documents -->
+            <div class="pricing-card-item">
+              <div class="pricing-card-inner">
+                <h3 class="package-name" data-i18n="pricing.packages.0.name">Gói 100</h3>
+                <ul class="package-features">
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.0.feature1">Không giới hạn
+                      tính năng</span></li>
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.0.feature2">100 tài liệu
+                      ký</span></li>
+                </ul>
+                <div class="package-price">
+                  <span class="price-value">500.000</span>
+                  <span class="price-unit">VND/Gói</span>
+                </div>
+                <a href="#contact" class="btn btn-outline package-btn" data-i18n="pricing.buyNow">Mua ngay</a>
+              </div>
             </div>
-          </div>
-          <ul class="pricing-features">
-            <li><span class="check">✓</span> 5 tài liệu/tháng</li>
-            <li><span class="check">✓</span> 1 người dùng</li>
-            <li><span class="check">✓</span> Xác thực Email</li>
-            <li><span class="check">✓</span> Lưu trữ 1GB</li>
-          </ul>
-          <a href="#" class="btn btn-outline btn-block" data-i18n="pricing.plans.0.cta">Bắt đầu miễn phí</a>
-        </div>
-        <div class="pricing-card popular animate-on-scroll">
-          <div class="popular-badge" data-i18n="pricing.plans.1.popularLabel">Phổ biến</div>
-          <div class="pricing-header">
-            <h3 data-i18n="pricing.plans.1.name">Doanh nghiệp</h3>
-            <div class="pricing-price">
-              <span class="price-amount" data-i18n="pricing.plans.1.price">499K</span>
-              <span class="price-period" data-i18n="pricing.plans.1.period">/tháng</span>
+
+            <!-- Package 2: 200 documents -->
+            <div class="pricing-card-item">
+              <div class="pricing-card-inner">
+                <h3 class="package-name" data-i18n="pricing.packages.1.name">Gói 200</h3>
+                <ul class="package-features">
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.1.feature1">Không giới hạn
+                      tính năng</span></li>
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.1.feature2">200 tài liệu
+                      ký</span></li>
+                </ul>
+                <div class="package-price">
+                  <span class="price-value">960.000</span>
+                  <span class="price-unit">VND/Gói</span>
+                </div>
+                <a href="#contact" class="btn btn-outline package-btn" data-i18n="pricing.buyNow">Mua ngay</a>
+              </div>
             </div>
-          </div>
-          <ul class="pricing-features">
-            <li><span class="check">✓</span> 100 tài liệu/tháng</li>
-            <li><span class="check">✓</span> 10 người dùng</li>
-            <li><span class="check">✓</span> Xác thực OTP + Email</li>
-            <li><span class="check">✓</span> Lưu trữ 50GB</li>
-            <li><span class="check">✓</span> Hỗ trợ ưu tiên</li>
-          </ul>
-          <a href="#" class="btn btn-primary btn-block" data-i18n="pricing.plans.1.cta">Dùng thử miễn phí</a>
-        </div>
-        <div class="pricing-card animate-on-scroll">
-          <div class="pricing-header">
-            <h3 data-i18n="pricing.plans.2.name">Enterprise</h3>
-            <div class="pricing-price">
-              <span class="price-amount" data-i18n="pricing.plans.2.price">Liên hệ</span>
+
+            <!-- Package 3: 300 documents -->
+            <div class="pricing-card-item">
+              <div class="pricing-card-inner">
+                <h3 class="package-name" data-i18n="pricing.packages.2.name">Gói 300</h3>
+                <ul class="package-features">
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.2.feature1">Không giới hạn
+                      tính năng</span></li>
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.2.feature2">300 tài liệu
+                      ký</span></li>
+                </ul>
+                <div class="package-price">
+                  <span class="price-value">1.380.000</span>
+                  <span class="price-unit">VND/Gói</span>
+                </div>
+                <a href="#contact" class="btn btn-outline package-btn" data-i18n="pricing.buyNow">Mua ngay</a>
+              </div>
             </div>
+
+            <!-- Package 4: 500 documents -->
+            <div class="pricing-card-item">
+              <div class="pricing-card-inner">
+                <h3 class="package-name" data-i18n="pricing.packages.3.name">Gói 500</h3>
+                <ul class="package-features">
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.3.feature1">Không giới hạn
+                      tính năng</span></li>
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.3.feature2">500 tài liệu
+                      ký</span></li>
+                </ul>
+                <div class="package-price">
+                  <span class="price-value">2.150.000</span>
+                  <span class="price-unit">VND/Gói</span>
+                </div>
+                <a href="#contact" class="btn btn-outline package-btn" data-i18n="pricing.buyNow">Mua ngay</a>
+              </div>
+            </div>
+
+            <!-- Package 5: 1000 documents - RECOMMENDED -->
+            <div class="pricing-card-item recommended">
+              <div class="recommended-badge" data-i18n="pricing.recommendedBadge">Gói khuyên dùng</div>
+              <div class="pricing-card-inner">
+                <h3 class="package-name" data-i18n="pricing.packages.4.name">Gói 1.000</h3>
+                <ul class="package-features">
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.4.feature1">Không giới hạn
+                      tính năng</span></li>
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.4.feature2">1.000 tài liệu
+                      ký</span></li>
+                </ul>
+                <div class="package-price">
+                  <span class="price-value">3.900.000</span>
+                  <span class="price-unit">VND/Gói</span>
+                </div>
+                <a href="#contact" class="btn btn-primary package-btn" data-i18n="pricing.buyNow">Mua ngay</a>
+              </div>
+            </div>
+
+            <!-- Package 6: 2500 documents -->
+            <div class="pricing-card-item">
+              <div class="pricing-card-inner">
+                <h3 class="package-name" data-i18n="pricing.packages.5.name">Gói 2.500</h3>
+                <ul class="package-features">
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.5.feature1">Không giới hạn
+                      tính năng</span></li>
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.5.feature2">2.500 tài liệu
+                      ký</span></li>
+                </ul>
+                <div class="package-price">
+                  <span class="price-value">8.000.000</span>
+                  <span class="price-unit">VND/Gói</span>
+                </div>
+                <a href="#contact" class="btn btn-outline package-btn" data-i18n="pricing.buyNow">Mua ngay</a>
+              </div>
+            </div>
+
+            <!-- Package 7: 5000 documents -->
+            <div class="pricing-card-item">
+              <div class="pricing-card-inner">
+                <h3 class="package-name" data-i18n="pricing.packages.6.name">Gói 5.000</h3>
+                <ul class="package-features">
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.6.feature1">Không giới hạn
+                      tính năng</span></li>
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.6.feature2">5.000 tài liệu
+                      ký</span></li>
+                </ul>
+                <div class="package-price">
+                  <span class="price-value">13.500.000</span>
+                  <span class="price-unit">VND/Gói</span>
+                </div>
+                <a href="#contact" class="btn btn-outline package-btn" data-i18n="pricing.buyNow">Mua ngay</a>
+              </div>
+            </div>
+
+            <!-- Package 8: 10000 documents -->
+            <div class="pricing-card-item">
+              <div class="pricing-card-inner">
+                <h3 class="package-name" data-i18n="pricing.packages.7.name">Gói 10.000</h3>
+                <ul class="package-features">
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.7.feature1">Không giới hạn
+                      tính năng</span></li>
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.7.feature2">10.000 tài liệu
+                      ký</span></li>
+                </ul>
+                <div class="package-price">
+                  <span class="price-value">20.000.000</span>
+                  <span class="price-unit">VND/Gói</span>
+                </div>
+                <a href="#contact" class="btn btn-outline package-btn" data-i18n="pricing.buyNow">Mua ngay</a>
+              </div>
+            </div>
+
+            <!-- Package 9: Enterprise -->
+            <div class="pricing-card-item">
+              <div class="pricing-card-inner">
+                <h3 class="package-name" data-i18n="pricing.packages.8.name">Gói Doanh nghiệp</h3>
+                <ul class="package-features">
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.8.feature1">Không giới hạn
+                      tính năng</span></li>
+                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.8.feature2">Trên 10.000 tài
+                      liệu</span></li>
+                </ul>
+                <div class="package-price">
+                  <span class="price-value" data-i18n="pricing.contactUs">Liên hệ</span>
+                  <span class="price-unit"></span>
+                </div>
+                <a href="#contact" class="btn btn-outline package-btn" data-i18n="pricing.contactBtn">Liên hệ tư vấn</a>
+              </div>
+            </div>
+
           </div>
-          <ul class="pricing-features">
-            <li><span class="check">✓</span> Không giới hạn tài liệu</li>
-            <li><span class="check">✓</span> Không giới hạn người dùng</li>
-            <li><span class="check">✓</span> API tích hợp</li>
-            <li><span class="check">✓</span> Lưu trữ không giới hạn</li>
-            <li><span class="check">✓</span> Account Manager riêng</li>
-          </ul>
-          <a href="#" class="btn btn-outline btn-block" data-i18n="pricing.plans.2.cta">Liên hệ tư vấn</a>
         </div>
+
+        <button class="pricing-nav-btn pricing-nav-next" id="pricingNext" aria-label="Next packages">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Pricing Notes -->
+      <div class="pricing-notes-bottom animate-on-scroll">
+        <p data-i18n="pricing.notes.setup">Chi phí khởi tạo: 500.000đ</p>
+        <p data-i18n="pricing.notes.maintenance">Chi phí duy trì hằng năm: 300.000đ</p>
+      </div>
+
+      <!-- Free Trial CTA -->
+      <div class="pricing-trial-cta animate-on-scroll">
+        <a href="#contact" class="btn btn-outline btn-lg" data-i18n="pricing.trialCta">Dùng thử miễn phí 14 ngày với 50
+          tài liệu</a>
       </div>
     </div>
   </section>

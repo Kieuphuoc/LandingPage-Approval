@@ -382,51 +382,28 @@ const translations = {
         // Pricing
         pricing: {
             badge: "Bảng giá",
-            title: "Chọn gói phù hợp với bạn",
-            desc: "Dùng thử miễn phí 14 ngày, không cần thẻ tín dụng",
-            plans: [
-                {
-                    name: "Cá nhân",
-                    price: "Miễn phí",
-                    features: [
-                        "5 tài liệu/tháng",
-                        "1 người dùng",
-                        "Xác thực Email",
-                        "Lưu trữ 1GB"
-                    ],
-                    cta: "Bắt đầu miễn phí",
-                    popular: false
-                },
-                {
-                    name: "Doanh nghiệp",
-                    price: "499K",
-                    period: "/tháng",
-                    features: [
-                        "100 tài liệu/tháng",
-                        "10 người dùng",
-                        "Xác thực OTP + Email",
-                        "Lưu trữ 50GB",
-                        "Hỗ trợ ưu tiên"
-                    ],
-                    cta: "Dùng thử miễn phí",
-                    popular: true,
-                    popularLabel: "Phổ biến"
-                },
-                {
-                    name: "Enterprise",
-                    price: "Liên hệ",
-                    features: [
-                        "Không giới hạn tài liệu",
-                        "Không giới hạn người dùng",
-                        "eKYC + VNeID + USB Token",
-                        "Lưu trữ không giới hạn",
-                        "API tích hợp",
-                        "Hỗ trợ 24/7"
-                    ],
-                    cta: "Liên hệ tư vấn",
-                    popular: false
-                }
-            ]
+            title: "Báo giá sản phẩm Tài liệu điện tử",
+            desc: "Phí dịch vụ phần mềm: 1.000.000đ/Năm khi sử dụng chính thức",
+            recommendedBadge: "Gói khuyên dùng",
+            buyNow: "Mua ngay",
+            contactUs: "Liên hệ",
+            contactBtn: "Liên hệ tư vấn",
+            trialCta: "Dùng thử miễn phí 14 ngày với 50 tài liệu",
+            packages: [
+                { name: "Gói 100", feature1: "Không giới hạn tính năng", feature2: "100 tài liệu ký" },
+                { name: "Gói 200", feature1: "Không giới hạn tính năng", feature2: "200 tài liệu ký" },
+                { name: "Gói 300", feature1: "Không giới hạn tính năng", feature2: "300 tài liệu ký" },
+                { name: "Gói 500", feature1: "Không giới hạn tính năng", feature2: "500 tài liệu ký" },
+                { name: "Gói 1.000", feature1: "Không giới hạn tính năng", feature2: "1.000 tài liệu ký" },
+                { name: "Gói 2.500", feature1: "Không giới hạn tính năng", feature2: "2.500 tài liệu ký" },
+                { name: "Gói 5.000", feature1: "Không giới hạn tính năng", feature2: "5.000 tài liệu ký" },
+                { name: "Gói 10.000", feature1: "Không giới hạn tính năng", feature2: "10.000 tài liệu ký" },
+                { name: "Gói Doanh nghiệp", feature1: "Không giới hạn tính năng", feature2: "Trên 10.000 tài liệu" }
+            ],
+            notes: {
+                setup: "Chi phí khởi tạo: 500.000đ",
+                maintenance: "Chi phí duy trì hằng năm: 300.000đ"
+            }
         },
 
         // Final CTA Section
@@ -839,51 +816,28 @@ const translations = {
         // Pricing
         pricing: {
             badge: "Pricing",
-            title: "Choose the Right Plan for You",
-            desc: "14-day free trial, no credit card required",
-            plans: [
-                {
-                    name: "Personal",
-                    price: "Free",
-                    features: [
-                        "5 documents/month",
-                        "1 user",
-                        "Email authentication",
-                        "1GB storage"
-                    ],
-                    cta: "Start Free",
-                    popular: false
-                },
-                {
-                    name: "Business",
-                    price: "499K",
-                    period: "/month",
-                    features: [
-                        "100 documents/month",
-                        "10 users",
-                        "OTP + Email authentication",
-                        "50GB storage",
-                        "Priority support"
-                    ],
-                    cta: "Try Free",
-                    popular: true,
-                    popularLabel: "Popular"
-                },
-                {
-                    name: "Enterprise",
-                    price: "Contact",
-                    features: [
-                        "Unlimited documents",
-                        "Unlimited users",
-                        "eKYC + VNeID + USB Token",
-                        "Unlimited storage",
-                        "API integration",
-                        "24/7 support"
-                    ],
-                    cta: "Contact Sales",
-                    popular: false
-                }
-            ]
+            title: "Electronic Document Pricing",
+            desc: "Software service fee: 1,000,000 VND/Year for official use",
+            recommendedBadge: "Recommended",
+            buyNow: "Buy Now",
+            contactUs: "Contact",
+            contactBtn: "Contact Sales",
+            trialCta: "Free 14-day trial with 50 documents",
+            packages: [
+                { name: "Package 100", feature1: "Unlimited features", feature2: "100 documents to sign" },
+                { name: "Package 200", feature1: "Unlimited features", feature2: "200 documents to sign" },
+                { name: "Package 300", feature1: "Unlimited features", feature2: "300 documents to sign" },
+                { name: "Package 500", feature1: "Unlimited features", feature2: "500 documents to sign" },
+                { name: "Package 1,000", feature1: "Unlimited features", feature2: "1,000 documents to sign" },
+                { name: "Package 2,500", feature1: "Unlimited features", feature2: "2,500 documents to sign" },
+                { name: "Package 5,000", feature1: "Unlimited features", feature2: "5,000 documents to sign" },
+                { name: "Package 10,000", feature1: "Unlimited features", feature2: "10,000 documents to sign" },
+                { name: "Enterprise", feature1: "Unlimited features", feature2: "Over 10,000 documents" }
+            ],
+            notes: {
+                setup: "Setup fee: 500,000 VND",
+                maintenance: "Annual maintenance fee: 300,000 VND"
+            }
         },
 
         // Final CTA Section
