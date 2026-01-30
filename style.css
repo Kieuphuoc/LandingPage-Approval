@@ -1924,6 +1924,12 @@ section {
     flex: 1;
     overflow: hidden;
     border-radius: var(--radius-lg);
+    padding-top: 40px;
+    /* Space for recommended badge */
+    padding-bottom: 20px;
+    /* Space for hover shadow */
+    margin-top: -30px;
+    /* Adjust alignment to avoid excessive whitespace */
 }
 
 /* Cards Track */

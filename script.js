@@ -347,20 +347,37 @@ function initPricingCarousel() {
     if (cards.length === 0) return;
 
     let currentIndex = 0;
-    const cardsToShow = 5;
+    const cardsToShow = 5; // Target, but will calculate dynamic
     const totalCards = cards.length;
-    const maxIndex = Math.max(0, totalCards - cardsToShow);
+    // maxIndex removed from const, calculated dynamically
 
     // Calculate card width dynamically
     function getCardWidth() {
         const card = cards[0];
         const style = getComputedStyle(card);
+        const trackStyle = getComputedStyle(track);
+        const gap = parseFloat(trackStyle.gap) || 20; // fallback to 20 if fails
         const marginRight = parseFloat(style.marginRight) || 0;
-        return card.offsetWidth + marginRight + 20; // 20px is the gap
+        return card.offsetWidth + marginRight + gap;
     }
 
     function updateCarousel() {
         const cardWidth = getCardWidth();
+        const containerWidth = carousel.offsetWidth;
+        const visibleCards = containerWidth / cardWidth;
+        // Use ceil to ensure we can scroll past partial cards to see the end
+        // But clamp so we don't scroll too far into empty space if not needed
+        // Actually, if we want to show the last card fully, we need to be able to scroll to (total - visible).
+        // If visible is 3.5, we need to scroll to 9 - 3.5 = 5.5. 
+        // We use integer steps, so ceil(5.5) = 6 is safe (bit of whitespace), floor(5.5) = 5 (might clip 0.5).
+        // Let's use exact calculation for maxIndex then round up for the loop limit.
+
+        let maxIndex = Math.max(0, Math.ceil(totalCards - visibleCards));
+
+        // Improve edge alignment for last item:
+        // If we are at the last index, we might want to clamp translation to exactly the end.
+        // But consistent steps are better for UX usually. Let's stick to standard steps for now.
+
         const translateX = -currentIndex * cardWidth;
         track.style.transform = `translateX(${translateX}px)`;
 
@@ -371,10 +388,21 @@ function initPricingCarousel() {
         // Visual feedback for disabled state
         prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
         nextBtn.style.opacity = currentIndex >= maxIndex ? '0.5' : '1';
+
+        return maxIndex;
     }
 
     function nextSlide() {
-        if (currentIndex < maxIndex) {
+        const maxIndex = updateCarousel();
+        // Calling updateCarousel here is inefficient just to get maxIndex, 
+        // but safe. Better to separate calc. 
+        // Let's recalculate maxIndex here.
+        const cardWidth = getCardWidth();
+        const containerWidth = carousel.offsetWidth;
+        const visibleCards = containerWidth / cardWidth;
+        const currentMaxIndex = Math.max(0, Math.ceil(totalCards - visibleCards));
+
+        if (currentIndex < currentMaxIndex) {
             currentIndex++;
             updateCarousel();
         }

@@ -388,7 +388,7 @@ const translations = {
             buyNow: "Mua ngay",
             contactUs: "Liên hệ",
             contactBtn: "Liên hệ tư vấn",
-            trialCta: "Dùng thử miễn phí 14 ngày với 50 tài liệu",
+            trialCta: "Đăng ký dùng thử miễn phí 14 ngày",
             packages: [
                 { name: "Gói 100", feature1: "Không giới hạn tính năng", feature2: "100 tài liệu ký" },
                 { name: "Gói 200", feature1: "Không giới hạn tính năng", feature2: "200 tài liệu ký" },
@@ -815,14 +815,14 @@ const translations = {
 
         // Pricing
         pricing: {
-            badge: "Pricing",
+            badge: "Pricing Slider",
             title: "Electronic Document Pricing",
             desc: "Software service fee: 1,000,000 VND/Year for official use",
             recommendedBadge: "Recommended",
             buyNow: "Buy Now",
             contactUs: "Contact",
             contactBtn: "Contact Sales",
-            trialCta: "Free 14-day trial with 50 documents",
+            trialCta: "Free 14-day trial",
             packages: [
                 { name: "Package 100", feature1: "Unlimited features", feature2: "100 documents to sign" },
                 { name: "Package 200", feature1: "Unlimited features", feature2: "200 documents to sign" },
