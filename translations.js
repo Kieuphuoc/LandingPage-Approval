@@ -435,6 +435,26 @@ const translations = {
             contactTitle: "Liên hệ",
             copyright: "© 2024 Arito Approval. Bảo lưu mọi quyền.",
             compliance: "Tuân thủ Bộ luật Lao động & Luật Giao dịch điện tử Việt Nam 2023"
+        },
+
+        // Contact Modal
+        contactModal: {
+            title: "Thông tin liên hệ",
+            subtitle: "Vui lòng để lại thông tin, đội ngũ ARITO sẽ liên hệ tư vấn cho bạn.",
+            fullName: "Họ và tên",
+            email: "Email",
+            phone: "Số điện thoại",
+            company: "Tên công ty",
+            requestType: "Vui lòng chọn loại yêu cầu",
+            selectOption: "Chọn loại yêu cầu",
+            optionDemo: "Tư vấn & Demo",
+            optionTrial: "Dùng thử miễn phí",
+            optionPricing: "Nhận báo giá",
+            optionPartner: "Hợp tác kinh doanh",
+            message: "Nội dung yêu cầu",
+            submit: "Gửi đăng ký",
+            disclaimer: "Bằng cách Gửi đăng ký, tôi đồng ý các <a href=\"https://arito.vn/chinh-sach-bao-mat-phan-mem-arito/\" target=\"_blank\">điều khoản và Chính sách bảo mật</a> của ARITO",
+            success: "Cảm ơn bạn đã quan tâm! Đội ngũ ARITO sẽ liên hệ với bạn trong thời gian sớm nhất."
         }
     },
 
@@ -870,6 +890,26 @@ const translations = {
             contactTitle: "Contact",
             copyright: "© 2024 Arito Approval. All rights reserved.",
             compliance: "Compliant with Vietnam Labor Code & E-Transaction Law 2023"
+        },
+
+        // Contact Modal
+        contactModal: {
+            title: "Contact Information",
+            subtitle: "Please leave your information, ARITO team will contact you for advice.",
+            fullName: "Full Name",
+            email: "Email",
+            phone: "Phone Number",
+            company: "Company Name",
+            requestType: "Please select request type",
+            selectOption: "Select request type",
+            optionDemo: "Consultation & Demo",
+            optionTrial: "Free Trial",
+            optionPricing: "Get a Quote",
+            optionPartner: "Business Partnership",
+            message: "Request Content",
+            submit: "Submit Registration",
+            disclaimer: "By submitting, I agree to the <a href=\"https://arito.vn/chinh-sach-bao-mat-phan-mem-arito/\" target=\"_blank\">terms and Privacy Policy</a> of ARITO",
+            success: "Thank you for your interest! ARITO team will contact you as soon as possible."
         }
     }
 };

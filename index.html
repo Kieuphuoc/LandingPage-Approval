@@ -28,7 +28,7 @@
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#" class="logo">
-        <img src="images/signPanel.png" style="width: 180px;" alt="Arito Approval Logo" class="logo-icon">
+        <img src="images/logo_arito.webp" style="width: 90px;" alt="Arito Logo" class="logo-icon">
       </a>
       <div class="nav-links" id="navLinks">
         <a href="#problem-solution" data-i18n="nav.problemSolution">Vấn đề & Giải pháp</a>
@@ -40,11 +40,7 @@
       <div class="nav-buttons">
         <div class="language-switcher">
           <button class="lang-btn" id="langBtn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10" />
-              <line x1="2" y1="12" x2="22" y2="12" />
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-            </svg>
+            <i class="fas fa-globe"></i>
             <span id="currentLang">VI</span>
           </button>
           <div class="lang-dropdown" id="langDropdown">
@@ -77,7 +73,7 @@
     <div class="container hero-container">
       <div class="hero-content">
         <div class="hero-badge animate-fade-in">
-          <span class="badge-icon">📋</span>
+          <span class="badge-icon"><i class="fas fa-clipboard-list"></i></span>
           <span data-i18n="hero.badge">Nền tảng quản lý hợp đồng lao động & hồ sơ nhân sự</span>
         </div>
         <h1 class="hero-title animate-slide-up" data-i18n="hero.title">
@@ -89,23 +85,21 @@
           Bộ luật Lao động Việt Nam.
         </p>
         <div class="hero-cta animate-slide-up delay-2">
-          <a href="#pricing" class="btn btn-primary btn-lg">
-            <span data-i18n="hero.ctaPrimary">Bắt đầu dùng thử miễn phí</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+          <a href="#contact" class="btn btn-primary btn-lg">
+            <span data-i18n="hero.ctaPrimary">Dùng thử miễn phí</span>
+            <i class="fas fa-arrow-right"></i>
           </a>
-          <a href="#contact" class="btn btn-outline btn-lg">
+          <a href="tel:+842871012288" class="btn btn-outline btn-lg">
             <span data-i18n="hero.ctaSecondary">Liên hệ tư vấn</span>
           </a>
         </div>
         <div class="trust-indicators animate-fade-in delay-3">
           <div class="trust-item">
-            <span class="trust-icon">⚖️</span>
+            <span class="trust-icon"><i class="fas fa-balance-scale"></i></span>
             <span data-i18n="hero.trustLabor">Tuân thủ Bộ luật Lao động</span>
           </div>
           <div class="trust-item">
-            <span class="trust-icon">🔒</span>
+            <span class="trust-icon"><i class="fas fa-lock"></i></span>
             <span data-i18n="hero.trustSecurity">Bảo mật ISO 27001</span>
           </div>
         </div>
@@ -140,11 +134,11 @@
             </div>
           </div>
           <div class="floating-badge badge-1">
-            <span class="fb-icon">✓</span>
+            <span class="fb-icon"><i class="fas fa-check-circle"></i></span>
             <span data-i18n="hero.badgeEkyc">eKYC xác thực</span>
           </div>
           <div class="floating-badge badge-2">
-            <span class="fb-icon">📄</span>
+            <span class="fb-icon"><i class="fas fa-file-contract"></i></span>
             <span data-i18n="hero.badgeContract">HĐLĐ hợp lệ</span>
           </div>
         </div>
@@ -213,11 +207,11 @@
       <div class="ps-cards-grid animate-on-scroll">
         <div class="ps-column problem-column">
           <div class="ps-column-header problem-header">
-            <span class="ps-icon">❌</span>
+            <span class="ps-icon"><i class="fas fa-times-circle"></i></span>
             <h3 data-i18n="problemSolution.problemTitle">Quy trình truyền thống</h3>
           </div>
           <div class="ps-card problem-card">
-            <div class="ps-card-icon">📝</div>
+            <div class="ps-card-icon"><i class="fas fa-edit"></i></div>
             <div class="ps-card-content">
               <h4 data-i18n="problemSolution.problems.0.title">Soạn thảo thủ công, rời rạc</h4>
               <p data-i18n="problemSolution.problems.0.desc">Hợp đồng điện tử được soạn bằng Word, lưu file cá nhân,
@@ -225,7 +219,7 @@
             </div>
           </div>
           <div class="ps-card problem-card">
-            <div class="ps-card-icon">⏰</div>
+            <div class="ps-card-icon"><i class="fas fa-clock"></i></div>
             <div class="ps-card-content">
               <h4 data-i18n="problemSolution.problems.1.title">Ký kết mất thời gian</h4>
               <p data-i18n="problemSolution.problems.1.desc">Đặc biệt với nhân sự từ xa, phải in – gửi bưu điện – chờ ký
@@ -233,7 +227,7 @@
             </div>
           </div>
           <div class="ps-card problem-card">
-            <div class="ps-card-icon">📦</div>
+            <div class="ps-card-icon"><i class="fas fa-archive"></i></div>
             <div class="ps-card-content">
               <h4 data-i18n="problemSolution.problems.2.title">Lưu trữ giấy hoặc file rời</h4>
               <p data-i18n="problemSolution.problems.2.desc">Hồ sơ nhân sự nằm rải rác trong tủ, folder, khó tìm kiếm
@@ -241,7 +235,7 @@
             </div>
           </div>
           <div class="ps-card problem-card">
-            <div class="ps-card-icon">🔄</div>
+            <div class="ps-card-icon"><i class="fas fa-sync-alt"></i></div>
             <div class="ps-card-content">
               <h4 data-i18n="problemSolution.problems.3.title">Khó kiểm soát phiên bản</h4>
               <p data-i18n="problemSolution.problems.3.desc">Không rõ phiên bản hợp đồng nào mới nhất, thời hạn gia hạn,
@@ -249,7 +243,7 @@
             </div>
           </div>
           <div class="ps-card problem-card">
-            <div class="ps-card-icon">⚠️</div>
+            <div class="ps-card-icon"><i class="fas fa-exclamation-triangle"></i></div>
             <div class="ps-card-content">
               <h4 data-i18n="problemSolution.problems.4.title">Rủi ro pháp lý & thất lạc</h4>
               <p data-i18n="problemSolution.problems.4.desc">Sai sót nội dung, mất hồ sơ, không đủ căn cứ khi có tranh
@@ -260,17 +254,17 @@
 
         <div class="ps-arrow-divider">
           <div class="arrow-line"></div>
-          <div class="arrow-icon">→</div>
+          <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div>
           <div class="arrow-line"></div>
         </div>
 
         <div class="ps-column solution-column">
           <div class="ps-column-header solution-header">
-            <span class="ps-icon">✅</span>
+            <span class="ps-icon"><i class="fas fa-check-circle"></i></span>
             <h3 data-i18n="problemSolution.solutionTitle">Arito Approval</h3>
           </div>
           <div class="ps-card solution-card">
-            <div class="ps-card-icon">📋</div>
+            <div class="ps-card-icon"><i class="fas fa-tasks"></i></div>
             <div class="ps-card-content">
               <h4 data-i18n="problemSolution.solutions.0.title">Khởi tạo & quản lý tập trung</h4>
               <p data-i18n="problemSolution.solutions.0.desc">Mẫu hợp đồng điện tử chuẩn, tạo nhanh, quản lý trên một
@@ -278,7 +272,7 @@
             </div>
           </div>
           <div class="ps-card solution-card">
-            <div class="ps-card-icon">✍️</div>
+            <div class="ps-card-icon"><i class="fas fa-signature"></i></div>
             <div class="ps-card-content">
               <h4 data-i18n="problemSolution.solutions.1.title">Hỗ trợ ký kết điện tử</h4>
               <p data-i18n="problemSolution.solutions.1.desc">Tích hợp trong quy trình HR, ký mọi lúc mọi nơi qua Email,
@@ -286,7 +280,7 @@
             </div>
           </div>
           <div class="ps-card solution-card">
-            <div class="ps-card-icon">🔐</div>
+            <div class="ps-card-icon"><i class="fas fa-shield-alt"></i></div>
             <div class="ps-card-content">
               <h4 data-i18n="problemSolution.solutions.2.title">Lưu trữ an toàn, dễ tra cứu</h4>
               <p data-i18n="problemSolution.solutions.2.desc">Hồ sơ nhân sự được mã hóa, lưu trữ cloud, tìm kiếm tức thì
@@ -294,7 +288,7 @@
             </div>
           </div>
           <div class="ps-card solution-card">
-            <div class="ps-card-icon">🔄</div>
+            <div class="ps-card-icon"><i class="fas fa-history"></i></div>
             <div class="ps-card-content">
               <h4 data-i18n="problemSolution.solutions.3.title">Quản lý vòng đời hợp đồng</h4>
               <p data-i18n="problemSolution.solutions.3.desc">Tạo → Phê duyệt → Ký kết → Lưu trữ → Tái sử dụng & Gia hạn
@@ -302,7 +296,7 @@
             </div>
           </div>
           <div class="ps-card solution-card">
-            <div class="ps-card-icon">🔗</div>
+            <div class="ps-card-icon"><i class="fas fa-link"></i></div>
             <div class="ps-card-content">
               <h4 data-i18n="problemSolution.solutions.4.title">Kết nối hệ thống HR/ERP</h4>
               <p data-i18n="problemSolution.solutions.4.desc">Tích hợp liền mạch với HRM, ERP, CRM doanh nghiệp qua API
@@ -329,35 +323,35 @@
       </div>
       <div class="benefits-grid">
         <div class="benefit-card animate-on-scroll">
-          <div class="benefit-icon"><span>💰</span></div>
+          <div class="benefit-icon"><span><i class="fas fa-hand-holding-usd"></i></span></div>
           <h3 data-i18n="benefits.items.0.title">Giảm ~80% chi phí xử lý hồ sơ</h3>
           <p data-i18n="benefits.items.0.desc">Loại bỏ in ấn, vận chuyển, lưu kho. Tối ưu chi phí nhân sự ngay từ tháng
             đầu.</p>
         </div>
         <div class="benefit-card animate-on-scroll">
-          <div class="benefit-icon"><span>⚡</span></div>
+          <div class="benefit-icon"><span><i class="fas fa-bolt"></i></span></div>
           <h3 data-i18n="benefits.items.1.title">Rút ngắn thời gian ký HĐLĐ</h3>
           <p data-i18n="benefits.items.1.desc">Từ vài ngày xuống vài phút. Ký ngay khi gửi offer, không cần gặp mặt.</p>
         </div>
         <div class="benefit-card animate-on-scroll">
-          <div class="benefit-icon"><span>🌍</span></div>
+          <div class="benefit-icon"><span><i class="fas fa-mobile-alt"></i></span></div>
           <h3 data-i18n="benefits.items.2.title">Ký kết linh hoạt mọi nơi</h3>
           <p data-i18n="benefits.items.2.desc">Ký trên điện thoại, máy tính, tablet qua Email, SMS hoặc trực tiếp trên
             hệ thống.</p>
         </div>
         <div class="benefit-card animate-on-scroll">
-          <div class="benefit-icon"><span>🔒</span></div>
+          <div class="benefit-icon"><span><i class="fas fa-user-shield"></i></span></div>
           <h3 data-i18n="benefits.items.3.title">An toàn & Bảo mật dữ liệu</h3>
           <p data-i18n="benefits.items.3.desc">ISO 27001, xác thực eKYC. Lưu trữ hồ sơ an toàn ≥ 10 năm.</p>
         </div>
         <div class="benefit-card animate-on-scroll">
-          <div class="benefit-icon"><span>📁</span></div>
+          <div class="benefit-icon"><span><i class="fas fa-folder-open"></i></span></div>
           <h3 data-i18n="benefits.items.4.title">Hồ sơ nhân sự tập trung</h3>
           <p data-i18n="benefits.items.4.desc">Quản lý HĐLĐ, phụ lục, đơn từ trên một nền tảng. Tìm kiếm nhanh, dễ kiểm
             soát.</p>
         </div>
         <div class="benefit-card animate-on-scroll">
-          <div class="benefit-icon"><span>⚖️</span></div>
+          <div class="benefit-icon"><span><i class="fas fa-gavel"></i></span></div>
           <h3 data-i18n="benefits.items.5.title">Giá trị pháp lý đầy đủ</h3>
           <p data-i18n="benefits.items.5.desc">HĐLĐ có giá trị pháp lý tương đương hợp đồng giấy theo quy định.</p>
         </div>
@@ -377,38 +371,38 @@
       </div>
       <div class="features-grid">
         <div class="feature-item animate-on-scroll">
-          <div class="feature-icon">📋</div>
+          <div class="feature-icon"><i class="fas fa-clipboard-list"></i></div>
           <h4 data-i18n="features.items.0.title">Quản lý HĐLĐ & Phụ lục</h4>
           <p data-i18n="features.items.0.desc">Tạo, chỉnh sửa, quản lý tất cả hợp đồng lao động và phụ lục trên một nền
             tảng. Theo dõi thời hạn, nhắc gia
             hạn tự động.</p>
         </div>
         <div class="feature-item animate-on-scroll">
-          <div class="feature-icon">🔐</div>
+          <div class="feature-icon"><i class="fas fa-user-check"></i></div>
           <h4 data-i18n="features.items.1.title">Hỗ trợ nhiều hình thức ký</h4>
           <p data-i18n="features.items.1.desc">Hỗ trợ xác thực eKYC, VNeID, ký ảnh, USB Token, HSM và ký điện tử theo
             đúng quy định pháp luật, linh hoạt
             tích hợp vào quy trình nhân sự.</p>
         </div>
         <div class="feature-item animate-on-scroll">
-          <div class="feature-icon">🔄</div>
+          <div class="feature-icon"><i class="fas fa-random"></i></div>
           <h4 data-i18n="features.items.2.title">Thiết lập luồng HR</h4>
           <p data-i18n="features.items.2.desc">Tùy chỉnh quy trình: Soạn thảo → Phê duyệt → Ký kết (HR & NLĐ).</p>
         </div>
         <div class="feature-item animate-on-scroll">
-          <div class="feature-icon">🔗</div>
+          <div class="feature-icon"><i class="fas fa-plug"></i></div>
           <h4 data-i18n="features.items.3.title">Tích hợp hệ thống</h4>
           <p data-i18n="features.items.3.desc">Kết nối HRM, ERP, CRM qua API. Đồng bộ dữ liệu, giảm nhập liệu thủ công.
           </p>
         </div>
         <div class="feature-item animate-on-scroll">
-          <div class="feature-icon">🌐</div>
+          <div class="feature-icon"><i class="fas fa-globe"></i></div>
           <h4 data-i18n="features.items.4.title">Nền tảng web, không cài đặt</h4>
           <p data-i18n="features.items.4.desc">Truy cập qua trình duyệt, hỗ trợ đa thiết bị. Sử dụng ngay, không cần cài
             app.</p>
         </div>
         <div class="feature-item animate-on-scroll">
-          <div class="feature-icon">👥</div>
+          <div class="feature-icon"><i class="fas fa-users-cog"></i></div>
           <h4 data-i18n="features.items.5.title">Phân quyền chi tiết</h4>
           <p data-i18n="features.items.5.desc">Phân quyền theo vai trò. Kiểm soát rõ ai được xem, sửa, ký từng tài liệu.
           </p>
@@ -532,31 +526,32 @@
 
           <div class="legal-columns">
             <div class="legal-column">
-              <h4 class="legal-column-title" data-i18n="legal.complianceTitle">📜 Tuân thủ pháp luật</h4>
+              <h4 class="legal-column-title" data-i18n="legal.complianceTitle"><i class="fas fa-file-invoice"></i> Tuân
+                thủ pháp luật</h4>
               <div class="legal-items">
                 <div class="legal-item">
-                  <div class="legal-icon">⚖️</div>
+                  <div class="legal-icon"><i class="fas fa-balance-scale"></i></div>
                   <div>
                     <h5 data-i18n="legal.compliance.0.title">Bộ luật Lao động</h5>
                     <p data-i18n="legal.compliance.0.desc">Đảm bảo nội dung HĐLĐ đầy đủ theo quy định</p>
                   </div>
                 </div>
                 <div class="legal-item">
-                  <div class="legal-icon">📋</div>
+                  <div class="legal-icon"><i class="fas fa-clipboard-check"></i></div>
                   <div>
                     <h5 data-i18n="legal.compliance.1.title">Luật Giao dịch điện tử 2023</h5>
                     <p data-i18n="legal.compliance.1.desc">Chữ ký điện tử có giá trị pháp lý tương đương chữ ký tay</p>
                   </div>
                 </div>
                 <div class="legal-item">
-                  <div class="legal-icon">📖</div>
+                  <div class="legal-icon"><i class="fas fa-book"></i></div>
                   <div>
                     <h5 data-i18n="legal.compliance.2.title">Bộ luật Dân sự 2015</h5>
                     <p data-i18n="legal.compliance.2.desc">Hợp đồng điện tử được công nhận và bảo vệ</p>
                   </div>
                 </div>
                 <div class="legal-item">
-                  <div class="legal-icon">🏛️</div>
+                  <div class="legal-icon"><i class="fas fa-landmark"></i></div>
                   <div>
                     <h5 data-i18n="legal.compliance.3.title">Luật Thương mại 2005</h5>
                     <p data-i18n="legal.compliance.3.desc">Giao dịch điện tử trong quan hệ thương mại</p>
@@ -566,31 +561,32 @@
             </div>
 
             <div class="legal-column">
-              <h4 class="legal-column-title" data-i18n="legal.securityTitle">🔒 Bảo mật thông tin</h4>
+              <h4 class="legal-column-title" data-i18n="legal.securityTitle"><i class="fas fa-user-shield"></i> Bảo mật
+                thông tin</h4>
               <div class="legal-items">
                 <div class="legal-item">
-                  <div class="legal-icon">🛡️</div>
+                  <div class="legal-icon"><i class="fas fa-shield-alt"></i></div>
                   <div>
                     <h5 data-i18n="legal.security.0.title">Chứng nhận ISO 27001</h5>
                     <p data-i18n="legal.security.0.desc">Tiêu chuẩn quốc tế về quản lý an ninh thông tin</p>
                   </div>
                 </div>
                 <div class="legal-item">
-                  <div class="legal-icon">🔐</div>
+                  <div class="legal-icon"><i class="fas fa-id-card-alt"></i></div>
                   <div>
                     <h5 data-i18n="legal.security.1.title">eKYC xác thực danh tính</h5>
                     <p data-i18n="legal.security.1.desc">Xác minh chính xác người lao động trước khi ký</p>
                   </div>
                 </div>
                 <div class="legal-item">
-                  <div class="legal-icon">📁</div>
+                  <div class="legal-icon"><i class="fas fa-box-open"></i></div>
                   <div>
                     <h5 data-i18n="legal.security.2.title">Lưu trữ hồ sơ ≥ 10 năm</h5>
                     <p data-i18n="legal.security.2.desc">Đáp ứng yêu cầu lưu trữ hồ sơ lao động theo quy định</p>
                   </div>
                 </div>
                 <div class="legal-item">
-                  <div class="legal-icon">🔑</div>
+                  <div class="legal-icon"><i class="fas fa-key"></i></div>
                   <div>
                     <h5 data-i18n="legal.security.3.title">Kiểm soát truy cập</h5>
                     <p data-i18n="legal.security.3.desc">Phân quyền chi tiết, audit log đầy đủ</p>
@@ -603,7 +599,7 @@
         <div class="legal-visual animate-on-scroll">
           <div class="shield-container">
             <div class="shield">
-              <div class="shield-icon">🛡️</div>
+              <div class="shield-icon"><i class="fas fa-shield-alt"></i></div>
               <div class="shield-ring"></div>
               <div class="shield-ring ring-2"></div>
             </div>
@@ -632,7 +628,7 @@
         <div class="step animate-on-scroll" data-step="1">
           <div class="step-number">1</div>
           <div class="step-content">
-            <div class="step-icon">📤</div>
+            <div class="step-icon"><i class="fas fa-cloud-upload-alt"></i></div>
             <h4 data-i18n="howItWorks.steps.0.title">Tạo / Upload hợp đồng lao động</h4>
             <p data-i18n="howItWorks.steps.0.desc">Sử dụng mẫu HĐLĐ có sẵn hoặc upload file PDF/Word.</p>
           </div>
@@ -640,7 +636,7 @@
         <div class="step animate-on-scroll" data-step="2">
           <div class="step-number">2</div>
           <div class="step-content">
-            <div class="step-icon">🔄</div>
+            <div class="step-icon"><i class="fas fa-random"></i></div>
             <h4 data-i18n="howItWorks.steps.1.title">Thiết lập luồng phê duyệt</h4>
             <p data-i18n="howItWorks.steps.1.desc">Tùy chỉnh quy trình theo cơ cấu tổ chức.</p>
           </div>
@@ -648,7 +644,7 @@
         <div class="step animate-on-scroll" data-step="3">
           <div class="step-number">3</div>
           <div class="step-content">
-            <div class="step-icon">✍️</div>
+            <div class="step-icon"><i class="fas fa-signature"></i></div>
             <h4 data-i18n="howItWorks.steps.2.title">Ký kết hợp đồng</h4>
             <p data-i18n="howItWorks.steps.2.desc">Gửi link ký qua Email, SMS hoặc ký trực tiếp trên hệ thống. Hỗ trợ
               eKYC, VNeID xác thực danh tính người
@@ -663,7 +659,7 @@
         <div class="step animate-on-scroll" data-step="4">
           <div class="step-number">4</div>
           <div class="step-content">
-            <div class="step-icon">📁</div>
+            <div class="step-icon"><i class="fas fa-folder-open"></i></div>
             <h4 data-i18n="howItWorks.steps.3.title">Lưu trữ & Quản lý hồ sơ nhân sự</h4>
             <p data-i18n="howItWorks.steps.3.desc">Hồ sơ lưu trữ an toàn, tra cứu nhanh đa tiêu chí; quản lý tập trung,
               tái sử dụng mẫu và nhắc gia hạn tự
@@ -686,37 +682,37 @@
       </div>
       <div class="use-cases-grid">
         <div class="use-case-card animate-on-scroll">
-          <div class="uc-icon">🌍</div>
+          <div class="uc-icon"><i class="fas fa-map-marker-alt"></i></div>
           <h4 data-i18n="useCases.items.0.title">Doanh nghiệp có nhân sự từ xa</h4>
           <p data-i18n="useCases.items.0.desc">Ký hợp đồng lao động với ứng viên ở bất kỳ đâu, không cần gặp mặt trực
             tiếp hay gửi bưu điện.</p>
         </div>
         <div class="use-case-card animate-on-scroll">
-          <div class="uc-icon">🛒</div>
+          <div class="uc-icon"><i class="fas fa-shopping-cart"></i></div>
           <h4 data-i18n="useCases.items.1.title">E-commerce & Chuỗi bán lẻ</h4>
           <p data-i18n="useCases.items.1.desc">Quản lý hợp đồng cho đội ngũ bán hàng, kho vận, vận chuyển phân tán nhiều
             địa điểm.</p>
         </div>
         <div class="use-case-card animate-on-scroll">
-          <div class="uc-icon">📈</div>
+          <div class="uc-icon"><i class="fas fa-chart-line"></i></div>
           <h4 data-i18n="useCases.items.2.title">Doanh nghiệp tăng trưởng nhanh</h4>
           <p data-i18n="useCases.items.2.desc">Tuyển dụng hàng loạt, onboarding nhanh không bị nghẽn bởi quy trình ký
             kết thủ công.</p>
         </div>
         <div class="use-case-card animate-on-scroll">
-          <div class="uc-icon">🏭</div>
+          <div class="uc-icon"><i class="fas fa-industry"></i></div>
           <h4 data-i18n="useCases.items.3.title">Sản xuất & Khu công nghiệp</h4>
           <p data-i18n="useCases.items.3.desc">Quản lý hợp đồng lao động cho hàng nghìn công nhân, theo dõi thời hạn,
             gia hạn tự động.</p>
         </div>
         <div class="use-case-card animate-on-scroll">
-          <div class="uc-icon">🏗️</div>
+          <div class="uc-icon"><i class="fas fa-building"></i></div>
           <h4 data-i18n="useCases.items.4.title">Bất động sản & Xây dựng</h4>
           <p data-i18n="useCases.items.4.desc">Ký kết với đội ngũ thi công, kỹ sư làm việc tại công trường các tỉnh
             thành khác nhau.</p>
         </div>
         <div class="use-case-card animate-on-scroll">
-          <div class="uc-icon">🏢</div>
+          <div class="uc-icon"><i class="fas fa-city"></i></div>
           <h4 data-i18n="useCases.items.5.title">Doanh nghiệp mọi quy mô</h4>
           <p data-i18n="useCases.items.5.desc">Từ SME đến tập đoàn lớn, tất cả đều cần quản lý hồ sơ lao động chuyên
             nghiệp, tuân thủ pháp luật.</p>
@@ -732,31 +728,8 @@
         <span class="section-badge" data-i18n="socialProof.badge">Khách hàng</span>
         <h2 class="section-title" data-i18n="socialProof.title">Được doanh nghiệp Việt Nam tin dùng</h2>
       </div>
-      <div class="stats-grid animate-on-scroll">
-        <div class="stat-item">
-          <div class="stat-number" data-count="500">500+</div>
-          <div class="stat-label" data-i18n="socialProof.stats.0.label">Doanh nghiệp sử dụng</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number" data-count="50000">50,000+</div>
-          <div class="stat-label" data-i18n="socialProof.stats.1.label">Hợp đồng lao động đã xử lý</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">80%</div>
-          <div class="stat-label" data-i18n="socialProof.stats.2.label">Giảm thời gian xử lý</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">24/7</div>
-          <div class="stat-label" data-i18n="socialProof.stats.3.label">Hỗ trợ kỹ thuật</div>
-        </div>
-      </div>
       <div class="section-header animate-on-scroll">
-        <h3 style="text-align: center;
-    color: var(--gray-500);
-    font-weight: 600;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;" data-i18n="socialProof.successTitle">Doanh nghiệp đã triển khai thành công cùng ARITO</h3>
+
       </div>
       <div class="success-stories-grid animate-on-scroll">
         <a href="https://arito.vn/arito-hr2b-kickoff-du-an-phan-mem-quan-tri-doanh-nghiep/" target="_blank"
@@ -778,7 +751,7 @@
           <img src="images/backimthang_logo.png" alt="Bắc Kim Thang Logo">
         </a>
       </div>
-      <div class="testimonials-grid">
+      <!-- <div class="testimonials-grid">
         <div class="testimonial-card animate-on-scroll">
           <div class="testimonial-quote" data-i18n="socialProof.testimonials.0.quote">"Giảm mạnh thời gian xử lý hợp
             đồng lao động. Trước đây mất 3-5 ngày để ký xong
@@ -815,7 +788,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -831,9 +804,7 @@
       <!-- Pricing Carousel -->
       <div class="pricing-carousel-wrapper animate-on-scroll">
         <button class="pricing-nav-btn pricing-nav-prev" id="pricingPrev" aria-label="Previous packages">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M15 18l-6-6 6-6" />
-          </svg>
+          <i class="fas fa-chevron-left"></i>
         </button>
 
         <div class="pricing-carousel" id="pricingCarousel">
@@ -846,7 +817,8 @@
                 <ul class="package-features">
                   <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.0.feature1">Không giới hạn
                       tính năng</span></li>
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.0.feature2">100 tài liệu
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.0.feature2">100 tài liệu
                       ký</span></li>
                 </ul>
                 <div class="package-price">
@@ -862,9 +834,11 @@
               <div class="pricing-card-inner">
                 <h3 class="package-name" data-i18n="pricing.packages.1.name">Gói 200</h3>
                 <ul class="package-features">
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.1.feature1">Không giới hạn
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.1.feature1">Không giới hạn
                       tính năng</span></li>
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.1.feature2">200 tài liệu
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.1.feature2">200 tài liệu
                       ký</span></li>
                 </ul>
                 <div class="package-price">
@@ -880,9 +854,11 @@
               <div class="pricing-card-inner">
                 <h3 class="package-name" data-i18n="pricing.packages.2.name">Gói 300</h3>
                 <ul class="package-features">
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.2.feature1">Không giới hạn
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.2.feature1">Không giới hạn
                       tính năng</span></li>
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.2.feature2">300 tài liệu
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.2.feature2">300 tài liệu
                       ký</span></li>
                 </ul>
                 <div class="package-price">
@@ -898,9 +874,11 @@
               <div class="pricing-card-inner">
                 <h3 class="package-name" data-i18n="pricing.packages.3.name">Gói 500</h3>
                 <ul class="package-features">
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.3.feature1">Không giới hạn
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.3.feature1">Không giới hạn
                       tính năng</span></li>
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.3.feature2">500 tài liệu
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.3.feature2">500 tài liệu
                       ký</span></li>
                 </ul>
                 <div class="package-price">
@@ -917,9 +895,11 @@
               <div class="pricing-card-inner">
                 <h3 class="package-name" data-i18n="pricing.packages.4.name">Gói 1.000</h3>
                 <ul class="package-features">
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.4.feature1">Không giới hạn
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.4.feature1">Không giới hạn
                       tính năng</span></li>
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.4.feature2">1.000 tài liệu
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.4.feature2">1.000 tài liệu
                       ký</span></li>
                 </ul>
                 <div class="package-price">
@@ -935,9 +915,11 @@
               <div class="pricing-card-inner">
                 <h3 class="package-name" data-i18n="pricing.packages.5.name">Gói 2.500</h3>
                 <ul class="package-features">
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.5.feature1">Không giới hạn
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.5.feature1">Không giới hạn
                       tính năng</span></li>
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.5.feature2">2.500 tài liệu
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.5.feature2">2.500 tài liệu
                       ký</span></li>
                 </ul>
                 <div class="package-price">
@@ -953,9 +935,11 @@
               <div class="pricing-card-inner">
                 <h3 class="package-name" data-i18n="pricing.packages.6.name">Gói 5.000</h3>
                 <ul class="package-features">
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.6.feature1">Không giới hạn
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.6.feature1">Không giới hạn
                       tính năng</span></li>
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.6.feature2">5.000 tài liệu
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.6.feature2">5.000 tài liệu
                       ký</span></li>
                 </ul>
                 <div class="package-price">
@@ -971,9 +955,11 @@
               <div class="pricing-card-inner">
                 <h3 class="package-name" data-i18n="pricing.packages.7.name">Gói 10.000</h3>
                 <ul class="package-features">
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.7.feature1">Không giới hạn
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.7.feature1">Không giới hạn
                       tính năng</span></li>
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.7.feature2">10.000 tài liệu
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.7.feature2">10.000 tài liệu
                       ký</span></li>
                 </ul>
                 <div class="package-price">
@@ -989,16 +975,19 @@
               <div class="pricing-card-inner">
                 <h3 class="package-name" data-i18n="pricing.packages.8.name">Gói Doanh nghiệp</h3>
                 <ul class="package-features">
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.8.feature1">Không giới hạn
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.8.feature1">Không giới hạn
                       tính năng</span></li>
-                  <li><span class="check-icon">✓</span> <span data-i18n="pricing.packages.8.feature2">Trên 10.000 tài
+                  <li><span class="check-icon"><i class="fas fa-check"></i></span> <span
+                      data-i18n="pricing.packages.8.feature2">Trên 10.000 tài
                       liệu</span></li>
                 </ul>
                 <div class="package-price">
                   <span class="price-value" data-i18n="pricing.contactUs">Liên hệ</span>
                   <span class="price-unit" data-i18n="pricing.priceUnit"></span>
                 </div>
-                <a href="#contact" class="btn btn-outline package-btn" data-i18n="pricing.contactBtn">Liên hệ tư vấn</a>
+                <a href="tel:+842871012288" class="btn btn-outline package-btn" data-i18n="pricing.contactBtn">Liên hệ
+                  tư vấn</a>
               </div>
             </div>
 
@@ -1006,9 +995,7 @@
         </div>
 
         <button class="pricing-nav-btn pricing-nav-next" id="pricingNext" aria-label="Next packages">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 18l6-6-6-6" />
-          </svg>
+          <i class="fas fa-chevron-right"></i>
         </button>
       </div>
 
@@ -1037,11 +1024,8 @@
         <div class="cta-buttons">
           <a href="#" class="btn btn-white btn-lg">
             <span data-i18n="finalCta.ctaPrimary">Dùng thử miễn phí</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            <i class="fas fa-arrow-right"></i>
           </a>
-          <a href="#" class="btn btn-outline-white btn-lg" data-i18n="finalCta.ctaSecondary">Đặt lịch demo</a>
         </div>
         <p class="cta-note"><span data-i18n="finalCta.callText">Hoặc gọi ngay:</span> <strong>028 7101 2288</strong></p>
       </div>
@@ -1572,6 +1556,62 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- Contact Form Modal -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-container">
+      <button class="modal-close" id="closeModal" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <h3 data-i18n="contactModal.title">Thông tin liên hệ</h3>
+        <p data-i18n="contactModal.subtitle">Vui lòng để lại thông tin, đội ngũ ARITO sẽ liên hệ tư vấn cho bạn.</p>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="fullName"><span data-i18n="contactModal.fullName">Họ và tên</span> <span
+              class="required">*</span></label>
+          <input type="text" id="fullName" name="fullName" placeholder="Nhập họ và tên" required>
+        </div>
+        <div class="form-group">
+          <label for="email"><span data-i18n="contactModal.email">Email</span> <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone"><span data-i18n="contactModal.phone">Số điện thoại</span> <span
+              class="required">*</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+        </div>
+        <div class="form-group">
+          <label for="company"><span data-i18n="contactModal.company">Tên công ty</span> <span
+              class="required">*</span></label>
+          <input type="text" id="company" name="company" placeholder="Nhập tên công ty" required>
+        </div>
+        <div class="form-group">
+          <label for="requestType"><span data-i18n="contactModal.requestType">Vui lòng chọn loại yêu cầu</span> <span
+              class="required">*</span></label>
+          <div class="select-wrapper">
+            <select id="requestType" name="requestType" required>
+              <option value="" disabled selected data-i18n="contactModal.selectOption">Chọn loại yêu cầu</option>
+              <option value="demo" data-i18n="contactModal.optionDemo">Tư vấn & Demo</option>
+              <option value="trial" data-i18n="contactModal.optionTrial">Dùng thử miễn phí</option>
+              <option value="pricing" data-i18n="contactModal.optionPricing">Nhận báo giá</option>
+              <option value="partner" data-i18n="contactModal.optionPartner">Hợp tác kinh doanh</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message" data-i18n="contactModal.message">Nội dung yêu cầu</label>
+          <textarea id="message" name="message" rows="3" placeholder="Nhập nội dung yêu cầu của bạn"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="submitForm">
+          <span data-i18n="contactModal.submit">Gửi đăng ký</span>
+        </button>
+        <p class="form-disclaimer" data-i18n="contactModal.disclaimer">
+          Bằng cách Gửi đăng ký, tôi đồng ý các <a href="https://arito.vn/chinh-sach-bao-mat-phan-mem-arito/"
+            target="_blank">điều khoản và Chính sách bảo mật</a> của ARITO
+        </p>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>

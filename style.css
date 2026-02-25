@@ -50,6 +50,13 @@
     --transition: all 0.3s ease;
     --transition-fast: all 0.15s ease;
     --transition-slow: all 0.5s ease;
+
+    /* Extra Icon Colors */
+    --accent-indigo: #6366f1;
+    --accent-purple: #8b5cf6;
+    --accent-teal: #14b8a6;
+    --accent-gold: #f59e0b;
+    --accent-cyan: #06b6d4;
 }
 
 /* Reset & Base */
@@ -3020,4 +3027,407 @@ section {
     .package-btn::before {
         display: none;
     }
+}
+
+/* ========================================
+   Contact Form Modal
+======================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    padding: 1.5rem;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-container {
+    background: var(--white);
+    width: 100%;
+    max-width: 550px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    padding: 2.5rem;
+    position: relative;
+    transform: translateY(20px);
+    transition: var(--transition-slow);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-overlay.active .modal-container {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: var(--gray-100);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--gray-600);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    background: var(--gray-200);
+    color: var(--gray-900);
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.modal-header h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.modal-header p {
+    color: var(--gray-500);
+    font-size: 0.95rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--gray-700);
+}
+
+.required {
+    color: var(--danger);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem 1rem;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--gray-900);
+    transition: var(--transition-fast);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--gray-400);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-500);
+    background: var(--white);
+    box-shadow: 0 0 0 4px var(--primary-50);
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: '\f078';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-400);
+    pointer-events: none;
+    font-size: 0.75rem;
+}
+
+.form-group select {
+    appearance: none;
+    width: 100%;
+}
+
+.form-disclaimer {
+    font-size: 0.8rem;
+    color: var(--primary-900);
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+    .modal-container {
+        padding: 1.5rem;
+    }
+
+    .modal-header h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ========================================
+   Font Awesome Icon Refinements & Colors
+======================================== */
+.trust-icon i,
+.fb-icon i,
+.ps-icon i,
+.ps-card-icon i,
+.benefit-icon i,
+.feature-icon i,
+.step-icon i,
+.uc-icon i,
+.legal-icon i,
+.shield-icon i,
+.feature-arrow i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.btn i {
+    margin-left: 0.75rem;
+    font-size: 0.9em;
+}
+
+.benefit-icon span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--primary-50);
+    color: var(--primary-600);
+    border-radius: 50%;
+    font-size: 0.8rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+/* Specific Section Colors */
+
+/* Hero Trust Icons */
+.trust-item:nth-child(1) .trust-icon {
+    color: var(--primary-500);
+}
+
+.trust-item:nth-child(2) .trust-icon {
+    color: var(--success);
+}
+
+/* Floating Badges */
+.badge-1 .fb-icon {
+    color: var(--success);
+}
+
+.badge-2 .fb-icon {
+    color: var(--accent-cyan);
+}
+
+/* Section Headers & Dividers */
+.problem-header .ps-icon {
+    color: var(--danger);
+}
+
+.solution-header .ps-icon {
+    color: var(--success);
+}
+
+.ps-arrow-divider .arrow-icon {
+    color: var(--primary-400);
+}
+
+/* Problem Cards */
+.problem-column .ps-card:nth-child(2) .ps-card-icon {
+    color: var(--accent-gold);
+    background: #fffbeb;
+}
+
+.problem-column .ps-card:nth-child(3) .ps-card-icon {
+    color: var(--warning);
+    background: #fff7ed;
+}
+
+.problem-column .ps-card:nth-child(4) .ps-card-icon {
+    color: var(--danger);
+    background: #fef2f2;
+}
+
+.problem-column .ps-card:nth-child(5) .ps-card-icon {
+    color: var(--gray-500);
+    background: var(--gray-100);
+}
+
+.problem-column .ps-card:nth-child(6) .ps-card-icon {
+    color: var(--danger);
+    background: #fef2f2;
+}
+
+/* Solution Cards */
+.solution-column .ps-card:nth-child(2) .ps-card-icon {
+    color: var(--primary-600);
+    background: var(--primary-50);
+}
+
+.solution-column .ps-card:nth-child(3) .ps-card-icon {
+    color: var(--accent-teal);
+    background: #f0fdfa;
+}
+
+.solution-column .ps-card:nth-child(4) .ps-card-icon {
+    color: var(--success);
+    background: #f0fdf4;
+}
+
+.solution-column .ps-card:nth-child(5) .ps-card-icon {
+    color: var(--accent-indigo);
+    background: #f5f3ff;
+}
+
+.solution-column .ps-card:nth-child(6) .ps-card-icon {
+    color: var(--accent-purple);
+    background: #faf5ff;
+}
+
+/* Benefits Icons */
+.benefit-card:nth-child(1) .benefit-icon {
+    color: var(--accent-gold);
+    background: #fffbeb;
+}
+
+.benefit-card:nth-child(2) .benefit-icon {
+    color: var(--accent-cyan);
+    background: #ecfeff;
+}
+
+.benefit-card:nth-child(3) .benefit-icon {
+    color: var(--accent-indigo);
+    background: #f5f3ff;
+}
+
+.benefit-card:nth-child(4) .benefit-icon {
+    color: var(--success);
+    background: #ecfdf5;
+}
+
+.benefit-card:nth-child(5) .benefit-icon {
+    color: var(--primary-500);
+    background: var(--primary-50);
+}
+
+.benefit-card:nth-child(6) .benefit-icon {
+    color: var(--accent-purple);
+    background: #faf5ff;
+}
+
+/* Features Icons */
+.feature-item .feature-icon {
+    color: var(--primary-600);
+}
+
+.feature-item:nth-child(2n) .feature-icon {
+    color: var(--accent-indigo);
+}
+
+/* How it works */
+.step-icon {
+    color: var(--primary-600);
+}
+
+.step:nth-child(2) .step-icon {
+    color: var(--primary-600);
+}
+
+.step:nth-child(3) .step-icon {
+    color: var(--accent-teal);
+}
+
+.step:nth-child(4) .step-icon {
+    color: var(--accent-indigo);
+}
+
+.step:nth-child(5) .step-icon {
+    color: var(--accent-purple);
+}
+
+/* Use Cases */
+.use-case-card:nth-child(1) .uc-icon {
+    color: var(--accent-cyan);
+}
+
+.use-case-card:nth-child(2) .uc-icon {
+    color: var(--accent-gold);
+}
+
+.use-case-card:nth-child(3) .uc-icon {
+    color: var(--accent-teal);
+}
+
+.use-case-card:nth-child(4) .uc-icon {
+    color: var(--accent-indigo);
+}
+
+.use-case-card:nth-child(5) .uc-icon {
+    color: var(--accent-purple);
+}
+
+.use-case-card:nth-child(6) .uc-icon {
+    color: var(--primary-500);
+}
+
+/* Legal Icons */
+.legal-icon {
+    color: var(--primary-600);
+}
+
+.legal-column:nth-child(2) .legal-icon {
+    color: var(--success);
+}
+
+.shield-icon {
+    color: var(--success);
 }

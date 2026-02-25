@@ -24,7 +24,92 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Pricing carousel
     initPricingCarousel();
+
+    // Contact modal
+    initContactModal();
 });
+
+/**
+ * Contact Form Modal - Open, close and submit logic
+ */
+function initContactModal() {
+    const modal = document.getElementById('contactModal');
+    const openBtns = document.querySelectorAll('[data-i18n="nav.freeTrial"], [data-i18n="hero.ctaPrimary"], [data-i18n="pricing.trialCta"], [data-i18n="finalCta.ctaPrimary"], [data-i18n="pricing.buyNow"], [data-i18n="highlightedFeatures.feature1.cta"], [data-i18n="highlightedFeatures.feature2.cta"], [data-i18n="finalCta.ctaSecondary"]');
+    const closeBtn = document.getElementById('closeModal');
+    const contactForm = document.getElementById('contactForm');
+    const requestTypeSelect = document.getElementById('requestType');
+
+    // Open modal on CTA click
+    openBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // Check if button is actually a phone link (shouldn't be in openBtns but safe to check)
+            if (btn.tagName === 'A' && btn.getAttribute('href').startsWith('tel:')) return;
+
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+
+            // Pre-select request type based on button text
+            const btnKey = btn.dataset.i18n;
+            if (btnKey.includes('freeTrial') || btnKey.includes('trialCta') || btnKey.includes('ctaPrimary')) {
+                requestTypeSelect.value = 'trial';
+            } else if (btnKey.includes('buyNow')) {
+                requestTypeSelect.value = 'pricing';
+            } else if (btnKey.includes('ctaSecondary') || btnKey.includes('feature') || btnKey.includes('demo')) {
+                requestTypeSelect.value = 'demo';
+            }
+        });
+    });
+
+
+    // Close modal function
+    const closeModal = () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scroll
+    };
+
+    // Close on button click
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close on overlay click
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    // Form submission
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+
+            console.log('Form submitted:', data);
+
+            // Show success message (using translated string)
+            const currentLang = localStorage.getItem('language') || 'vi';
+            const successMsg = translations[currentLang].contactModal.success;
+
+            // Temporary feedback (can be improved with a nice toast/notification)
+            alert(successMsg);
+
+            // Reset and close
+            contactForm.reset();
+            closeModal();
+        });
+    }
+}
+
 
 /**
  * Navbar scroll effect - adds shadow on scroll
