@@ -1173,72 +1173,119 @@ section {
 .legal-simple-item {
     display: flex;
     gap: 1.5rem;
-    align-items: flex-start;
-    padding: 1.25rem;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: var(--radius-md);
-    transition: var(--transition-base);
+    align-items: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    transition: var(--transition);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .legal-simple-item:hover {
-    background: rgba(255, 255, 255, 0.07);
-    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+    border-color: rgba(59, 130, 246, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .legal-simple-item .legal-icon {
-    width: 48px;
-    height: 48px;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-    border-radius: var(--radius-md);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     color: white;
     flex-shrink: 0;
-    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+    transition: var(--transition);
+}
+
+.legal-simple-item:hover .legal-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.5);
 }
 
 .legal-item-text h4 {
     color: white;
-    margin-bottom: 0.25rem;
-    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 .legal-item-text p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
+    color: var(--primary-200);
+    font-size: 0.875rem;
     line-height: 1.5;
+    opacity: 0.9;
 }
 
 .legal-commitment-box {
-    margin-top: 3rem;
-    padding: 2rem;
-    background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 102, 255, 0.05));
-    border-left: 5px solid var(--primary-color);
-    border-radius: var(--radius-md);
+    margin-top: 4rem;
+    padding: 3.5rem 2rem;
+    background: radial-gradient(circle at top left, var(--primary-900), #0a0f1d);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-xl);
     position: relative;
     overflow: hidden;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(59, 130, 246, 0.1);
+    animation: quoteGlow 6s ease-in-out infinite;
 }
 
 .legal-commitment-box::before {
-    content: '\f132';
+    content: '\f10d';
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     position: absolute;
-    right: -20px;
-    bottom: -20px;
-    font-size: 8rem;
-    color: rgba(255, 255, 255, 0.03);
+    top: 1rem;
+    left: 2rem;
+    font-size: 3rem;
+    color: rgba(59, 130, 246, 0.2);
+    opacity: 0.5;
+}
+
+.legal-commitment-box::after {
+    content: '\f10e';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    font-size: 3rem;
+    color: rgba(59, 130, 246, 0.2);
+    opacity: 0.5;
 }
 
 .legal-commitment-box p {
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 500;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
     line-height: 1.6;
     margin: 0;
     font-style: italic;
+    background: linear-gradient(135deg, #fff 0%, var(--primary-200) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes quoteGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(59, 130, 246, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 20px 50px rgba(37, 99, 235, 0.2), inset 0 0 30px rgba(59, 130, 246, 0.2);
+    }
 }
 
 /* ========================================

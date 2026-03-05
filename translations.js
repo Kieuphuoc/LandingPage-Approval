@@ -358,7 +358,7 @@ const translations = {
             unlimitedUsers: "Không giới hạn người dùng",
             support247: "Hỗ trợ 24/7",
             starter: {
-                name: "Gói Khởi đầu (Starter)",
+                name: "Gói Khởi đầu \n(Starter)",
                 desc: "Cho cá nhân hoặc hộ kinh doanh.",
                 cta: "Bắt đầu ngay",
                 tiers: [
