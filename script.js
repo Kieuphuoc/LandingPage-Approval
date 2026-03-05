@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Language switcher
     initLanguageSwitcher();
 
-    // Pricing slider
-    initPricingCarousel();
+    // Pricing Toggle
+    initPricingToggle();
 
     // Benefits slider
     initBenefitsSlider();
@@ -475,51 +475,35 @@ function initLanguageSwitcher() {
 // initRippleEffect();
 
 /**
- * Pricing Slider - Navigate through 3 categories
+ * Pricing Toggle - Switch between Monthly and Yearly billing
  */
-function initPricingCarousel() {
-    const track = document.getElementById('pricingTrack');
-    const dots = document.querySelectorAll('.pricing-dot');
-    const prevBtn = document.getElementById('pricingPrev');
-    const nextBtn = document.getElementById('pricingNext');
+function initPricingToggle() {
+    const toggle = document.getElementById('pricingToggle');
+    const labelMonthly = document.getElementById('labelMonthly');
+    const labelYearly = document.getElementById('labelYearly');
 
-    if (!track || dots.length === 0) return;
+    if (!toggle || !labelMonthly || !labelYearly) return;
 
-    let currentSlide = 0;
-    const totalSlides = 3;
+    toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        labelMonthly.classList.toggle('active');
+        labelYearly.classList.toggle('active');
 
-    function goToSlide(index) {
-        currentSlide = index;
-        track.style.transform = `translateX(-${index * 100}%)`;
-
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
-        });
-    }
-
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            goToSlide(index);
-        });
+        // Logic to update prices if we had different values for monthly/yearly
+        // const isYearly = toggle.classList.contains('active');
+        // updatePricingValues(isYearly);
     });
 
-    if (prevBtn && nextBtn) {
-        prevBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            goToSlide(currentSlide);
-        });
-        nextBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            goToSlide(currentSlide);
-        });
-    }
+    labelMonthly.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        labelMonthly.classList.add('active');
+        labelYearly.classList.remove('active');
+    });
 
-    // Initialize dots based on data-index
-    dots.forEach(dot => {
-        dot.addEventListener('click', function () {
-            const index = parseInt(this.getAttribute('data-index'));
-            goToSlide(index);
-        });
+    labelYearly.addEventListener('click', () => {
+        toggle.classList.add('active');
+        labelMonthly.classList.remove('active');
+        labelYearly.classList.add('active');
     });
 }
 

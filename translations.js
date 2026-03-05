@@ -350,43 +350,47 @@ const translations = {
             priceUnit: "VND",
             contactBtn: "Liên hệ tư vấn",
             trialCta: "Đăng ký dùng thử miễn phí 14 ngày",
+            toggleMonthly: "Thanh toán tháng",
+            toggleYearly: "Thanh toán năm",
+            mostPopular: "Được tin dùng nhất",
+            saveBadge: "Tiết kiệm 20%",
+            customPlan: "Giải pháp tùy chỉnh theo nhu cầu riêng",
+            unlimitedUsers: "Không giới hạn người dùng",
+            support247: "Hỗ trợ 24/7",
+            starter: {
+                name: "Gói Khởi đầu (Starter)",
+                desc: "Cho cá nhân hoặc hộ kinh doanh.",
+                cta: "Bắt đầu ngay",
+                tiers: [
+                    { name: "100 tài liệu", id: "s100" },
+                    { name: "200 tài liệu", id: "s200" },
+                    { name: "300 tài liệu", id: "s300" }
+                ]
+            },
+            professional: {
+                name: "Gói Chuyên nghiệp (Professional)",
+                desc: "Cho doanh nghiệp vừa và nhỏ (SME).",
+                cta: "Nâng cấp ngay",
+                tiers: [
+                    { name: "500 tài liệu", id: "p500" },
+                    { name: "1.000 tài liệu", id: "p1000" },
+                    { name: "2.500 tài liệu", id: "p2500" }
+                ]
+            },
+            enterprise: {
+                name: "Gói Doanh nghiệp (Enterprise)",
+                desc: "Cho tập đoàn lớn cần tùy chỉnh sâu.",
+                cta: "Liên hệ tư vấn",
+                tiers: [
+                    { name: "5.000 tài liệu", id: "e5000" },
+                    { name: "10.000 tài liệu", id: "e10000" },
+                    { name: "Gói DN (liên hệ thêm)", id: "edn" }
+                ]
+            },
             notes: {
                 setup: "Chi phí khởi tạo phần mềm: 500.000đ",
                 maintenance: "Chi phí dịch vụ phần mềm: 300.000đ/Năm"
-            },
-            categories: [
-                {
-                    id: "starter",
-                    name: "Gói Khởi đầu (Starter)",
-                    desc: "Cho cá nhân hoặc hộ kinh doanh.",
-                    packages: [
-                        { name: "Gói 100", price: "Thỏa thuận" },
-                        { name: "Gói 200", price: "Thỏa thuận" },
-                        { name: "Gói 300", price: "Thỏa thuận" }
-                    ]
-                },
-                {
-                    id: "professional",
-                    name: "Gói Chuyên nghiệp (Professional)",
-                    desc: "Cho doanh nghiệp vừa và nhỏ (SME).",
-                    badge: "Được tin dùng nhất",
-                    packages: [
-                        { name: "Gói 500", price: "Thỏa thuận" },
-                        { name: "Gói 1000", price: "Thỏa thuận" },
-                        { name: "Gói 2500", price: "Thỏa thuận" }
-                    ]
-                },
-                {
-                    id: "enterprise",
-                    name: "Gói Doanh nghiệp (Enterprise)",
-                    desc: "Cho tập đoàn lớn cần tùy chỉnh sâu.",
-                    packages: [
-                        { name: "Gói 5000", price: "Thỏa thuận" },
-                        { name: "Gói 10000", price: "Thỏa thuận" },
-                        { name: "Gói DN", price: "Liên hệ thêm" }
-                    ]
-                }
-            ]
+            }
         },
 
         // Final CTA Section
@@ -789,43 +793,47 @@ const translations = {
             priceUnit: "VND",
             contactBtn: "Contact Sales",
             trialCta: "Free 14-day trial",
+            toggleMonthly: "Monthly Billing",
+            toggleYearly: "Yearly Billing",
+            mostPopular: "Most Popular",
+            saveBadge: "Save 20%",
+            customPlan: "Custom solution for your needs",
+            unlimitedUsers: "Unlimited users",
+            support247: "24/7 Support",
+            starter: {
+                name: "Starter Package",
+                desc: "For individuals or small businesses.",
+                cta: "Get Started",
+                tiers: [
+                    { name: "100 documents", id: "s100" },
+                    { name: "200 documents", id: "s200" },
+                    { name: "300 documents", id: "s300" }
+                ]
+            },
+            professional: {
+                name: "Professional Package",
+                desc: "For small and medium enterprises (SME).",
+                cta: "Upgrade Now",
+                tiers: [
+                    { name: "500 documents", id: "p500" },
+                    { name: "1,000 documents", id: "p1000" },
+                    { name: "2,500 documents", id: "p2500" }
+                ]
+            },
+            enterprise: {
+                name: "Enterprise Package",
+                desc: "For large corporations needing deep customization.",
+                cta: "Contact Sales",
+                tiers: [
+                    { name: "5,000 documents", id: "e5000" },
+                    { name: "10,000 documents", id: "e10000" },
+                    { name: "Enterprise Plan (custom)", id: "edn" }
+                ]
+            },
             notes: {
                 setup: "Software setup fee: 500,000 VND",
                 maintenance: "Software service fee: 300,000 VND/Year"
-            },
-            categories: [
-                {
-                    id: "starter",
-                    name: "Starter Package",
-                    desc: "For individuals or small businesses.",
-                    packages: [
-                        { name: "Package 100", price: "Negotiable" },
-                        { name: "Package 200", price: "Negotiable" },
-                        { name: "Package 300", price: "Negotiable" }
-                    ]
-                },
-                {
-                    id: "professional",
-                    name: "Professional Package",
-                    desc: "For small and medium enterprises (SME).",
-                    badge: "Most Popular",
-                    packages: [
-                        { name: "Package 500", price: "Negotiable" },
-                        { name: "Package 1000", price: "Negotiable" },
-                        { name: "Package 2500", price: "Negotiable" }
-                    ]
-                },
-                {
-                    id: "enterprise",
-                    name: "Enterprise Package",
-                    desc: "For large corporations needing deep customization.",
-                    packages: [
-                        { name: "Package 5000", price: "Negotiable" },
-                        { name: "Package 10000", price: "Negotiable" },
-                        { name: "Corp Package", price: "Contact for details" }
-                    ]
-                }
-            ]
+            }
         },
 
         // Final CTA Section

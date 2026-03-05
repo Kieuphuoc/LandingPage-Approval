@@ -15,7 +15,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <link rel="icon" href="images/logo_arito.webp" type="image/webp">
+  <link rel="icon" href="images/logo_a.webp" type="image/webp">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="translations.js"></script>
 </head>
@@ -430,7 +430,7 @@
         <div class="feature-highlight-image">
           <div class="feature-mockup">
             <img src="/images/tinhnang1.jpg" alt="Xác thực danh tính eKYC"
-              style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+              style="width: 70%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
           </div>
         </div>
         <div class="feature-highlight-content">
@@ -587,7 +587,7 @@
         <div class="feature-highlight-image">
           <div class="feature-mockup">
             <img src="/images/tinhnang4.png" alt="Trợ lý AI thông minh"
-              style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+              style="width: 70%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
           </div>
         </div>
       </div>
@@ -848,98 +848,74 @@
           của doanh nghiệp bạn. Tiết kiệm hơn, ký kết nhanh hơn cùng Arito.</p>
       </div>
 
-      <!-- Pricing Slider Container -->
-      <div class="pricing-slider-container animate-on-scroll">
-        <button class="pricing-nav-btn prev" id="pricingPrev"><i class="fas fa-chevron-left"></i></button>
-        <button class="pricing-nav-btn next" id="pricingNext"><i class="fas fa-chevron-right"></i></button>
-
-        <div class="pricing-slider-viewport">
-          <div class="pricing-track" id="pricingTrack">
-            <!-- Slide 1: Starter -->
-            <div class="pricing-slide">
-              <div class="pricing-category-card">
-                <div class="category-header">
-                  <i class="fas fa-seedling"></i>
-                  <h3 data-i18n="pricing.categories.0.name">Gói Khởi đầu (Starter)</h3>
-                  <p data-i18n="pricing.categories.0.desc">Cho cá nhân hoặc hộ kinh doanh.</p>
-                </div>
-                <div class="package-tiers">
-                  <div class="tier-item">
-                    <span data-i18n="pricing.categories.0.packages.0.name">Gói 100</span>
-                    <span class="tier-price" data-i18n="pricing.categories.0.packages.0.price">Thỏa thuận</span>
-                  </div>
-                  <div class="tier-item">
-                    <span data-i18n="pricing.categories.0.packages.1.name">Gói 200</span>
-                    <span class="tier-price" data-i18n="pricing.categories.0.packages.1.price">Thỏa thuận</span>
-                  </div>
-                  <div class="tier-item">
-                    <span data-i18n="pricing.categories.0.packages.2.name">Gói 300</span>
-                    <span class="tier-price" data-i18n="pricing.categories.0.packages.2.price">Thỏa thuận</span>
-                  </div>
-                </div>
-                <button class="btn btn-primary" data-i18n="pricing.contactBtn">Liên hệ tư vấn</button>
-              </div>
+      <div class="pricing-grid animate-on-scroll">
+        <!-- Package 1: Starter -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3 class="package-name" data-i18n="pricing.starter.name">Gói Khởi đầu (Starter)</h3>
+            <p class="package-desc" data-i18n="pricing.starter.desc">Cho cá nhân hoặc hộ kinh doanh.</p>
+          </div>
+          <div class="tier-list">
+            <div class="tier-frame">
+              <span class="tier-name" data-i18n="pricing.starter.tiers.0.name">100 tài liệu</span>
             </div>
-
-            <!-- Slide 2: Professional -->
-            <div class="pricing-slide">
-              <div class="pricing-category-card recommended">
-                <div class="recommended-tag" data-i18n="pricing.categories.1.badge">Được tin dùng nhất</div>
-                <div class="category-header">
-                  <i class="fas fa-briefcase"></i>
-                  <h3 data-i18n="pricing.categories.1.name">Gói Chuyên nghiệp (Professional)</h3>
-                  <p data-i18n="pricing.categories.1.desc">Cho doanh nghiệp vừa và nhỏ (SME).</p>
-                </div>
-                <div class="package-tiers">
-                  <div class="tier-item">
-                    <span data-i18n="pricing.categories.1.packages.0.name">Gói 500</span>
-                    <span class="tier-price" data-i18n="pricing.categories.1.packages.0.price">Thỏa thuận</span>
-                  </div>
-                  <div class="tier-item">
-                    <span data-i18n="pricing.categories.1.packages.1.name">Gói 1000</span>
-                    <span class="tier-price" data-i18n="pricing.categories.1.packages.1.price">Thỏa thuận</span>
-                  </div>
-                  <div class="tier-item">
-                    <span data-i18n="pricing.categories.1.packages.2.name">Gói 2500</span>
-                    <span class="tier-price" data-i18n="pricing.categories.1.packages.2.price">Thỏa thuận</span>
-                  </div>
-                </div>
-                <button class="btn btn-primary" data-i18n="pricing.contactBtn">Liên hệ tư vấn</button>
-              </div>
+            <div class="tier-frame">
+              <span class="tier-name" data-i18n="pricing.starter.tiers.1.name">200 tài liệu</span>
             </div>
-
-            <!-- Slide 3: Enterprise -->
-            <div class="pricing-slide">
-              <div class="pricing-category-card">
-                <div class="category-header">
-                  <i class="fas fa-building"></i>
-                  <h3 data-i18n="pricing.categories.2.name">Gói Doanh nghiệp (Enterprise)</h3>
-                  <p data-i18n="pricing.categories.2.desc">Cho tập đoàn lớn cần tùy chỉnh sâu.</p>
-                </div>
-                <div class="package-tiers">
-                  <div class="tier-item">
-                    <span data-i18n="pricing.categories.2.packages.0.name">Gói 5000</span>
-                    <span class="tier-price" data-i18n="pricing.categories.2.packages.0.price">Thỏa thuận</span>
-                  </div>
-                  <div class="tier-item">
-                    <span data-i18n="pricing.categories.2.packages.1.name">Gói 10000</span>
-                    <span class="tier-price" data-i18n="pricing.categories.2.packages.1.price">Thỏa thuận</span>
-                  </div>
-                  <div class="tier-item">
-                    <span data-i18n="pricing.categories.2.packages.2.name">Gói DN</span>
-                    <span class="tier-price" data-i18n="pricing.categories.2.packages.2.price">Liên hệ thêm</span>
-                  </div>
-                </div>
-                <button class="btn btn-primary" data-i18n="pricing.contactBtn">Liên hệ tư vấn</button>
-              </div>
+            <div class="tier-frame">
+              <span class="tier-name" data-i18n="pricing.starter.tiers.2.name">300 tài liệu</span>
             </div>
+          </div>
+          <div class="group-cta">
+            <button class="btn btn-outline" data-i18n="pricing.starter.cta">Bắt đầu ngay</button>
           </div>
         </div>
 
-        <div class="pricing-slider-controls">
-          <button class="pricing-dot active" data-index="0"></button>
-          <button class="pricing-dot" data-index="1"></button>
-          <button class="pricing-dot" data-index="2"></button>
+        <!-- Package 2: Professional -->
+        <div class="pricing-card highlight">
+          <div class="pricing-card-header">
+            <h3 class="package-name">
+              <span data-i18n="pricing.professional.name">Gói Chuyên nghiệp (Professional)</span><br>
+              <span class="popular-tag" data-i18n="pricing.mostPopular">Được tin dùng nhất</span>
+            </h3>
+            <p class="package-desc" data-i18n="pricing.professional.desc">Cho doanh nghiệp vừa và nhỏ (SME).</p>
+          </div>
+          <div class="tier-list">
+            <div class="tier-frame">
+              <span class="tier-name" data-i18n="pricing.professional.tiers.0.name">500 tài liệu</span>
+            </div>
+            <div class="tier-frame">
+              <span class="tier-name" data-i18n="pricing.professional.tiers.1.name">1.000 tài liệu</span>
+            </div>
+            <div class="tier-frame">
+              <span class="tier-name" data-i18n="pricing.professional.tiers.2.name">2.500 tài liệu</span>
+            </div>
+          </div>
+          <div class="group-cta">
+            <button class="btn btn-primary" data-i18n="pricing.professional.cta">Nâng cấp ngay</button>
+          </div>
+        </div>
+
+        <!-- Package 3: Enterprise -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3 class="package-name" data-i18n="pricing.enterprise.name">Gói Doanh nghiệp (Enterprise)</h3>
+            <p class="package-desc" data-i18n="pricing.enterprise.desc">Cho tập đoàn lớn cần tùy chỉnh sâu.</p>
+          </div>
+          <div class="tier-list">
+            <div class="tier-frame">
+              <span class="tier-name" data-i18n="pricing.enterprise.tiers.0.name">5.000 tài liệu</span>
+            </div>
+            <div class="tier-frame">
+              <span class="tier-name" data-i18n="pricing.enterprise.tiers.1.name">10.000 tài liệu</span>
+            </div>
+            <div class="tier-frame">
+              <span class="tier-name" data-i18n="pricing.enterprise.tiers.2.name">Gói DN (liên hệ thêm)</span>
+            </div>
+          </div>
+          <div class="group-cta">
+            <button class="btn btn-outline" data-i18n="pricing.enterprise.cta">Liên hệ tư vấn</button>
+          </div>
         </div>
       </div>
 
@@ -954,6 +930,8 @@
         <button class="btn btn-outline btn-lg" data-i18n="pricing.trialCta">Đăng ký dùng thử miễn phí 14 ngày</button>
       </div>
     </div>
+  </section>
+  </div>
   </section>
 
   <!-- Final CTA Section -->
