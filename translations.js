@@ -238,7 +238,7 @@ const translations = {
                     desc: "Tích hợp công nghệ nhận diện khuôn mặt và kiểm tra CCCD gắn chip để định danh chính xác 100% người ký."
                 }
             ],
-            commitment: "Arito cam kết bảo vệ quyền lợi của doanh nghiệp bằng nền tảng công nghệ an toàn nhất. Mọi tài liệu của bạn là tài sản bất khả xâm phạm."
+            commitment: "\" Arito cam kết bảo vệ quyền lợi của doanh nghiệp bằng nền tảng công nghệ an toàn nhất.Mọi tài liệu của bạn là tài sản bất khả xâm phạm.\""
         },
 
         // How It Works
@@ -399,6 +399,7 @@ const translations = {
             title: "Bắt đầu hành trình số hóa quy trình ký kết ngay hôm nay!",
             desc: "Tham gia cùng 3000+ doanh nghiệp đang bứt phá tốc độ vận hành cùng Arito eContract. Chỉ mất 60 giây để thiết lập tài liệu đầu tiên.",
             ctaPrimary: "Liên hệ tư vấn",
+            hotlineLabel: "Hotline:",
             hotline: "84.2871.012288",
             trustMarkers: [
                 { icon: "💳", text: "Không yêu cầu thẻ tín dụng" },
@@ -455,7 +456,7 @@ const translations = {
             problemSolution: "Problem & Solution",
             benefits: "Benefits",
             features: "Features",
-            howItWorks: "How It Works",
+            howItWorks: "Process",
             pricing: "Pricing",
             login: "Login",
             freeTrial: "Free Trial"
@@ -466,7 +467,7 @@ const translations = {
             badge: "Labor Contract & HR Document Management Platform",
             title: "Manage <span class='gradient-text'>Labor Contracts</span><br>Centralized & Professional",
             subtitle: "Create, sign, and store labor contracts. Manage all HR documents centrally, securely, and in compliance with Vietnam Labor Code.",
-            ctaPrimary: "Start Free Trial",
+            ctaPrimary: "Learn More",
             ctaSecondary: "Contact Sales",
             trustLabor: "Labor Code Compliant",
             trustSecurity: "ISO 27001 Certified",
@@ -485,35 +486,173 @@ const translations = {
         },
 
         // Problem Solution Section
-        howItWorks: {
-            badge: "Process",
-            title: "4 Steps to Digitize Your Signing Process in 60 Seconds.",
-            desc: "Simple process, integrated into your current workflow",
-            steps: [
+        problemSolution: {
+            badge: "Problem & Solution",
+            title: "Breakthrough Performance with Paperless Signing.",
+            desc: "Eliminate 90% of administrative barriers, converting from manual to comprehensive automation.",
+            problemTitle: "Traditional Process",
+            solutionTitle: "Arito eContract",
+            problems: [
                 {
-                    icon: "📤",
-                    title: "Step 1: Initialization & Drafting",
-                    desc: "Choose a template from the Arito library or upload a PDF/Word file."
+                    icon: "📝",
+                    title: "Fragmented & Manual",
+                    desc: "Drafting in Word, saving personal files, prone to errors, and lacking standard templates."
+                },
+                {
+                    icon: "⏰",
+                    title: "Delayed & Costly",
+                    desc: "Waiting for manual signatures, high printing and delivery costs, and frequent process bottlenecks."
+                },
+                {
+                    icon: "📦",
+                    title: "Bulky & Easily Lost",
+                    desc: "Paper records take up space, are difficult to preserve, and carry high damage risks."
                 },
                 {
                     icon: "🔄",
-                    title: "Step 2: Setup Approval Workflow",
-                    desc: "Assign approvers, signers, and priority order (parallel or sequential)."
+                    title: "Out of Control",
+                    desc: "Unclear progress, difficult version management, and easy to forget re-signing deadlines or appendices."
+                },
+                {
+                    icon: "⚠️",
+                    title: "Isolated & Manual",
+                    desc: "Re-entering data across multiple software, leading to frequent data discrepancies."
+                }
+            ],
+            solutions: [
+                {
+                    icon: "📋",
+                    title: "Centralized Template Management",
+                    desc: "Standardized template library, fast creation, and data synchronization on a single platform."
                 },
                 {
                     icon: "✍️",
-                    title: "Step 3: Digital Signing & eKYC",
-                    desc: "Recipients receive notifications via Email/QR Code and perform signing with face verification."
+                    title: "Instant Digital Signature",
+                    desc: "Integrated e-signing anytime, anywhere via Email/SMS; approval in just 1 minute."
                 },
                 {
-                    icon: "📁",
-                    title: "Step 4: Completion & Storage",
-                    desc: "Contracts are automatically encrypted, copies sent to parties, and securely stored on Cloud."
+                    icon: "🔐",
+                    title: "Secure Digitization",
+                    desc: "Encrypted Cloud storage, absolute safety, and instant data retrieval by criteria."
+                },
+                {
+                    icon: "🔄",
+                    title: "Lifecycle Automation",
+                    desc: "Real-time tracking dashboard; automated reminders for renewal and reuse."
+                },
+                {
+                    icon: "🔗",
+                    title: "Internet of Things (API)",
+                    desc: "Seamless integration with HRM, ERP, CRM; data automatically flows to the central system."
                 }
             ]
         },
 
         // Benefits Section
+        benefits: {
+            badge: "Benefits",
+            title: "Why Vietnamese Businesses Trust Arito Approval?",
+            desc: "Comprehensive labor contract & HR record management solution for Vietnamese enterprises",
+            items: [
+                {
+                    icon: "🚀",
+                    title: "Operational Performance Optimization",
+                    desc: "Cut 90% of time: Completely eliminate printing, delivery, and waiting for manual signatures. Signing now takes minutes instead of days. <br><br> Save 70% of costs: Minimize stationery, physical storage, and manual operational staff costs."
+                },
+                {
+                    icon: "⚖️",
+                    title: "Solid Legality & Absolute Security",
+                    desc: "100% Vietnamese Law Compliance: Full legal validity under E-Transaction Law and Labor Code. <br><br> International Standard Data Safety: Multi-layered security, data encryption, and centralized storage on a secure Cloud platform."
+                },
+                {
+                    icon: "🌐",
+                    title: "Comprehensive Management Ecosystem",
+                    desc: "Unlimited Connections: Easily integrate with existing ERP, HRM, Accounting systems (especially Arito's strength in ERP and accounting). <br><br> Document Lifecycle Management: Beyond signing, Arito helps you track from creation and approval to storage and auto-renewal reminders."
+                }
+            ]
+        },
+        highlightRow: "More than just signing software, Arito is a companion helping you digitize your entire internal approval and commercial transaction processes.",
+
+        // Features Section
+        features: {
+            badge: "Features",
+            title: "Professional HR Document Management Tools",
+            desc: "Create, edit, and track all labor contracts and amendments on one platform. Auto-renewal reminders.",
+            items: [
+                {
+                    icon: "📋",
+                    title: "Contract Template Management",
+                    desc: "Standardized template library, easy to customize and create with just a few steps."
+                },
+                {
+                    icon: "🔐",
+                    title: "Multi-method Digital Signing",
+                    desc: "Supports signing via Email, SMS, QR code for those without email, or integrated USB Token, HSM digital signatures."
+                },
+                {
+                    icon: "🔄",
+                    title: "Multi-level Approval",
+                    desc: "Set up flexible signing workflows by department or contract value."
+                },
+                {
+                    icon: "🔗",
+                    title: "Cloud Storage",
+                    desc: "Centralized storage system, secure encryption, and access anytime, anywhere."
+                },
+                {
+                    icon: "🌐",
+                    title: "Search & Reporting",
+                    desc: "Smart contract search by keyword, status, or effective date."
+                }
+            ]
+        },
+
+        highlightedFeatures: {
+            badge: "Highlighted Features",
+            title: "Breakthrough Advantages of Arito eContract",
+            feature1: {
+                title: "In-depth eKYC Identity Verification",
+                desc: "Beyond signing, Arito integrates eKYC technology to verify signers via face recognition and chip-based ID cards. This eliminates forgery risks and ensures authorship for each signature.",
+                points: [
+                    { title: "Face Recognition:", desc: "Real-time signer verification." },
+                    { title: "Chip-based ID:", desc: "Check the legal validity of identity documents." },
+                    { title: "Anti-forgery:", desc: "Absolute prevention of identity fraud." }
+                ],
+                cta: "Experience eKYC"
+            },
+            feature2: {
+                title: "Contract Lifecycle Automation",
+                desc: "The system is more than just storage; it's smarter than that:",
+                points: [
+                    { title: "Auto-create Contracts:", desc: "Based on available standard templates." },
+                    { title: "Auto-reminders:", desc: "Send notifications before contract expiration for timely renewal or re-signing." },
+                    { title: "Audit Trail:", desc: "Record detailed steps from drafting to signing completion." }
+                ],
+                cta: "Explore Automation"
+            },
+            feature3: {
+                title: "Strong Integration Capabilities",
+                desc: "Arito Approval seamlessly connects with HRM, ERP, CRM systems via standard APIs.",
+                points: [
+                    { title: "Data Sync:", desc: "Automatically flow to the central system without re-entry." },
+                    { title: "ERP Connection:", desc: "Special strength in Arito's ERP and accounting segments." },
+                    { title: "Standard API:", desc: "Easily integrate with any existing system." }
+                ],
+                cta: "View API Docs"
+            },
+            feature4: {
+                title: "AI Assistant – Instant Signing Support",
+                desc: "Arito integrates a smart Chatbot to answer all usage questions on the spot.",
+                points: [
+                    { title: "Visual Guidance:", desc: "Automatic guidance for creating templates, sending for signature, and eKYC." },
+                    { title: "Legal Answer:", desc: "Quickly answer questions about legality or error handling." },
+                    { title: "24/7 Operation:", desc: "Chatbot is always ready whenever you need." }
+                ],
+                cta: "Chat with AI Assistant"
+            }
+        },
+
+        // Legal & Security
         legal: {
             badge: "Legal & Security",
             title: "Peace of Mind Transactions – Solid Legality",
@@ -537,7 +676,7 @@ const translations = {
                 {
                     icon: "🏛️",
                     title: "ISO 27001 Standard",
-                    desc: "Information security management system operated according to international standards."
+                    desc: "Information security management system operated according to international standards, ensuring no data leaks."
                 },
                 {
                     icon: "🔐",
@@ -545,171 +684,34 @@ const translations = {
                     desc: "Integrated face recognition and chip-based ID card check for 100% accurate identification."
                 }
             ],
-            commitment: "Arito is committed to protecting your business's interests with the most secure technology. Your documents are inviolable assets."
-        },
-
-        // Features Section
-        features: {
-            badge: "Features",
-            title: "Professional HR Document Management Tools",
-            desc: "Create, edit, and track all labor contracts and amendments on one platform. Auto-renewal reminders.",
-            items: [
-                {
-                    icon: "📋",
-                    title: "Contract & Amendment Management",
-                    desc: "Create, edit, manage all labor contracts and amendments on one platform. Track deadlines, auto-renewal reminders."
-                },
-                {
-                    icon: "🔐",
-                    title: "Multiple Signing Methods",
-                    desc: "Support eKYC, VNeID authentication, image signature, USB Token, HSM, and digital signatures according to legal regulations, flexibly integrated into HR processes."
-                },
-                {
-                    icon: "🔄",
-                    title: "HR Workflow Setup",
-                    desc: "Customize process: Draft → Approve → Sign (HR & Employee)."
-                },
-                {
-                    icon: "🔗",
-                    title: "System Integration",
-                    desc: "Connect HRM, ERP, CRM via API. Sync data, reduce manual entry."
-                },
-                {
-                    icon: "🌐",
-                    title: "Web Platform, No Installation",
-                    desc: "Access via browser, multi-device support. Use immediately, no app installation needed."
-                },
-                {
-                    icon: "👥",
-                    title: "Detailed Permission Control",
-                    desc: "Role-based permissions. Clear control over who can view, edit, sign each document."
-                }
-            ]
-        },
-
-        // Highlighted Features
-        highlightedFeatures: {
-            title: "Register Once. Sign Everywhere<br>Seamlessly Across the System",
-            desc: "Signpanel helps businesses improve efficiency and reduce time for workflows related to signing",
-            feature1: {
-                title: "Digital Signature Registration & Integration",
-                desc: "Easily enter digital signature card number from provider and integrate signature into Signpanel system",
-                points: [
-                    {
-                        title: "Simple signature registration:",
-                        desc: "Customers register digital signatures from providers and integrate signatures into Arito Approval system"
-                    },
-                    {
-                        title: "Easy signature integration:",
-                        desc: "Just easily integrate registration on Arito Approval system"
-                    },
-                    {
-                        title: "Convenient signature management:",
-                        desc: "Easily manage digital signatures registered by the business"
-                    }
-                ],
-                cta: "Register Demo"
-            },
-            feature2: {
-                title: "Fast and Secure Document Signing",
-                desc: "Signers can sign digitally right on the application conveniently",
-                points: [
-                    {
-                        title: "Convenient signing operation:",
-                        desc: "Quick document signing, convenient remote signing, on computer or phone"
-                    },
-                    {
-                        title: "High security, safe to use:",
-                        desc: "Arito Approval sets up strict signer authentication mechanisms with PIN codes, OTP codes..."
-                    },
-                    {
-                        title: "Easy to view and manage signing history:",
-                        desc: "Users can easily view signing history and manage documents"
-                    }
-                ],
-                cta: "Register Demo"
-            }
-        },
-
-        // Legal & Security
-        legal: {
-            badge: "Legal & Security",
-            title: "Compliant with Vietnam Labor Code & E-Transaction Law",
-            desc: "Arito Approval is designed to fully meet legal regulations on electronic labor contracts in Vietnam.",
-            complianceTitle: "📜 Legal Compliance",
-            securityTitle: "🔒 Information Security",
-            compliance: [
-                {
-                    icon: "⚖️",
-                    title: "Labor Code",
-                    desc: "Ensure complete contract content as regulated"
-                },
-                {
-                    icon: "📋",
-                    title: "E-Transaction Law 2023",
-                    desc: "Digital signatures have legal validity equivalent to handwritten signatures"
-                },
-                {
-                    icon: "📖",
-                    title: "Civil Code 2015",
-                    desc: "Electronic contracts are recognized and protected"
-                },
-                {
-                    icon: "🏛️",
-                    title: "Commercial Law 2005",
-                    desc: "Electronic transactions in commercial relations"
-                }
-            ],
-            security: [
-                {
-                    icon: "🛡️",
-                    title: "ISO 27001 Certified",
-                    desc: "International standard for information security management"
-                },
-                {
-                    icon: "🔐",
-                    title: "eKYC Identity Verification",
-                    desc: "Accurately verify employees before signing"
-                },
-                {
-                    icon: "📁",
-                    title: "Record Storage ≥ 10 Years",
-                    desc: "Meet labor record storage requirements as regulated"
-                },
-                {
-                    icon: "🔑",
-                    title: "Access Control",
-                    desc: "Detailed permissions, complete audit log"
-                }
-            ]
+            commitment: "\"Arito is committed to protecting your business's interests with the most secure technology. Your documents are inviolable assets.\""
         },
 
         // How It Works
         howItWorks: {
             badge: "Process",
-            title: "4 Steps to Manage Labor Contracts",
-            desc: "Simple process, integrated into your current HR workflow",
+            title: "4 Steps to Digitize Your Signing Process in 60 Seconds.",
+            desc: "Simple process, integrated into your current business workflow",
             steps: [
                 {
                     icon: "📤",
-                    title: "Create / Upload Labor Contract",
-                    desc: "Use available contract templates or upload PDF/Word files."
+                    title: "Step 1: Initialization & Drafting",
+                    desc: "Choose a template from the Arito library or upload a PDF/Word file."
                 },
                 {
                     icon: "🔄",
-                    title: "Set Up Approval Workflow",
-                    desc: "Customize process according to organizational structure."
+                    title: "Step 2: Setup Approval Workflow",
+                    desc: "Assign approvers, signers, and priority order (parallel or sequential)."
                 },
                 {
                     icon: "✍️",
-                    title: "Sign Contract",
-                    desc: "Send signing link via Email, SMS, or sign directly on the system. Support eKYC, VNeID for employee identity verification.",
-                    tags: ["Email", "SMS", "System"]
+                    title: "Step 3: Digital Signing & eKYC",
+                    desc: "Recipients receive notifications via Email/QR Code and perform signing with face verification."
                 },
                 {
                     icon: "📁",
-                    title: "Store & Manage HR Records",
-                    desc: "Securely stored records, quick multi-criteria search; centralized management, template reuse, and auto-renewal reminders."
+                    title: "Step 4: Completion & Storage",
+                    desc: "Contracts are automatically encrypted, copies sent to parties, and securely stored on Cloud."
                 }
             ]
         },
@@ -826,7 +828,7 @@ const translations = {
                 desc: "For large corporations needing deep customization.",
                 cta: "Contact Sales",
                 tiers: [
-                    { name: "2,500 documents", price: "8,000,000 VND", id: "e2500" },
+                    { name: "2.500 documents", price: "8,000,000 VND", id: "e2500" },
                     { name: "5,000 documents", price: "13,500,000 VND", id: "e5000" },
                     { name: "10,000 documents", price: "20,000,000 VND", id: "e10000" },
                     { name: "Over 10,000", price: "Contact us", id: "edn" }
@@ -845,7 +847,13 @@ const translations = {
             ctaPrimary: "Try Free",
             ctaSecondary: "Schedule Demo",
             callText: "Or call now:",
-            hotline: "84.2871.012288"
+            hotlineLabel: "Hotline:",
+            hotline: "84.2871.012288",
+            trustMarkers: [
+                { text: "No credit card required" },
+                { text: "24/7 Technical support" },
+                { text: "Cancel anytime" }
+            ]
         },
 
         // Footer Section
