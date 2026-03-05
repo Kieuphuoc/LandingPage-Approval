@@ -19,9 +19,9 @@ const translations = {
         // Hero Section
         hero: {
             badge: "Nền tảng quản lý hợp đồng lao động & hồ sơ nhân sự",
-            title: "Quản lý <span class='gradient-text'>hợp đồng lao động</span><br>Tập trung & Chuyên nghiệp",
-            subtitle: "Tạo, ký kết và lưu trữ hợp đồng lao động. Quản lý toàn bộ hồ sơ nhân sự tập trung, an toàn và tuân thủ Bộ luật Lao động Việt Nam.",
-            ctaPrimary: "Bắt đầu dùng thử miễn phí",
+            title: "Nền tảng Ký số & <span class='gradient-text'>Quản lý Hợp đồng</span><br>Chuẩn Pháp lý",
+            subtitle: "Tối ưu hóa quản lý nhân sự và giao dịch thương mại với hệ thống ký điện tử tuân thủ nghiêm ngặt Bộ luật Lao động và Luật Giao dịch điện tử Việt Nam.",
+            ctaPrimary: "Tìm hiểu thêm",
             ctaSecondary: "Liên hệ tư vấn",
             trustLabor: "Tuân thủ Bộ luật Lao động",
             trustSecurity: "Bảo mật ISO 27001",
@@ -42,62 +42,62 @@ const translations = {
         // Problem Solution Section
         problemSolution: {
             badge: "Vấn đề & Giải pháp",
-            title: "Quy trình quản lý hợp đồng truyền thống đang tốn rất nhiều thời gian và chi phí",
-            desc: "Chuyển đổi từ quy trình thủ công sang quản lý hợp đồng tập trung, chuyên nghiệp",
+            title: "Bứt phá hiệu suất với Quy trình ký kết không giấy tờ.",
+            desc: "Loại bỏ 90% rào cản hành chính, chuyển đổi từ thủ công sang tự động hóa toàn diện.",
             problemTitle: "Quy trình truyền thống",
-            solutionTitle: "Arito Approval",
+            solutionTitle: "Arito eContract",
             problems: [
                 {
                     icon: "📝",
-                    title: "Soạn thảo thủ công, rời rạc",
-                    desc: "Hợp đồng lao động được soạn bằng Word, lưu file cá nhân, không có mẫu chuẩn"
+                    title: "Rời rạc & Thủ công",
+                    desc: "Soạn thảo Word, lưu file cá nhân, dễ sai sót và không có mẫu chuẩn."
                 },
                 {
                     icon: "⏰",
-                    title: "Ký kết mất thời gian",
-                    desc: "Đặc biệt với nhân sự từ xa, phải in – gửi bưu điện – chờ ký – scan lại"
+                    title: "Chậm trễ & Tốn kém",
+                    desc: "Chờ đợi ký tay, tốn chi phí in ấn, chuyển phát và dễ tắc nghẽn quy trình."
                 },
                 {
                     icon: "📦",
-                    title: "Lưu trữ giấy hoặc file rời",
-                    desc: "Hồ sơ nhân sự nằm rải rác trong tủ, folder, khó tìm kiếm khi cần"
+                    title: "Cồng kềnh & Dễ thất lạc",
+                    desc: "Hồ sơ giấy chiếm diện tích, khó bảo quản, rủi ro hư hỏng cao."
                 },
                 {
                     icon: "🔄",
-                    title: "Khó kiểm soát phiên bản",
-                    desc: "Không rõ phiên bản hợp đồng nào mới nhất, thời hạn gia hạn, phụ lục đã ký"
+                    title: "Mất kiểm soát",
+                    desc: "Không rõ tiến độ, khó quản lý phiên bản, dễ quên hạn tái ký hoặc phụ lục."
                 },
                 {
                     icon: "⚠️",
-                    title: "Rủi ro pháp lý & thất lạc",
-                    desc: "Sai sót nội dung, mất hồ sơ, không đủ căn cứ khi có tranh chấp lao động"
+                    title: "Cô lập & Thủ công",
+                    desc: "Phải nhập liệu lại lên nhiều phần mềm khác nhau, dễ sai lệch dữ liệu."
                 }
             ],
             solutions: [
                 {
                     icon: "📋",
-                    title: "Khởi tạo & quản lý tập trung",
-                    desc: "Mẫu hợp đồng lao động chuẩn, tạo nhanh, quản lý trên một nền tảng duy nhất"
+                    title: "Quản lý mẫu tập trung",
+                    desc: "Thư viện mẫu chuẩn hóa, khởi tạo nhanh, dữ liệu đồng bộ trên một nền tảng."
                 },
                 {
                     icon: "✍️",
-                    title: "Hỗ trợ ký kết điện tử",
-                    desc: "Tích hợp trong quy trình HR, ký mọi lúc mọi nơi qua Email, SMS, hệ thống"
+                    title: "Ký số tức thì",
+                    desc: "Tích hợp ký điện tử mọi lúc, mọi nơi qua Email/SMS; ký duyệt chỉ trong 1 phút."
                 },
                 {
                     icon: "🔐",
-                    title: "Lưu trữ an toàn, dễ tra cứu",
-                    desc: "Hồ sơ nhân sự được mã hóa, lưu trữ cloud, tìm kiếm tức thì theo nhiều tiêu chí"
+                    title: "Số hóa an toàn",
+                    desc: "Lưu trữ Cloud mã hóa, an toàn tuyệt đối, truy xuất dữ liệu tức thì theo tiêu chí."
                 },
                 {
                     icon: "🔄",
-                    title: "Quản lý vòng đời hợp đồng",
-                    desc: "Tạo → Phê duyệt → Ký kết → Lưu trữ → Tái sử dụng & Gia hạn tự động nhắc nhở"
+                    title: "Tự động hóa vòng đời",
+                    desc: "Dashboard theo dõi thời gian thực; tự động nhắc nhở gia hạn và tái sử dụng."
                 },
                 {
                     icon: "🔗",
-                    title: "Kết nối hệ thống HR/ERP",
-                    desc: "Tích hợp liền mạch với HRM, ERP, CRM doanh nghiệp qua API chuẩn"
+                    title: "Kết nối vạn vật (API)",
+                    desc: "Tích hợp liền mạch với HRM, ERP, CRM; dữ liệu tự động đổ về hệ thống trung tâm."
                 }
             ]
         },
@@ -105,41 +105,27 @@ const translations = {
         // Benefits Section
         benefits: {
             badge: "Lợi ích",
-            title: "Tại sao chọn Arito Approval?",
+            title: "Tại sao các Doanh nghiệp tin dùng Arito Approval?",
             desc: "Giải pháp quản lý hợp đồng lao động & hồ sơ nhân sự toàn diện cho doanh nghiệp Việt Nam",
             items: [
                 {
-                    icon: "💰",
-                    title: "Giảm ~80% chi phí xử lý hồ sơ",
-                    desc: "Loại bỏ in ấn, vận chuyển, lưu kho. Tối ưu chi phí nhân sự ngay từ tháng đầu."
-                },
-                {
-                    icon: "⚡",
-                    title: "Rút ngắn thời gian ký HĐLĐ",
-                    desc: "Từ vài ngày xuống vài phút. Ký ngay khi gửi offer, không cần gặp mặt."
-                },
-                {
-                    icon: "🌍",
-                    title: "Ký kết linh hoạt mọi nơi",
-                    desc: "Ký trên điện thoại, máy tính, tablet qua Email, SMS hoặc trực tiếp trên hệ thống."
-                },
-                {
-                    icon: "🔒",
-                    title: "An toàn & Bảo mật dữ liệu",
-                    desc: "ISO 27001, xác thực eKYC. Lưu trữ hồ sơ an toàn ≥ 10 năm."
-                },
-                {
-                    icon: "📁",
-                    title: "Hồ sơ nhân sự tập trung",
-                    desc: "Quản lý HĐLĐ, phụ lục, đơn từ trên một nền tảng. Tìm kiếm nhanh, dễ kiểm soát."
+                    icon: "🚀",
+                    title: "Tối ưu hóa hiệu suất vận hành",
+                    desc: "Cắt giảm 90% thời gian: Loại bỏ hoàn toàn việc in ấn, chuyển phát và chờ đợi ký tay. Quy trình ký kết giờ đây chỉ tính bằng phút thay vì bằng ngày. <br><br> Tiết kiệm 70% chi phí: Giảm thiểu chi phí văn phòng phẩm, lưu kho vật lý và nhân sự vận hành thủ công."
                 },
                 {
                     icon: "⚖️",
-                    title: "Giá trị pháp lý đầy đủ",
-                    desc: "HĐLĐ có giá trị pháp lý tương đương hợp đồng giấy theo quy định."
+                    title: "Pháp lý vững chắc & Bảo mật tuyệt đối",
+                    desc: "Tuân thủ 100% Luật Việt Nam: Đảm bảo đầy đủ tính pháp lý theo Luật Giao dịch điện tử và Bộ luật Lao động. <br><br> An toàn dữ liệu chuẩn quốc tế: Hệ thống được bảo mật đa tầng, mã hóa dữ liệu và lưu trữ tập trung trên nền tảng Cloud an toàn."
+                },
+                {
+                    icon: "🌐",
+                    title: "Hệ sinh thái quản trị toàn diện",
+                    desc: "Kết nối không giới hạn: Dễ dàng tích hợp với các hệ thống ERP, HRM, Accounting hiện có của doanh nghiệp (đặc biệt là thế mạnh trong mảng ERP và kế toán của Arito). <br><br> Quản lý vòng đời chứng từ: Không chỉ là ký, Arito giúp bạn theo dõi từ khâu khởi tạo, phê duyệt đến khi lưu trữ và nhắc hạn tái ký tự động."
                 }
             ]
         },
+        highlightRow: "Không chỉ là phần mềm ký số, Arito là người đồng hành giúp số hóa toàn bộ quy trình phê duyệt nội bộ và giao dịch thương mại của bạn.",
 
         // Features Section
         features: {
@@ -149,160 +135,137 @@ const translations = {
             items: [
                 {
                     icon: "📋",
-                    title: "Quản lý HĐLĐ & Phụ lục",
-                    desc: "Tạo, chỉnh sửa, quản lý tất cả hợp đồng lao động và phụ lục trên một nền tảng. Theo dõi thời hạn, nhắc gia hạn tự động."
+                    title: "Quản lý mẫu hợp đồng",
+                    desc: "Thư viện mẫu chuẩn hóa, dễ dàng tùy chỉnh và khởi tạo chỉ với vài thao tác."
                 },
                 {
                     icon: "🔐",
-                    title: "Hỗ trợ nhiều hình thức ký",
-                    desc: "Hỗ trợ xác thực eKYC, VNeID, ký ảnh, USB Token, HSM và ký điện tử theo đúng quy định pháp luật, linh hoạt tích hợp vào quy trình nhân sự."
+                    title: "Ký số đa phương thức",
+                    desc: "Hỗ trợ ký qua Email, SMS, mã QR dành cho người không có email hoặc tích hợp chữ ký số USB Token, HSM."
                 },
                 {
                     icon: "🔄",
-                    title: "Thiết lập luồng HR",
-                    desc: "Tùy chỉnh quy trình: Soạn thảo → Phê duyệt → Ký kết (HR & NLĐ)."
+                    title: "Phê duyệt đa cấp",
+                    desc: "Thiết lập luồng ký duyệt linh hoạt theo từng phòng ban hoặc giá trị hợp đồng."
                 },
                 {
                     icon: "🔗",
-                    title: "Tích hợp hệ thống",
-                    desc: "Kết nối HRM, ERP, CRM qua API. Đồng bộ dữ liệu, giảm nhập liệu thủ công."
+                    title: "Lưu trữ đám mây",
+                    desc: "Hệ thống lưu trữ tập trung, mã hóa an toàn và cho phép truy xuất mọi lúc mọi nơi."
                 },
                 {
                     icon: "🌐",
-                    title: "Nền tảng web, không cài đặt",
-                    desc: "Truy cập qua trình duyệt, hỗ trợ đa thiết bị. Sử dụng ngay, không cần cài app."
-                },
-                {
-                    icon: "👥",
-                    title: "Phân quyền chi tiết",
-                    desc: "Phân quyền theo vai trò. Kiểm soát rõ ai được xem, sửa, ký từng tài liệu."
+                    title: "Tra cứu & Báo cáo",
+                    desc: "Tìm kiếm hợp đồng thông minh theo từ khóa, trạng thái hoặc ngày hiệu lực."
                 }
             ]
         },
 
         highlightedFeatures: {
             badge: "Tính năng nổi bật",
-            title: "Một lần đăng ký. Ký mọi nơi<br>Liên mạch toàn hệ thống",
-            desc: "Signpanel giúp doanh nghiệp nâng cao hiệu quả và giảm thiểu thời gian cho các quy trình làm việc có liên quan đến việc ký kết",
+            title: "Ưu điểm đột phá của Arito eContract",
             feature1: {
-                title: "Đăng ký và tích hợp chữ ký điện tử",
-                desc: "Dễ dàng nhập số thẻ đăng ký chữ ký điện tử từ đơn vị cung cấp và tích hợp chữ ký vào hệ thống của Signpanel",
+                title: "Xác thực danh tính eKYC chuyên sâu",
+                desc: "Không chỉ là ký, Arito tích hợp công nghệ eKYC để xác thực người ký qua khuôn mặt và CCCD gắn chip. Điều này loại bỏ hoàn toàn rủi ro giả mạo và đảm bảo tính chính chủ cho từng bản ký kết.",
                 points: [
-                    {
-                        title: "Đăng ký chữ ký đơn giản:",
-                        desc: "Khách hàng đăng ký chữ ký điện tử từ các đơn vị cung cấp và tích hợp chữ ký vào hệ thống của Arito Approval"
-                    },
-                    {
-                        title: "Tích hợp chữ ký dễ dàng:",
-                        desc: "Chỉ cần tích hợp dễ dàng đăng ký trên hệ thống của Arito Approval"
-                    },
-                    {
-                        title: "Quản lý chữ ký thuận tiện:",
-                        desc: "Dễ dàng quản lý các chữ ký điện tử mà doanh nghiệp đăng ký"
-                    }
+                    { title: "Nhận diện khuôn mặt:", desc: "Xác thực người ký theo thời gian thực." },
+                    { title: "CCCD gắn chip:", desc: "Kiểm tra tính hợp pháp của giấy tờ tùy thân." },
+                    { title: "Chống giả mạo:", desc: "Ngăn chặn tuyệt đối các hành vi gian lận danh tính." }
                 ],
-                cta: "Đăng ký Demo"
+                cta: "Trải nghiệm eKYC"
             },
             feature2: {
-                title: "Ký văn bản nhanh chóng, bảo mật cao",
-                desc: "Người ký có thể ký chữ ký điện tử ngay trên ứng dụng một cách thuận tiện",
+                title: "Tự động hóa vòng đời Hợp đồng",
+                desc: "Hệ thống không chỉ lưu trữ mà còn thông minh hơn thế:",
                 points: [
-                    {
-                        title: "Thao tác ký tiện lợi:",
-                        desc: "Thao tác ký văn bản nhanh chóng, có ký kết từ xa thuận tiện, trên máy tính hoặc điện thoại"
-                    },
-                    {
-                        title: "Tính bảo mật cao, an toàn khi sử dụng:",
-                        desc: "Arito Approval cài đặt cơ chế xác thực người ký chặt chẽ bằng mã khiếu, mã OTP..."
-                    },
-                    {
-                        title: "Dễ dàng xem và quản lý lịch sử ký:",
-                        desc: "Người dùng có thể dễ dàng xem lịch sử ký và quản lý sự vận bản"
-                    }
+                    { title: "Tạo hợp đồng tự động:", desc: "Dựa trên template mẫu có sẵn." },
+                    { title: "Tự động nhắc hạn:", desc: "Gửi thông báo nhắc nhở trước khi hợp đồng hết hạn để kịp thời gia hạn hoặc tái ký." },
+                    { title: "Audit Trail:", desc: "Ghi lại chi tiết từng bước từ lúc soạn thảo đến khi hoàn tất ký kết." }
                 ],
-                cta: "Đăng ký Demo"
+                cta: "Khám phá Automation"
+            },
+            feature3: {
+                title: "Khả năng tích hợp (Integration) mạnh mẽ",
+                desc: "Arito Approval có khả năng kết nối liền mạch với các hệ thống HRM, ERP, CRM của doanh nghiệp qua API chuẩn.",
+                points: [
+                    { title: "Đồng bộ dữ liệu:", desc: "Tự động đổ về hệ thống trung tâm mà không cần nhập liệu lại." },
+                    { title: "Kết nối ERP:", desc: "Thế mạnh đặc biệt trong mảng ERP và kế toán của Arito." },
+                    { title: "API chuẩn:", desc: "Dễ dàng tích hợp với mọi hệ thống hiện có." }
+                ],
+                cta: "Xem tài liệu API"
+            },
+            feature4: {
+                title: "Trợ lý AI – Hỗ trợ ký kết trong tích tắc",
+                desc: "Arito tích hợp Chatbot thông minh giúp giải đáp mọi thắc mắc về cách sử dụng ngay tại chỗ.",
+                points: [
+                    { title: "Hướng dẫn trực quan:", desc: "Tự động chỉ dẫn các bước tạo mẫu, gửi ký và xác thực eKYC." },
+                    { title: "Giải đáp pháp lý:", desc: "Trả lời nhanh các câu hỏi về tính pháp lý hoặc cách xử lý lỗi ký số." },
+                    { title: "Hoạt động 24/7:", desc: "Chatbot luôn sẵn sàng phục vụ bất cứ khi nào bạn cần." }
+                ],
+                cta: "Chat với Trợ lý AI"
             }
         },
 
         // Legal & Security
         legal: {
             badge: "Pháp lý & Bảo mật",
-            title: "Tuân thủ Bộ luật Lao động & Luật GĐĐT Việt Nam",
-            desc: "Arito Approval được thiết kế để đáp ứng đầy đủ các quy định pháp luật về hợp đồng lao động điện tử tại Việt Nam.",
-            complianceTitle: "📜 Tuân thủ pháp luật",
-            securityTitle: "🔒 Bảo mật thông tin",
-            compliance: [
+            title: "Giao dịch an tâm – Pháp lý vững chắc",
+            desc: "Nền tảng ký kết tuân thủ nghiêm ngặt các tiêu chuẩn bảo mật quốc tế và quy định pháp luật Việt Nam.",
+            items: [
                 {
                     icon: "⚖️",
-                    title: "Bộ luật Lao động",
-                    desc: "Đảm bảo nội dung HĐLĐ đầy đủ theo quy định"
+                    title: "Tuân thủ Bộ luật Lao động Việt Nam",
+                    desc: "Đảm bảo tính hợp pháp tuyệt đối cho các loại Hợp đồng lao động điện tử, phụ lục và quyết định nhân sự."
                 },
                 {
                     icon: "📋",
                     title: "Luật Giao dịch điện tử 2023",
-                    desc: "Chữ ký điện tử có giá trị pháp lý tương đương chữ ký tay"
+                    desc: "Chữ ký số trên Arito có giá trị pháp lý tương đương chữ ký tay và con dấu vật lý theo quy định hiện hành."
                 },
                 {
                     icon: "📖",
-                    title: "Bộ luật Dân sự 2015",
-                    desc: "Hợp đồng điện tử được công nhận và bảo vệ"
+                    title: "Bằng chứng pháp lý hoàn quy",
+                    desc: "Hệ thống lưu trữ lịch sử tương tác (Audit Trail) chi tiết, sẵn sàng cung cấp bằng chứng xác thực khi có tranh chấp."
                 },
                 {
                     icon: "🏛️",
-                    title: "Luật Thương mại 2005",
-                    desc: "Giao dịch điện tử trong quan hệ thương mại"
-                }
-            ],
-            security: [
-                {
-                    icon: "🛡️",
-                    title: "Chứng nhận ISO 27001",
-                    desc: "Tiêu chuẩn quốc tế về quản lý an ninh thông tin"
+                    title: "Tiêu chuẩn ISO 27001",
+                    desc: "Hệ thống quản lý an toàn thông tin được vận hành theo tiêu chuẩn quốc tế, đảm bảo dữ liệu không bị rò rỉ."
                 },
                 {
                     icon: "🔐",
-                    title: "eKYC xác thực danh tính",
-                    desc: "Xác minh chính xác người lao động trước khi ký"
-                },
-                {
-                    icon: "📁",
-                    title: "Lưu trữ hồ sơ ≥ 10 năm",
-                    desc: "Đáp ứng yêu cầu lưu trữ hồ sơ lao động theo quy định"
-                },
-                {
-                    icon: "🔑",
-                    title: "Kiểm soát truy cập",
-                    desc: "Phân quyền chi tiết, audit log đầy đủ"
+                    title: "Xác thực eKYC chuyên sâu",
+                    desc: "Tích hợp công nghệ nhận diện khuôn mặt và kiểm tra CCCD gắn chip để định danh chính xác 100% người ký."
                 }
-            ]
+            ],
+            commitment: "Arito cam kết bảo vệ quyền lợi của doanh nghiệp bằng nền tảng công nghệ an toàn nhất. Mọi tài liệu của bạn là tài sản bất khả xâm phạm."
         },
 
         // How It Works
         howItWorks: {
             badge: "Quy trình",
-            title: "4 bước quản lý hợp đồng lao động",
-            desc: "Quy trình đơn giản, tích hợp vào workflow HR hiện tại của doanh nghiệp",
+            title: "4 Bước Số hóa quy trình ký kết trong 60 giây.",
+            desc: "Quy trình đơn giản, tích hợp vào workflow hiện tại của doanh nghiệp",
             steps: [
                 {
                     icon: "📤",
-                    title: "Tạo / Upload hợp đồng lao động",
-                    desc: "Sử dụng mẫu HĐLĐ có sẵn hoặc upload file PDF/Word."
+                    title: "Bước 1: Khởi tạo & Soạn thảo",
+                    desc: "Chọn mẫu từ thư viện Arito hoặc tải lên file PDF/Word."
                 },
                 {
                     icon: "🔄",
-                    title: "Thiết lập luồng phê duyệt",
-                    desc: "Tùy chỉnh quy trình theo cơ cấu tổ chức."
+                    title: "Bước 2: Thiết lập luồng phê duyệt",
+                    desc: "Chỉ định người duyệt, người ký và thứ tự ưu tiên (song song hoặc tuần tự)."
                 },
                 {
                     icon: "✍️",
-                    title: "Ký kết hợp đồng",
-                    desc: "Gửi link ký qua Email, SMS hoặc ký trực tiếp trên hệ thống. Hỗ trợ eKYC, VNeID xác thực danh tính người lao động.",
-                    tags: ["Email", "SMS", "Hệ thống"]
+                    title: "Bước 3: Ký số & Xác thực eKYC",
+                    desc: "Người nhận nhận thông báo qua Email/Quét mã QR và thực hiện ký số kèm xác thực khuôn mặt."
                 },
                 {
                     icon: "📁",
-                    title: "Lưu trữ & Quản lý hồ sơ nhân sự",
-                    desc: "Hồ sơ lưu trữ an toàn, tra cứu nhanh đa tiêu chí; quản lý tập trung, tái sử dụng mẫu và nhắc gia hạn tự động."
+                    title: "Bước 4: Hoàn tất & Lưu trữ",
+                    desc: "Hợp đồng tự động được mã hóa, gửi bản sao cho các bên và lưu trữ an toàn trên Cloud."
                 }
             ]
         },
@@ -382,38 +345,61 @@ const translations = {
         // Pricing
         pricing: {
             badge: "Bảng giá",
-            title: "Báo giá sản phẩm Tài liệu điện tử",
-            desc: "Phí dịch vụ phần mềm: 1.000.000đ/Năm khi sử dụng chính thức",
-            recommendedBadge: "Gói khuyên dùng",
-            priceUnit: "VND/Gói",
-            buyNow: "Mua ngay",
-            contactUs: "Liên hệ",
+            title: "Đầu tư thông minh cho quy trình vận hành không giấy tờ.",
+            desc: "Chọn gói giải pháp phù hợp với quy mô và nhu cầu tăng trưởng của doanh nghiệp bạn. Tiết kiệm hơn, ký kết nhanh hơn cùng Arito.",
+            priceUnit: "VND",
             contactBtn: "Liên hệ tư vấn",
             trialCta: "Đăng ký dùng thử miễn phí 14 ngày",
-            packages: [
-                { name: "Gói 100", feature1: "Không giới hạn tính năng", feature2: "100 tài liệu ký" },
-                { name: "Gói 200", feature1: "Không giới hạn tính năng", feature2: "200 tài liệu ký" },
-                { name: "Gói 300", feature1: "Không giới hạn tính năng", feature2: "300 tài liệu ký" },
-                { name: "Gói 500", feature1: "Không giới hạn tính năng", feature2: "500 tài liệu ký" },
-                { name: "Gói 1.000", feature1: "Không giới hạn tính năng", feature2: "1.000 tài liệu ký" },
-                { name: "Gói 2.500", feature1: "Không giới hạn tính năng", feature2: "2.500 tài liệu ký" },
-                { name: "Gói 5.000", feature1: "Không giới hạn tính năng", feature2: "5.000 tài liệu ký" },
-                { name: "Gói 10.000", feature1: "Không giới hạn tính năng", feature2: "10.000 tài liệu ký" },
-                { name: "Gói Doanh nghiệp", feature1: "Không giới hạn tính năng", feature2: "Trên 10.000 tài liệu" }
-            ],
             notes: {
-                setup: "Chi phí khởi tạo: 500.000đ",
-                maintenance: "Chi phí duy trì hằng năm: 300.000đ"
-            }
+                setup: "Chi phí khởi tạo phần mềm: 500.000đ",
+                maintenance: "Chi phí dịch vụ phần mềm: 300.000đ/Năm"
+            },
+            categories: [
+                {
+                    id: "starter",
+                    name: "Gói Khởi đầu (Starter)",
+                    desc: "Cho cá nhân hoặc hộ kinh doanh.",
+                    packages: [
+                        { name: "Gói 100", price: "Thỏa thuận" },
+                        { name: "Gói 200", price: "Thỏa thuận" },
+                        { name: "Gói 300", price: "Thỏa thuận" }
+                    ]
+                },
+                {
+                    id: "professional",
+                    name: "Gói Chuyên nghiệp (Professional)",
+                    desc: "Cho doanh nghiệp vừa và nhỏ (SME).",
+                    badge: "Được tin dùng nhất",
+                    packages: [
+                        { name: "Gói 500", price: "Thỏa thuận" },
+                        { name: "Gói 1000", price: "Thỏa thuận" },
+                        { name: "Gói 2500", price: "Thỏa thuận" }
+                    ]
+                },
+                {
+                    id: "enterprise",
+                    name: "Gói Doanh nghiệp (Enterprise)",
+                    desc: "Cho tập đoàn lớn cần tùy chỉnh sâu.",
+                    packages: [
+                        { name: "Gói 5000", price: "Thỏa thuận" },
+                        { name: "Gói 10000", price: "Thỏa thuận" },
+                        { name: "Gói DN", price: "Liên hệ thêm" }
+                    ]
+                }
+            ]
         },
 
         // Final CTA Section
         finalCta: {
-            title: "Sẵn sàng số hóa quản lý hợp đồng lao động?",
-            desc: "Bắt đầu dùng thử miễn phí 14 ngày. Không cần thẻ tín dụng. Hỗ trợ triển khai từ đội ngũ chuyên gia HR Tech.",
-            ctaPrimary: "Dùng thử miễn phí",
-            ctaSecondary: "Đặt lịch demo",
-            callText: "Hoặc gọi ngay:"
+            title: "Bắt đầu hành trình số hóa quy trình ký kết ngay hôm nay!",
+            desc: "Tham gia cùng 3000+ doanh nghiệp đang bứt phá tốc độ vận hành cùng Arito eContract. Chỉ mất 60 giây để thiết lập tài liệu đầu tiên.",
+            ctaPrimary: "Liên hệ tư vấn",
+            hotline: "84.2871.012288",
+            trustMarkers: [
+                { icon: "💳", text: "Không yêu cầu thẻ tín dụng" },
+                { icon: "🎧", text: "Hỗ trợ kỹ thuật 24/7" },
+                { icon: "📅", text: "Hủy gói bất cứ lúc nào" }
+            ]
         },
 
         // Footer Section
@@ -494,105 +480,67 @@ const translations = {
         },
 
         // Problem Solution Section
-        problemSolution: {
-            badge: "Problem & Solution",
-            title: "Traditional contract management processes are time-consuming and costly",
-            desc: "Transform from manual processes to centralized, professional contract management",
-            problemTitle: "Traditional Process",
-            solutionTitle: "Arito Approval",
-            problems: [
+        howItWorks: {
+            badge: "Process",
+            title: "4 Steps to Digitize Your Signing Process in 60 Seconds.",
+            desc: "Simple process, integrated into your current workflow",
+            steps: [
                 {
-                    icon: "📝",
-                    title: "Manual, Fragmented Drafting",
-                    desc: "Contracts created in Word, saved individually, no standard templates"
-                },
-                {
-                    icon: "⏰",
-                    title: "Time-Consuming Signing",
-                    desc: "Especially with remote staff: print – mail – wait for signature – scan back"
-                },
-                {
-                    icon: "📦",
-                    title: "Paper or Scattered File Storage",
-                    desc: "HR records scattered in cabinets, folders, difficult to search when needed"
+                    icon: "📤",
+                    title: "Step 1: Initialization & Drafting",
+                    desc: "Choose a template from the Arito library or upload a PDF/Word file."
                 },
                 {
                     icon: "🔄",
-                    title: "Version Control Issues",
-                    desc: "Unclear which contract version is latest, renewal deadlines, signed amendments"
-                },
-                {
-                    icon: "⚠️",
-                    title: "Legal Risks & Loss",
-                    desc: "Content errors, lost records, insufficient evidence in labor disputes"
-                }
-            ],
-            solutions: [
-                {
-                    icon: "📋",
-                    title: "Centralized Creation & Management",
-                    desc: "Standard contract templates, quick creation, managed on a single platform"
+                    title: "Step 2: Setup Approval Workflow",
+                    desc: "Assign approvers, signers, and priority order (parallel or sequential)."
                 },
                 {
                     icon: "✍️",
-                    title: "Digital Signing Support",
-                    desc: "Integrated into HR workflow, sign anytime, anywhere via Email, SMS, system"
+                    title: "Step 3: Digital Signing & eKYC",
+                    desc: "Recipients receive notifications via Email/QR Code and perform signing with face verification."
                 },
                 {
-                    icon: "🔐",
-                    title: "Secure, Easy-to-Search Storage",
-                    desc: "HR records encrypted, cloud-stored, instant search by multiple criteria"
-                },
-                {
-                    icon: "🔄",
-                    title: "Contract Lifecycle Management",
-                    desc: "Create → Approve → Sign → Store → Reuse & Auto-renewal reminders"
-                },
-                {
-                    icon: "🔗",
-                    title: "HR/ERP System Integration",
-                    desc: "Seamlessly integrate with enterprise HRM, ERP, CRM via standard API"
+                    icon: "📁",
+                    title: "Step 4: Completion & Storage",
+                    desc: "Contracts are automatically encrypted, copies sent to parties, and securely stored on Cloud."
                 }
             ]
         },
 
         // Benefits Section
-        benefits: {
-            badge: "Benefits",
-            title: "Why Choose Arito Approval?",
-            desc: "Comprehensive labor contract & HR document management solution for Vietnamese enterprises",
+        legal: {
+            badge: "Legal & Security",
+            title: "Peace of Mind Transactions – Solid Legality",
+            desc: "A signing platform that strictly complies with international security standards and Vietnamese legal regulations.",
             items: [
                 {
-                    icon: "💰",
-                    title: "Reduce ~80% Document Processing Costs",
-                    desc: "Eliminate printing, shipping, storage. Optimize HR costs from the first month."
-                },
-                {
-                    icon: "⚡",
-                    title: "Shorten Contract Signing Time",
-                    desc: "From days to minutes. Sign immediately when sending offer, no face-to-face meeting needed."
-                },
-                {
-                    icon: "🌍",
-                    title: "Flexible Signing Anywhere",
-                    desc: "Sign on phone, computer, tablet via Email, SMS, or directly on the system."
-                },
-                {
-                    icon: "🔒",
-                    title: "Safe & Secure Data",
-                    desc: "ISO 27001, eKYC authentication. Secure record storage ≥ 10 years."
-                },
-                {
-                    icon: "📁",
-                    title: "Centralized HR Records",
-                    desc: "Manage contracts, amendments, applications on one platform. Quick search, easy control."
-                },
-                {
                     icon: "⚖️",
-                    title: "Full Legal Validity",
-                    desc: "Electronic contracts have legal validity equivalent to paper contracts as regulated."
+                    title: "Vietnam Labor Code Compliance",
+                    desc: "Ensure absolute legality for electronic labor contracts, amendments, and personnel decisions."
+                },
+                {
+                    icon: "📋",
+                    title: "E-Transaction Law 2023",
+                    desc: "Digital signatures on Arito have legal value equivalent to handwritten signatures and physical stamps."
+                },
+                {
+                    icon: "📖",
+                    title: "Full Legal Evidence",
+                    desc: "Detailed Audit Trail storage, ready to provide authentication evidence in case of disputes."
+                },
+                {
+                    icon: "🏛️",
+                    title: "ISO 27001 Standard",
+                    desc: "Information security management system operated according to international standards."
+                },
+                {
+                    icon: "🔐",
+                    title: "In-depth eKYC Verification",
+                    desc: "Integrated face recognition and chip-based ID card check for 100% accurate identification."
                 }
-            ]
+            ],
+            commitment: "Arito is committed to protecting your business's interests with the most secure technology. Your documents are inviolable assets."
         },
 
         // Features Section
@@ -636,7 +584,6 @@ const translations = {
 
         // Highlighted Features
         highlightedFeatures: {
-            badge: "Highlighted Features",
             title: "Register Once. Sign Everywhere<br>Seamlessly Across the System",
             desc: "Signpanel helps businesses improve efficiency and reduce time for workflows related to signing",
             feature1: {
@@ -836,30 +783,49 @@ const translations = {
 
         // Pricing
         pricing: {
-            badge: "Pricing Slider",
-            title: "Electronic Document Pricing",
-            desc: "Software service fee: 1,000,000 VND/Year for official use",
-            recommendedBadge: "Recommended",
-            priceUnit: "VND/Package",
-            buyNow: "Buy Now",
-            contactUs: "Contact",
+            badge: "Pricing",
+            title: "Smart Investment for Paperless Operations.",
+            desc: "Choose the package that fits your business scale and growth needs. Save more, sign faster with ARITO.",
+            priceUnit: "VND",
             contactBtn: "Contact Sales",
             trialCta: "Free 14-day trial",
-            packages: [
-                { name: "Package 100", feature1: "Unlimited features", feature2: "100 documents to sign" },
-                { name: "Package 200", feature1: "Unlimited features", feature2: "200 documents to sign" },
-                { name: "Package 300", feature1: "Unlimited features", feature2: "300 documents to sign" },
-                { name: "Package 500", feature1: "Unlimited features", feature2: "500 documents to sign" },
-                { name: "Package 1,000", feature1: "Unlimited features", feature2: "1,000 documents to sign" },
-                { name: "Package 2,500", feature1: "Unlimited features", feature2: "2,500 documents to sign" },
-                { name: "Package 5,000", feature1: "Unlimited features", feature2: "5,000 documents to sign" },
-                { name: "Package 10,000", feature1: "Unlimited features", feature2: "10,000 documents to sign" },
-                { name: "Enterprise", feature1: "Unlimited features", feature2: "Over 10,000 documents" }
-            ],
             notes: {
-                setup: "Setup fee: 500,000 VND",
-                maintenance: "Annual maintenance fee: 300,000 VND"
-            }
+                setup: "Software setup fee: 500,000 VND",
+                maintenance: "Software service fee: 300,000 VND/Year"
+            },
+            categories: [
+                {
+                    id: "starter",
+                    name: "Starter Package",
+                    desc: "For individuals or small businesses.",
+                    packages: [
+                        { name: "Package 100", price: "Negotiable" },
+                        { name: "Package 200", price: "Negotiable" },
+                        { name: "Package 300", price: "Negotiable" }
+                    ]
+                },
+                {
+                    id: "professional",
+                    name: "Professional Package",
+                    desc: "For small and medium enterprises (SME).",
+                    badge: "Most Popular",
+                    packages: [
+                        { name: "Package 500", price: "Negotiable" },
+                        { name: "Package 1000", price: "Negotiable" },
+                        { name: "Package 2500", price: "Negotiable" }
+                    ]
+                },
+                {
+                    id: "enterprise",
+                    name: "Enterprise Package",
+                    desc: "For large corporations needing deep customization.",
+                    packages: [
+                        { name: "Package 5000", price: "Negotiable" },
+                        { name: "Package 10000", price: "Negotiable" },
+                        { name: "Corp Package", price: "Contact for details" }
+                    ]
+                }
+            ]
         },
 
         // Final CTA Section
@@ -868,7 +834,8 @@ const translations = {
             desc: "Start a 14-day free trial. No credit card required. Implementation support from HR Tech experts.",
             ctaPrimary: "Try Free",
             ctaSecondary: "Schedule Demo",
-            callText: "Or call now:"
+            callText: "Or call now:",
+            hotline: "84.2871.012288"
         },
 
         // Footer Section

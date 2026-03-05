@@ -22,12 +22,69 @@ document.addEventListener('DOMContentLoaded', () => {
     // Language switcher
     initLanguageSwitcher();
 
-    // Pricing carousel
+    // Pricing slider
     initPricingCarousel();
+
+    // Benefits slider
+    initBenefitsSlider();
 
     // Contact modal
     initContactModal();
 });
+
+/**
+ * Benefits Slider - Toggle between 3 benefit slides
+ */
+function initBenefitsSlider() {
+    const track = document.querySelector('.benefits-track');
+    const slides = document.querySelectorAll('.benefit-slide');
+    const dots = document.querySelectorAll('.slider-dot');
+
+    if (!track || slides.length === 0 || dots.length === 0) return;
+
+    let currentSlide = 0;
+
+    function goToSlide(index) {
+        currentSlide = index;
+
+        // Update track position
+        track.style.transform = `translateX(-${index * 100}%)`;
+
+        // Update active classes
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+
+    // Add click events to dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+        });
+    });
+
+    // Auto-play
+    let autoPlayInterval = setInterval(() => {
+        let next = (currentSlide + 1) % slides.length;
+        goToSlide(next);
+    }, 5000);
+
+    // Pause auto-play on interaction
+    const container = document.querySelector('.benefits-slider-container');
+    if (container) {
+        container.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+        container.addEventListener('mouseleave', () => {
+            autoPlayInterval = setInterval(() => {
+                let next = (currentSlide + 1) % slides.length;
+                goToSlide(next);
+            }, 5000);
+        });
+    }
+}
 
 /**
  * Contact Form Modal - Open, close and submit logic
@@ -418,134 +475,51 @@ function initLanguageSwitcher() {
 // initRippleEffect();
 
 /**
- * Pricing Carousel - Navigate through pricing packages
+ * Pricing Slider - Navigate through 3 categories
  */
 function initPricingCarousel() {
-    const carousel = document.getElementById('pricingCarousel');
     const track = document.getElementById('pricingTrack');
+    const dots = document.querySelectorAll('.pricing-dot');
     const prevBtn = document.getElementById('pricingPrev');
     const nextBtn = document.getElementById('pricingNext');
 
-    if (!carousel || !track || !prevBtn || !nextBtn) return;
+    if (!track || dots.length === 0) return;
 
-    const cards = track.querySelectorAll('.pricing-card-item');
-    if (cards.length === 0) return;
+    let currentSlide = 0;
+    const totalSlides = 3;
 
-    let currentIndex = 0;
-    const cardsToShow = 5; // Target, but will calculate dynamic
-    const totalCards = cards.length;
-    // maxIndex removed from const, calculated dynamically
+    function goToSlide(index) {
+        currentSlide = index;
+        track.style.transform = `translateX(-${index * 100}%)`;
 
-    // Calculate card width dynamically
-    function getCardWidth() {
-        const card = cards[0];
-        const style = getComputedStyle(card);
-        const trackStyle = getComputedStyle(track);
-        const gap = parseFloat(trackStyle.gap) || 20; // fallback to 20 if fails
-        const marginRight = parseFloat(style.marginRight) || 0;
-        return card.offsetWidth + marginRight + gap;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
     }
 
-    function updateCarousel() {
-        const cardWidth = getCardWidth();
-        const containerWidth = carousel.offsetWidth;
-        const visibleCards = containerWidth / cardWidth;
-        // Use ceil to ensure we can scroll past partial cards to see the end
-        // But clamp so we don't scroll too far into empty space if not needed
-        // Actually, if we want to show the last card fully, we need to be able to scroll to (total - visible).
-        // If visible is 3.5, we need to scroll to 9 - 3.5 = 5.5. 
-        // We use integer steps, so ceil(5.5) = 6 is safe (bit of whitespace), floor(5.5) = 5 (might clip 0.5).
-        // Let's use exact calculation for maxIndex then round up for the loop limit.
-
-        let maxIndex = Math.max(0, Math.ceil(totalCards - visibleCards));
-
-        // Improve edge alignment for last item:
-        // If we are at the last index, we might want to clamp translation to exactly the end.
-        // But consistent steps are better for UX usually. Let's stick to standard steps for now.
-
-        const translateX = -currentIndex * cardWidth;
-        track.style.transform = `translateX(${translateX}px)`;
-
-        // Update button states
-        prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = currentIndex >= maxIndex;
-
-        // Visual feedback for disabled state
-        prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
-        nextBtn.style.opacity = currentIndex >= maxIndex ? '0.5' : '1';
-
-        return maxIndex;
-    }
-
-    function nextSlide() {
-        const maxIndex = updateCarousel();
-        // Calling updateCarousel here is inefficient just to get maxIndex, 
-        // but safe. Better to separate calc. 
-        // Let's recalculate maxIndex here.
-        const cardWidth = getCardWidth();
-        const containerWidth = carousel.offsetWidth;
-        const visibleCards = containerWidth / cardWidth;
-        const currentMaxIndex = Math.max(0, Math.ceil(totalCards - visibleCards));
-
-        if (currentIndex < currentMaxIndex) {
-            currentIndex++;
-            updateCarousel();
-        }
-    }
-
-    function prevSlide() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-        }
-    }
-
-    // Event listeners
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-
-    // Keyboard navigation
-    carousel.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-            prevSlide();
-        } else if (e.key === 'ArrowRight') {
-            nextSlide();
-        }
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+        });
     });
 
-    // Touch/swipe support for mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    carousel.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-
-    carousel.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-    }, { passive: true });
-
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        const diff = touchStartX - touchEndX;
-
-        if (diff > swipeThreshold) {
-            nextSlide();
-        } else if (diff < -swipeThreshold) {
-            prevSlide();
-        }
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            goToSlide(currentSlide);
+        });
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            goToSlide(currentSlide);
+        });
     }
 
-    // Handle window resize
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-            updateCarousel();
-        }, 100);
+    // Initialize dots based on data-index
+    dots.forEach(dot => {
+        dot.addEventListener('click', function () {
+            const index = parseInt(this.getAttribute('data-index'));
+            goToSlide(index);
+        });
     });
-
-    // Initial state
-    updateCarousel();
 }
+
