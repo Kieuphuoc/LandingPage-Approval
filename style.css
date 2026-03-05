@@ -1267,6 +1267,8 @@ section {
     flex-direction: column;
     height: 100%;
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
 .pricing-card.highlight {
@@ -1274,9 +1276,58 @@ section {
     box-shadow: 0 10px 40px rgba(139, 92, 246, 0.08);
 }
 
+/* Ribbon Styling */
+.ribbon-wrapper {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    z-index: 10;
+}
+
+.ribbon {
+    font-weight: 700;
+    text-align: center;
+    transform: rotate(-45deg);
+    position: relative;
+    padding: 7px 0;
+    left: -50px;
+    top: 30px;
+    width: 200px;
+    background-color: var(--danger);
+    color: var(--white);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+}
+
+.ribbon::before,
+.ribbon::after {
+    content: "";
+    border-top: 3px solid #b91c1c;
+    /* Darker red for shadow */
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    position: absolute;
+    bottom: -3px;
+}
+
+.ribbon::before {
+    left: 0;
+}
+
+.ribbon::after {
+    right: 0;
+}
+
 .pricing-card-header {
     margin-bottom: 2rem;
     text-align: center;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
 }
 
 .package-name {
@@ -1291,15 +1342,19 @@ section {
     color: var(--gray-500);
 }
 
-.popular-tag {
-    display: inline-block;
-    background: #f5f3ff;
-    color: #8b5cf6;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 0.2rem 0.6rem;
-    border-radius: var(--radius-full);
-    margin-top: 0.5rem;
+.package-starter {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border: 1px solid #bfdbfe;
+}
+
+.package-professional {
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+    border: 1px solid #ddd6fe;
+}
+
+.package-enterprise {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid #e2e8f0;
 }
 
 /* Tier Frames inside Cards */
