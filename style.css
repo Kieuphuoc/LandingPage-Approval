@@ -1368,14 +1368,13 @@ section {
 .tier-frame {
     background: #f9fafb;
     border-radius: 12px;
-    padding: 1rem 1.25rem;
+    padding: 0.85rem 1.25rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border: 1px solid transparent;
     transition: all 0.3s ease;
     cursor: pointer;
-    text-align: center;
 }
 
 .tier-frame:hover {
@@ -1390,8 +1389,14 @@ section {
 }
 
 .tier-name {
-    font-weight: 700;
-    color: var(--gray-900);
+    font-weight: 600;
+    color: var(--gray-700);
+    font-size: 0.9rem;
+}
+
+.tier-price {
+    font-weight: 800;
+    color: var(--primary-700);
     font-size: 1rem;
 }
 

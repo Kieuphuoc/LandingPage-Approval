@@ -352,7 +352,7 @@ const translations = {
             trialCta: "Đăng ký dùng thử miễn phí 14 ngày",
             toggleMonthly: "Thanh toán tháng",
             toggleYearly: "Thanh toán năm",
-            mostPopular: "Được tin dùng nhất",
+            mostPopular: "Được tin dùng",
             saveBadge: "Tiết kiệm 20%",
             customPlan: "Giải pháp tùy chỉnh theo nhu cầu riêng",
             unlimitedUsers: "Không giới hạn người dùng",
@@ -362,9 +362,9 @@ const translations = {
                 desc: "Cho cá nhân hoặc hộ kinh doanh.",
                 cta: "Bắt đầu ngay",
                 tiers: [
-                    { name: "100 tài liệu", id: "s100" },
-                    { name: "200 tài liệu", id: "s200" },
-                    { name: "300 tài liệu", id: "s300" }
+                    { name: "100 tài liệu", price: "500.000 đ", id: "s100" },
+                    { name: "200 tài liệu", price: "960.000 đ", id: "s200" },
+                    { name: "300 tài liệu", price: "1.380.000 đ", id: "s300" }
                 ]
             },
             professional: {
@@ -372,9 +372,9 @@ const translations = {
                 desc: "Cho doanh nghiệp vừa và nhỏ (SME).",
                 cta: "Nâng cấp ngay",
                 tiers: [
-                    { name: "500 tài liệu", id: "p500" },
-                    { name: "1.000 tài liệu", id: "p1000" },
-                    { name: "2.500 tài liệu", id: "p2500" }
+                    { name: "500 tài liệu", price: "2.150.000 đ", id: "p500" },
+                    { name: "700 tài liệu", price: "2.940.000 đ", id: "p700" },
+                    { name: "1.000 tài liệu", price: "3.900.000 đ", id: "p1000" }
                 ]
             },
             enterprise: {
@@ -382,14 +382,15 @@ const translations = {
                 desc: "Cho tập đoàn lớn cần tùy chỉnh sâu.",
                 cta: "Liên hệ tư vấn",
                 tiers: [
-                    { name: "5.000 tài liệu", id: "e5000" },
-                    { name: "10.000 tài liệu", id: "e10000" },
-                    { name: "Gói DN (liên hệ thêm)", id: "edn" }
+                    { name: "2.500 tài liệu", price: "8.000.000 đ", id: "e2500" },
+                    { name: "5.000 tài liệu", price: "13.500.000 đ", id: "e5000" },
+                    { name: "10.000 tài liệu", price: "20.000.000 đ", id: "e10000" },
+                    { name: "Trên 10.000", price: "Liên hệ", id: "edn" }
                 ]
             },
             notes: {
-                setup: "Chi phí khởi tạo phần mềm: 500.000đ",
-                maintenance: "Chi phí dịch vụ phần mềm: 300.000đ/Năm"
+                setup: "Chi phí khởi tạo: 500.000đ",
+                maintenance: "Chi phí duy trì hằng năm: 300.000đ"
             }
         },
 
@@ -805,9 +806,9 @@ const translations = {
                 desc: "For individuals or small businesses.",
                 cta: "Get Started",
                 tiers: [
-                    { name: "100 documents", id: "s100" },
-                    { name: "200 documents", id: "s200" },
-                    { name: "300 documents", id: "s300" }
+                    { name: "100 documents", price: "500,000 VND", id: "s100" },
+                    { name: "200 documents", price: "960,000 VND", id: "s200" },
+                    { name: "300 documents", price: "1,380,000 VND", id: "s300" }
                 ]
             },
             professional: {
@@ -815,9 +816,9 @@ const translations = {
                 desc: "For small and medium enterprises (SME).",
                 cta: "Upgrade Now",
                 tiers: [
-                    { name: "500 documents", id: "p500" },
-                    { name: "1,000 documents", id: "p1000" },
-                    { name: "2,500 documents", id: "p2500" }
+                    { name: "500 documents", price: "2,150,000 VND", id: "p500" },
+                    { name: "700 documents", price: "2,940,000 VND", id: "p700" },
+                    { name: "1,000 documents", price: "3,900,000 VND", id: "p1000" }
                 ]
             },
             enterprise: {
@@ -825,14 +826,15 @@ const translations = {
                 desc: "For large corporations needing deep customization.",
                 cta: "Contact Sales",
                 tiers: [
-                    { name: "5,000 documents", id: "e5000" },
-                    { name: "10,000 documents", id: "e10000" },
-                    { name: "Enterprise Plan (custom)", id: "edn" }
+                    { name: "2,500 documents", price: "8,000,000 VND", id: "e2500" },
+                    { name: "5,000 documents", price: "13,500,000 VND", id: "e5000" },
+                    { name: "10,000 documents", price: "20,000,000 VND", id: "e10000" },
+                    { name: "Over 10,000", price: "Contact us", id: "edn" }
                 ]
             },
             notes: {
-                setup: "Software setup fee: 500,000 VND",
-                maintenance: "Software service fee: 300,000 VND/Year"
+                setup: "Setup fee: 500,000 VND",
+                maintenance: "Annual maintenance fee: 300,000 VND"
             }
         },
 
