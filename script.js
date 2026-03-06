@@ -30,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Contact modal
     initContactModal();
+
+    // Back to Top button
+    initBackToTop();
 });
 
 /**
@@ -506,4 +509,32 @@ function initPricingToggle() {
         labelYearly.classList.add('active');
     });
 }
+
+/**
+ * Back to Top Button Logic
+ * Shows button after scrolling down and scrolls back to top on click
+ */
+function initBackToTop() {
+    const backToTopBtn = document.getElementById('backToTop');
+
+    if (!backToTopBtn) return;
+
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('active');
+        } else {
+            backToTopBtn.classList.remove('active');
+        }
+    });
+
+    // Scroll to top when clicked
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
 
