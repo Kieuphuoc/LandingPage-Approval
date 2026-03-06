@@ -1,5 +1,5 @@
 /**
- * Translations for Arito Approval Landing Page
+ * Translations for Arito eContract Landing Page
  * Vietnamese (vi) and English (en)
  */
 
@@ -105,7 +105,7 @@ const translations = {
         // Benefits Section
         benefits: {
             badge: "Lợi ích",
-            title: "Tại sao các Doanh nghiệp tin dùng Arito Approval?",
+            title: "Tại sao các Doanh nghiệp tin dùng Arito eContract?",
             desc: "Giải pháp quản lý hợp đồng lao động & hồ sơ nhân sự toàn diện cho doanh nghiệp Việt Nam",
             items: [
                 {
@@ -186,7 +186,7 @@ const translations = {
             },
             feature3: {
                 title: "Khả năng tích hợp (Integration) mạnh mẽ",
-                desc: "Arito Approval có khả năng kết nối liền mạch với các hệ thống HRM, ERP, CRM của doanh nghiệp qua API chuẩn.",
+                desc: "Arito eContract có khả năng kết nối liền mạch với các hệ thống HRM, ERP, CRM của doanh nghiệp qua API chuẩn.",
                 points: [
                     { title: "Đồng bộ dữ liệu:", desc: "Tự động đổ về hệ thống trung tâm mà không cần nhập liệu lại." },
                     { title: "Kết nối ERP:", desc: "Thế mạnh đặc biệt trong mảng ERP và kế toán của Arito." },
@@ -245,7 +245,7 @@ const translations = {
         howItWorks: {
             badge: "Quy trình",
             title: "4 Bước Số hóa quy trình ký kết trong 60 giây.",
-            desc: "Quy trình đơn giản, tích hợp vào workflow hiện tại của doanh nghiệp",
+            desc: "",
             steps: [
                 {
                     icon: "📤",
@@ -273,7 +273,7 @@ const translations = {
         // Use Cases
         useCases: {
             badge: "Đối tượng phù hợp",
-            title: "Doanh nghiệp nào cần Arito Approval?",
+            title: "Doanh nghiệp nào cần Arito eContract?",
             desc: "Giải pháp phù hợp cho mọi quy mô doanh nghiệp có nhu cầu quản lý hồ sơ lao động chuyên nghiệp",
             items: [
                 {
@@ -425,7 +425,7 @@ const translations = {
             legalValue: "Giá trị pháp lý HĐLĐ",
             legalISO: "Chứng nhận ISO 27001",
             contactTitle: "Liên hệ",
-            copyright: "© 2024 Arito Approval. Bảo lưu mọi quyền.",
+            copyright: "© 2024 Arito eContract. Bảo lưu mọi quyền.",
             compliance: "Tuân thủ Bộ luật Lao động & Luật Giao dịch điện tử Việt Nam 2023"
         },
 
@@ -528,7 +528,7 @@ const translations = {
                 {
                     icon: "✍️",
                     title: "Instant Digital Signature",
-                    desc: "Integrated e-signing anytime, anywhere via Email/SMS; approval in just 1 minute."
+                    desc: "Integrated e-signing anytime, anywhere via Email/SMS; eContract in just 1 minute."
                 },
                 {
                     icon: "🔐",
@@ -551,7 +551,7 @@ const translations = {
         // Benefits Section
         benefits: {
             badge: "Benefits",
-            title: "Why Vietnamese Businesses Trust Arito Approval?",
+            title: "Why Vietnamese Businesses Trust Arito eContract?",
             desc: "Comprehensive labor contract & HR record management solution for Vietnamese enterprises",
             items: [
                 {
@@ -567,11 +567,11 @@ const translations = {
                 {
                     icon: "🌐",
                     title: "Comprehensive Management Ecosystem",
-                    desc: "Unlimited Connections: Easily integrate with existing ERP, HRM, Accounting systems (especially Arito's strength in ERP and accounting). <br><br> Document Lifecycle Management: Beyond signing, Arito helps you track from creation and approval to storage and auto-renewal reminders."
+                    desc: "Unlimited Connections: Easily integrate with existing ERP, HRM, Accounting systems (especially Arito's strength in ERP and accounting). <br><br> Document Lifecycle Management: Beyond signing, Arito helps you track from creation and eContract to storage and auto-renewal reminders."
                 }
             ]
         },
-        highlightRow: "More than just signing software, Arito is a companion helping you digitize your entire internal approval and commercial transaction processes.",
+        highlightRow: "More than just signing software, Arito is a companion helping you digitize your entire internal eContract and commercial transaction processes.",
 
         // Features Section
         features: {
@@ -591,7 +591,7 @@ const translations = {
                 },
                 {
                     icon: "images/icon/Quan ly phe duyet.png",
-                    title: "Multi-level Approval",
+                    title: "Multi-level eContract",
                     desc: "Set up flexible signing workflows by department or contract value."
                 },
                 {
@@ -632,7 +632,7 @@ const translations = {
             },
             feature3: {
                 title: "Strong Integration Capabilities",
-                desc: "Arito Approval seamlessly connects with HRM, ERP, CRM systems via standard APIs.",
+                desc: "Arito eContract seamlessly connects with HRM, ERP, CRM systems via standard APIs.",
                 points: [
                     { title: "Data Sync:", desc: "Automatically flow to the central system without re-entry." },
                     { title: "ERP Connection:", desc: "Special strength in Arito's ERP and accounting segments." },
@@ -691,7 +691,7 @@ const translations = {
         howItWorks: {
             badge: "Process",
             title: "4 Steps to Digitize Your Signing Process in 60 Seconds.",
-            desc: "Simple process, integrated into your current business workflow",
+            desc: "",
             steps: [
                 {
                     icon: "📤",
@@ -719,7 +719,7 @@ const translations = {
         // Use Cases
         useCases: {
             badge: "Target Audience",
-            title: "Who Needs Arito Approval?",
+            title: "Who Needs Arito eContract?",
             desc: "Suitable solution for businesses of all sizes needing professional labor record management",
             items: [
                 {
@@ -873,7 +873,7 @@ const translations = {
             legalValue: "Contract Legal Value",
             legalISO: "ISO 27001 Certification",
             contactTitle: "Contact",
-            copyright: "© 2024 Arito Approval. All rights reserved.",
+            copyright: "© 2024 Arito eContract. All rights reserved.",
             compliance: "Compliant with Vietnam Labor Code & E-Transaction Law 2023"
         },
 
