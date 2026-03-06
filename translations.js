@@ -134,27 +134,27 @@ const translations = {
             desc: "Tạo, chỉnh sửa và theo dõi toàn bộ HĐLĐ, phụ lục trên một nền tảng. Nhắc gia hạn tự động.",
             items: [
                 {
-                    icon: "📋",
+                    icon: "images/icon/tai lieu.png",
                     title: "Quản lý mẫu hợp đồng",
                     desc: "Thư viện mẫu chuẩn hóa, dễ dàng tùy chỉnh và khởi tạo chỉ với vài thao tác."
                 },
                 {
-                    icon: "🔐",
+                    icon: "images/icon/Digital Signature.png",
                     title: "Ký số đa phương thức",
                     desc: "Hỗ trợ ký qua Email, SMS, mã QR dành cho người không có email hoặc tích hợp chữ ký số USB Token, HSM."
                 },
                 {
-                    icon: "🔄",
+                    icon: "images/icon/Quan ly phe duyet.png",
                     title: "Phê duyệt đa cấp",
                     desc: "Thiết lập luồng ký duyệt linh hoạt theo từng phòng ban hoặc giá trị hợp đồng."
                 },
                 {
-                    icon: "🔗",
+                    icon: "images/icon/Cloud Api.png",
                     title: "Lưu trữ đám mây",
                     desc: "Hệ thống lưu trữ tập trung, mã hóa an toàn và cho phép truy xuất mọi lúc mọi nơi."
                 },
                 {
-                    icon: "🌐",
+                    icon: "images/icon/Data.png",
                     title: "Tra cứu & Báo cáo",
                     desc: "Tìm kiếm hợp đồng thông minh theo từ khóa, trạng thái hoặc ngày hiệu lực."
                 }
@@ -213,27 +213,27 @@ const translations = {
             desc: "Nền tảng ký kết tuân thủ nghiêm ngặt các tiêu chuẩn bảo mật quốc tế và quy định pháp luật Việt Nam.",
             items: [
                 {
-                    icon: "⚖️",
+                    icon: "images/icon/Ke toan - tai chinh.png",
                     title: "Tuân thủ Bộ luật Lao động Việt Nam",
-                    desc: "Đảm bảo tính hợp pháp tuyệt đối cho các loại Hợp đồng lao động điện tử, phụ lục và quyết định nhân sự."
+                    desc: "Đảm bảo tính hợp pháp tuyệt đối for the various types of electronic labor contracts, appendices, and personnel decisions."
                 },
                 {
-                    icon: "📋",
+                    icon: "images/icon/Digital Signature.png",
                     title: "Luật Giao dịch điện tử 2023",
                     desc: "Chữ ký số trên Arito có giá trị pháp lý tương đương chữ ký tay và con dấu vật lý theo quy định hiện hành."
                 },
                 {
-                    icon: "📖",
+                    icon: "images/icon/approved.png",
                     title: "Bằng chứng pháp lý hoàn quy",
                     desc: "Hệ thống lưu trữ lịch sử tương tác (Audit Trail) chi tiết, sẵn sàng cung cấp bằng chứng xác thực khi có tranh chấp."
                 },
                 {
-                    icon: "🏛️",
+                    icon: "images/icon/approved1.png",
                     title: "Tiêu chuẩn ISO 27001",
                     desc: "Hệ thống quản lý an toàn thông tin được vận hành theo tiêu chuẩn quốc tế, đảm bảo dữ liệu không bị rò rỉ."
                 },
                 {
-                    icon: "🔐",
+                    icon: "images/icon/Signature Recognition.png",
                     title: "Xác thực eKYC chuyên sâu",
                     desc: "Tích hợp công nghệ nhận diện khuôn mặt và kiểm tra CCCD gắn chip để định danh chính xác 100% người ký."
                 }
@@ -277,32 +277,32 @@ const translations = {
             desc: "Giải pháp phù hợp cho mọi quy mô doanh nghiệp có nhu cầu quản lý hồ sơ lao động chuyên nghiệp",
             items: [
                 {
-                    icon: "🌍",
+                    icon: "images/icon/nguoi.png",
                     title: "Doanh nghiệp có nhân sự từ xa",
                     desc: "Ký hợp đồng lao động với ứng viên ở bất kỳ đâu, không cần gặp mặt trực tiếp hay gửi bưu điện."
                 },
                 {
-                    icon: "🛒",
+                    icon: "images/icon/Ecommerce.png",
                     title: "E-commerce & Chuỗi bán lẻ",
                     desc: "Quản lý hợp đồng cho đội ngũ bán hàng, kho vận, vận chuyển phân tán nhiều địa điểm."
                 },
                 {
-                    icon: "📈",
+                    icon: "images/icon/Tang truong.png",
                     title: "Doanh nghiệp tăng trưởng nhanh",
                     desc: "Tuyển dụng hàng loạt, onboarding nhanh không bị nghẽn bởi quy trình ký kết thủ công."
                 },
                 {
-                    icon: "🏭",
+                    icon: "images/icon/Quan ly san xuat.png",
                     title: "Sản xuất & Khu công nghiệp",
                     desc: "Quản lý hợp đồng lao động cho hàng nghìn công nhân, theo dõi thời hạn, gia hạn tự động."
                 },
                 {
-                    icon: "🏗️",
+                    icon: "images/icon/BĐS.png",
                     title: "Bất động sản & Xây dựng",
                     desc: "Ký kết với đội ngũ thi công, kỹ sư làm việc tại công trường các tỉnh thành khác nhau."
                 },
                 {
-                    icon: "🏢",
+                    icon: "images/icon/quan ly.png",
                     title: "Doanh nghiệp mọi quy mô",
                     desc: "Từ SME đến tập đoàn lớn, tất cả đều cần quản lý hồ sơ lao động chuyên nghiệp, tuân thủ pháp luật."
                 }
@@ -580,27 +580,27 @@ const translations = {
             desc: "Create, edit, and track all labor contracts and amendments on one platform. Auto-renewal reminders.",
             items: [
                 {
-                    icon: "📋",
+                    icon: "images/icon/tai lieu.png",
                     title: "Contract Template Management",
                     desc: "Standardized template library, easy to customize and create with just a few steps."
                 },
                 {
-                    icon: "🔐",
+                    icon: "images/icon/Digital Signature.png",
                     title: "Multi-method Digital Signing",
                     desc: "Supports signing via Email, SMS, QR code for those without email, or integrated USB Token, HSM digital signatures."
                 },
                 {
-                    icon: "🔄",
+                    icon: "images/icon/Quan ly phe duyet.png",
                     title: "Multi-level Approval",
                     desc: "Set up flexible signing workflows by department or contract value."
                 },
                 {
-                    icon: "🔗",
+                    icon: "images/icon/Cloud Api.png",
                     title: "Cloud Storage",
                     desc: "Centralized storage system, secure encryption, and access anytime, anywhere."
                 },
                 {
-                    icon: "🌐",
+                    icon: "images/icon/Data.png",
                     title: "Search & Reporting",
                     desc: "Smart contract search by keyword, status, or effective date."
                 }
@@ -659,27 +659,27 @@ const translations = {
             desc: "A signing platform that strictly complies with international security standards and Vietnamese legal regulations.",
             items: [
                 {
-                    icon: "⚖️",
+                    icon: "images/icon/Ke toan - tai chinh.png",
                     title: "Vietnam Labor Code Compliance",
                     desc: "Ensure absolute legality for electronic labor contracts, amendments, and personnel decisions."
                 },
                 {
-                    icon: "📋",
+                    icon: "images/icon/Digital Signature.png",
                     title: "E-Transaction Law 2023",
                     desc: "Digital signatures on Arito have legal value equivalent to handwritten signatures and physical stamps."
                 },
                 {
-                    icon: "📖",
+                    icon: "images/icon/approved.png",
                     title: "Full Legal Evidence",
                     desc: "Detailed Audit Trail storage, ready to provide authentication evidence in case of disputes."
                 },
                 {
-                    icon: "🏛️",
+                    icon: "images/icon/approved1.png",
                     title: "ISO 27001 Standard",
                     desc: "Information security management system operated according to international standards, ensuring no data leaks."
                 },
                 {
-                    icon: "🔐",
+                    icon: "images/icon/Signature Recognition.png",
                     title: "In-depth eKYC Verification",
                     desc: "Integrated face recognition and chip-based ID card check for 100% accurate identification."
                 }
@@ -723,32 +723,32 @@ const translations = {
             desc: "Suitable solution for businesses of all sizes needing professional labor record management",
             items: [
                 {
-                    icon: "🌍",
+                    icon: "images/icon/nguoi.png",
                     title: "Businesses with Remote Staff",
                     desc: "Sign labor contracts with candidates anywhere, no face-to-face meeting or postal service needed."
                 },
                 {
-                    icon: "🛒",
+                    icon: "images/icon/Ecommerce.png",
                     title: "E-commerce & Retail Chains",
                     desc: "Manage contracts for sales, warehouse, delivery teams distributed across multiple locations."
                 },
                 {
-                    icon: "📈",
+                    icon: "images/icon/Tang truong.png",
                     title: "Fast-Growing Businesses",
                     desc: "Mass recruitment, fast onboarding without bottlenecks from manual signing processes."
                 },
                 {
-                    icon: "🏭",
+                    icon: "images/icon/Quan ly san xuat.png",
                     title: "Manufacturing & Industrial Zones",
                     desc: "Manage labor contracts for thousands of workers, track deadlines, auto-renewal."
                 },
                 {
-                    icon: "🏗️",
+                    icon: "images/icon/BĐS.png",
                     title: "Real Estate & Construction",
                     desc: "Sign with construction teams, engineers working at sites in different provinces."
                 },
                 {
-                    icon: "🏢",
+                    icon: "images/icon/quan ly.png",
                     title: "Businesses of All Sizes",
                     desc: "From SMEs to large corporations, all need professional, legally compliant labor record management."
                 }

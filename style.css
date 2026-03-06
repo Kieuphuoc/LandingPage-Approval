@@ -1190,18 +1190,23 @@ section {
 }
 
 .legal-simple-item .legal-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
-    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    background: var(--white);
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.75rem;
-    color: white;
     flex-shrink: 0;
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+    box-shadow: var(--shadow-md);
     transition: var(--transition);
+    padding: 10px;
+}
+
+.legal-simple-item .legal-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .legal-simple-item:hover .legal-icon {
@@ -1659,24 +1664,25 @@ section {
 }
 
 .feature-icon {
-    width: 56px;
-    height: 56px;
+    width: 70px;
+    height: 70px;
     background: var(--primary-50);
-    color: var(--primary-600);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.75rem;
     margin-bottom: 1.5rem;
     transition: var(--transition);
+    padding: 12px;
 }
 
-.feature-item:hover .feature-icon {
-    background: var(--primary-600);
-    color: var(--white);
-    transform: rotateY(360deg);
+.feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
+
+
 
 .feature-item h4 {
     font-size: 1rem;
@@ -2161,8 +2167,19 @@ section {
 }
 
 .uc-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.uc-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .use-case-card h4 {
@@ -3273,7 +3290,7 @@ section {
 
 .animate-on-scroll.visible {
     opacity: 1;
-    transform: translateY(0);
+    /* transform: translateY(0); */
 }
 
 /* ========================================
@@ -3923,4 +3940,49 @@ section {
 
 .shield-icon {
     color: var(--success);
+}
+
+/* --- Back to Top Button --- */
+.back-to-top {
+    position: fixed;
+    bottom: 100px;
+    /* Above Chatbot */
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-600);
+    color: var(--white);
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+    bottom: 110px;
+    /* Slight lift when appearing */
+}
+
+.back-to-top:hover {
+    background: var(--primary-700);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+}
+
+.back-to-top i {
+    transition: transform 0.3s ease;
+}
+
+.back-to-top:hover i {
+    transform: translateY(-3px);
 }

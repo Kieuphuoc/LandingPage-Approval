@@ -30,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Contact modal
     initContactModal();
+
+    // Back to Top button
+    initBackToTop();
 });
 
 /**
@@ -488,10 +491,6 @@ function initPricingToggle() {
         toggle.classList.toggle('active');
         labelMonthly.classList.toggle('active');
         labelYearly.classList.toggle('active');
-
-        // Logic to update prices if we had different values for monthly/yearly
-        // const isYearly = toggle.classList.contains('active');
-        // updatePricingValues(isYearly);
     });
 
     labelMonthly.addEventListener('click', () => {
@@ -504,6 +503,33 @@ function initPricingToggle() {
         toggle.classList.add('active');
         labelMonthly.classList.remove('active');
         labelYearly.classList.add('active');
+    });
+}
+
+/**
+ * Back to Top Button Logic
+ * Shows button after scrolling down and scrolls back to top on click
+ */
+function initBackToTop() {
+    const backToTopBtn = document.getElementById('backToTop');
+
+    if (!backToTopBtn) return;
+
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('active');
+        } else {
+            backToTopBtn.classList.remove('active');
+        }
+    });
+
+    // Scroll to top when clicked
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 }
 
