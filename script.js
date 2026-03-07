@@ -267,7 +267,7 @@ function initContactPageForm() {
             from_name: document.getElementById('contact-name').value,
             company: document.getElementById('contact-company').value || "Không có",
             phone: document.getElementById('contact-phone').value,
-            email: document.getElementById('contact-email').value,
+            from_email: document.getElementById('contact-email').value,
             subject: document.getElementById('contact-subject').value,
             message: document.getElementById('contact-message').value
         };
