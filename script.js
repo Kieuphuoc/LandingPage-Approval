@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Contact modal
     initContactModal();
 
+    // Contact page form
+    initContactPageForm();
+
     // Back to Top button
     initBackToTop();
 });
@@ -94,8 +97,12 @@ function initBenefitsSlider() {
  */
 function initContactModal() {
     const modal = document.getElementById('contactModal');
-    const openBtns = document.querySelectorAll('[data-i18n="nav.freeTrial"], [data-i18n="hero.ctaPrimary"], [data-i18n="pricing.trialCta"], [data-i18n="finalCta.ctaPrimary"], [data-i18n="pricing.buyNow"], [data-i18n="highlightedFeatures.feature1.cta"], [data-i18n="highlightedFeatures.feature2.cta"], [data-i18n="finalCta.ctaSecondary"]');
     const closeBtn = document.getElementById('closeModal');
+
+    // Skip if modal elements don't exist (e.g. on contact.html page)
+    if (!modal || !closeBtn) return;
+
+    const openBtns = document.querySelectorAll('[data-i18n="nav.freeTrial"], [data-i18n="hero.ctaPrimary"], [data-i18n="pricing.trialCta"], [data-i18n="finalCta.ctaPrimary"], [data-i18n="pricing.buyNow"], [data-i18n="highlightedFeatures.feature1.cta"], [data-i18n="highlightedFeatures.feature2.cta"], [data-i18n="finalCta.ctaSecondary"]');
     const contactForm = document.getElementById('contactForm');
     const requestTypeSelect = document.getElementById('requestType');
 
@@ -168,6 +175,124 @@ function initContactModal() {
             closeModal();
         });
     }
+}
+
+/**
+ * Contact Page Form - Handle submission with EmailJS
+ */
+function initContactPageForm() {
+    // Initialize EmailJS
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init("5s6p5mDOfbH_1A63s");
+    }
+
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('contact-submit-btn');
+    const resetBtn = document.getElementById('contact-reset-btn');
+    const formContainer = document.getElementById('contact-form-container');
+    const successMessage = document.getElementById('contact-success');
+
+    if (!contactForm) return;
+
+    // Reset button logic
+    if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+            formContainer.style.display = 'block';
+            successMessage.style.display = 'none';
+            contactForm.reset();
+            
+            // Reset button state
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i><span>Gửi tin nhắn</span>';
+            }
+            
+            // Clear errors
+            document.querySelectorAll('.error-msg').forEach(el => el.textContent = '');
+        });
+    }
+
+    // Validation logic
+    function validateForm() {
+        let isValid = true;
+        const name = document.getElementById('contact-name');
+        const email = document.getElementById('contact-email');
+        const phone = document.getElementById('contact-phone');
+        const message = document.getElementById('contact-message');
+
+        // Reset errors
+        document.querySelectorAll('.error-msg').forEach(el => el.textContent = '');
+
+        if (!name.value.trim()) {
+            document.getElementById('error-name').textContent = 'Vui lòng nhập họ và tên';
+            isValid = false;
+        }
+
+        if (!email.value.trim()) {
+            document.getElementById('error-email').textContent = 'Vui lòng nhập email';
+            isValid = false;
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+            document.getElementById('error-email').textContent = 'Email không hợp lệ';
+            isValid = false;
+        }
+
+        if (!phone.value.trim()) {
+            document.getElementById('error-phone').textContent = 'Vui lòng nhập số điện thoại';
+            isValid = false;
+        }
+
+        if (!message.value.trim()) {
+            document.getElementById('error-message').textContent = 'Vui lòng nhập nội dung';
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    // Form submission
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (!validateForm()) return;
+
+        // Visual feedback during submission
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Đang gửi...</span>';
+        }
+
+        // Prepare parameters for EmailJS
+        const templateParams = {
+            to_name: "Arito Administrator",
+            from_name: document.getElementById('contact-name').value,
+            company: document.getElementById('contact-company').value || "Không có",
+            phone: document.getElementById('contact-phone').value,
+            email: document.getElementById('contact-email').value,
+            subject: document.getElementById('contact-subject').value,
+            message: document.getElementById('contact-message').value
+        };
+
+        // Send email via EmailJS
+        // Replace 'service_d2tst14' and 'template_05965m9' with your actual IDs
+        emailjs.send('service_d2tst14', 'template_05965m9', templateParams)
+            .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+                
+                // Show success container
+                formContainer.style.display = 'none';
+                successMessage.style.display = 'block';
+                successMessage.classList.add('animate-fade-in');
+            }, function (error) {
+                console.log('FAILED...', error);
+                alert("Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại sau hoặc liên hệ trực tiếp qua số HOTLINE.");
+                
+                // Reset button state
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i><span>Gửi lại</span>';
+                }
+            });
+    });
 }
 
 
