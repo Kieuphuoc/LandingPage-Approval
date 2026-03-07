@@ -183,7 +183,7 @@ function initContactModal() {
 function initContactPageForm() {
     // Initialize EmailJS
     if (typeof emailjs !== 'undefined') {
-        emailjs.init("5s6p5mDOfbH_1A63s");
+        emailjs.init("VJAdqHgUTmx918EVl");
     }
 
     const contactForm = document.getElementById('contact-form');
@@ -273,8 +273,7 @@ function initContactPageForm() {
         };
 
         // Send email via EmailJS
-        // Replace 'service_d2tst14' and 'template_05965m9' with your actual IDs
-        emailjs.send('service_d2tst14', 'template_05965m9', templateParams)
+        emailjs.send('service_ks32slo', 'template_co8s3zg', templateParams)
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
                 
@@ -512,6 +511,9 @@ function initLanguageSwitcher() {
     const langDropdown = document.getElementById('langDropdown');
     const currentLangSpan = document.getElementById('currentLang');
     const langOptions = document.querySelectorAll('.lang-option');
+
+    // Skip if required elements or translations are missing (e.g. on contact.html)
+    if (!langBtn || !langDropdown || !currentLangSpan || typeof translations === 'undefined') return;
 
     // Get saved language or default to Vietnamese
     let currentLang = localStorage.getItem('language') || 'vi';
