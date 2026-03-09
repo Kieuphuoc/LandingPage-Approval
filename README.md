@@ -111,6 +111,3 @@ Thay thế logo trong HTML:
 
 ---
 
-**Tác giả:** Antigravity AI  
-**Ngày tạo:** 09/01/2026
-#
