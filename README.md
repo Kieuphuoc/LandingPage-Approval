@@ -1,4 +1,4 @@
-# SignTrust - Landing Page Ký Số Trực Tuyến
+# Landing Page Ký Số Trực Tuyến
 
 ## 📋 Giới thiệu
 
@@ -110,4 +110,5 @@ Thay thế logo trong HTML:
 © 2024 SignTrust. All rights reserved.
 
 ---
+
 
