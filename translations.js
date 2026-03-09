@@ -13,7 +13,8 @@ const translations = {
             howItWorks: "Quy trình",
             pricing: "Bảng giá",
             login: "Đăng nhập",
-            freeTrial: "Dùng thử miễn phí"
+            freeTrial: "Dùng thử miễn phí",
+            contact: "Liên hệ"
         },
 
         // Hero Section
@@ -447,6 +448,52 @@ const translations = {
             submit: "Gửi đăng ký",
             disclaimer: "Bằng cách Gửi đăng ký, tôi đồng ý các <a href=\"https://arito.vn/chinh-sach-bao-mat-phan-mem-arito/\" target=\"_blank\">điều khoản và Chính sách bảo mật</a> của ARITO",
             success: "Cảm ơn bạn đã quan tâm! Đội ngũ ARITO sẽ liên hệ với bạn trong thời gian sớm nhất."
+        },
+        // Contact Page
+        contactPage: {
+            hero: {
+                badge: "LIÊN HỆ",
+                title: "Chúng tôi luôn sẵn sàng hỗ trợ",
+                subtitle: "Dù bạn cần tư vấn, báo giá hay hỗ trợ kỹ thuật — đội ngũ Arito sẽ phản hồi trong vòng 24 giờ làm việc."
+            },
+            info: {
+                address: "Địa chỉ",
+                phone: "Điện thoại",
+                email: "Email",
+                hours: "Giờ làm việc",
+                monFri: "Thứ Hai – Thứ Sáu: 8:00 – 17:00",
+                sat: "Thứ Bảy: 8:00 – 12:00"
+            },
+            form: {
+                title: "Gửi tin nhắn",
+                subtitle: "Điền thông tin và chúng tôi sẽ liên hệ lại sớm nhất.",
+                name: "Họ và tên <span>*</span>",
+                company: "Công ty",
+                email: "Email <span>*</span>",
+                phone: "Số điện thoại <span>*</span>",
+                subject: "Tiêu đề / Chủ đề",
+                message: "Nội dung <span>*</span>",
+                placeholderName: "Nguyễn Văn A",
+                placeholderCompany: "Công ty TNHH ABC",
+                placeholderEmail: "email@company.com",
+                placeholderPhone: "0901 234 567",
+                placeholderMessage: "Mô tả nhu cầu của bạn, số lượng người dùng, quy mô doanh nghiệp…",
+                subjects: [
+                    "Tư vấn nền tảng Arito e-Contract",
+                    "Đăng ký trải nghiệm Demo",
+                    "Báo giá bản quyền & triển khai",
+                    "Tích hợp hệ thống (HRM/ERP...)",
+                    "Hỗ trợ kỹ thuật & nghiệp vụ",
+                    "Khác"
+                ],
+                submit: "Gửi tin nhắn",
+                submitting: "Đang gửi..."
+            },
+            success: {
+                title: "Cảm ơn bạn đã liên hệ!",
+                desc: "Chúng tôi đã nhận được thông tin và sẽ phản hồi trong vòng 24 giờ làm việc.",
+                reset: "Gửi liên hệ khác"
+            }
         }
     },
 
@@ -459,7 +506,8 @@ const translations = {
             howItWorks: "Process",
             pricing: "Pricing",
             login: "Login",
-            freeTrial: "Free Trial"
+            freeTrial: "Free Trial",
+            contact: "Contact"
         },
 
         // Hero Section
@@ -895,6 +943,52 @@ const translations = {
             submit: "Submit Registration",
             disclaimer: "By submitting, I agree to the <a href=\"https://arito.vn/chinh-sach-bao-mat-phan-mem-arito/\" target=\"_blank\">terms and Privacy Policy</a> of ARITO",
             success: "Thank you for your interest! ARITO team will contact you as soon as possible."
+        },
+        // Contact Page
+        contactPage: {
+            hero: {
+                badge: "CONTACT",
+                title: "We are always ready to help",
+                subtitle: "Whether you need advice, a quote, or technical support — the Arito team will respond within 24 working hours."
+            },
+            info: {
+                address: "Address",
+                phone: "Phone",
+                email: "Email",
+                hours: "Working Hours",
+                monFri: "Monday – Friday: 8:00 – 17:00",
+                sat: "Saturday: 8:00 – 12:00"
+            },
+            form: {
+                title: "Send a message",
+                subtitle: "Fill in the information and we will contact you as soon as possible.",
+                name: "Full Name <span>*</span>",
+                company: "Company",
+                email: "Email <span>*</span>",
+                phone: "Phone Number <span>*</span>",
+                subject: "Subject",
+                message: "Message <span>*</span>",
+                placeholderName: "John Doe",
+                placeholderCompany: "ABC Company Ltd",
+                placeholderEmail: "email@company.com",
+                placeholderPhone: "0901 234 567",
+                placeholderMessage: "Describe your needs, number of users, business scale...",
+                subjects: [
+                    "Arito e-Contract Platform Consulting",
+                    "Register for Demo Experience",
+                    "License & Deployment Quote",
+                    "System Integration (HRM/ERP...)",
+                    "Technical & Professional Support",
+                    "Other"
+                ],
+                submit: "Send message",
+                submitting: "Sending..."
+            },
+            success: {
+                title: "Thank you for contacting us!",
+                desc: "We have received your information and will respond within 24 working hours.",
+                reset: "Send another message"
+            }
         }
     }
 };

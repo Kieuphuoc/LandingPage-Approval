@@ -586,6 +586,23 @@ function initLanguageSwitcher() {
                 } else {
                     element.textContent = translation;
                 }
+                
+                // Also update placeholder if it's an input/textarea
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    // Try to find a placeholder translation
+                    // If the current key is something like contactPage.form.name
+                    // We might want contactPage.form.placeholderName
+                    // But simpler: just add another data-attribute or logic
+                }
+            }
+        });
+
+        // Separate pass for placeholders if they have a specific attribute
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+            const key = element.dataset.i18nPlaceholder;
+            const translation = getNestedTranslation(translations[lang], key);
+            if (translation) {
+                element.placeholder = translation;
             }
         });
     }

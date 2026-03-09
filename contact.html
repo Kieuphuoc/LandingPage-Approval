@@ -32,9 +32,9 @@
         <section class="contact-hero-v2">
             <div class="container">
                 <div class="hero-header">
-                    <span class="badge-v2">LIÊN HỆ</span>
-                    <h1 class="main-title">Chúng tôi luôn sẵn sàng hỗ trợ</h1>
-                    <p class="main-subtitle">
+                    <span class="badge-v2" data-i18n="contactPage.hero.badge">LIÊN HỆ</span>
+                    <h1 class="main-title" data-i18n="contactPage.hero.title">Chúng tôi luôn sẵn sàng hỗ trợ</h1>
+                    <p class="main-subtitle" data-i18n="contactPage.hero.subtitle">
                         Dù bạn cần tư vấn, báo giá hay hỗ trợ kỹ thuật — đội ngũ Arito sẽ<br>
                         phản hồi trong vòng 24 giờ làm việc.
                     </p>
@@ -51,7 +51,7 @@
                         <div class="info-card-v2">
                             <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div class="card-text">
-                                <h3>Địa chỉ</h3>
+                                <h3 data-i18n="contactPage.info.address">Địa chỉ</h3>
                                 <p>597m Tên Lửa, Bình Trị Đông B, Bình Tân, TP. Hồ Chí Minh</p>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                         <div class="info-card-v2">
                             <div class="card-icon"><i class="fas fa-phone-alt"></i></div>
                             <div class="card-text">
-                                <h3>Điện thoại</h3>
+                                <h3 data-i18n="contactPage.info.phone">Điện thoại</h3>
                                 <p>+028 7101 2288</p>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                         <div class="info-card-v2">
                             <div class="card-icon"><i class="fas fa-envelope"></i></div>
                             <div class="card-text">
-                                <h3>Email</h3>
+                                <h3 data-i18n="contactPage.info.email">Email</h3>
                                 <p>contact@arito.vn</p>
                             </div>
                         </div>
@@ -75,9 +75,9 @@
                         <div class="info-card-v2">
                             <div class="card-icon"><i class="fas fa-clock"></i></div>
                             <div class="card-text">
-                                <h3>Giờ làm việc</h3>
-                                <p>Thứ Hai – Thứ Sáu: 8:00 – 17:00</p>
-                                <p>Thứ Bảy: 8:00 – 12:00</p>
+                                <h3 data-i18n="contactPage.info.hours">Giờ làm việc</h3>
+                                <p data-i18n="contactPage.info.monFri">Thứ Hai – Thứ Sáu: 8:00 – 17:00</p>
+                                <p data-i18n="contactPage.info.sat">Thứ Bảy: 8:00 – 12:00</p>
                             </div>
                         </div>
 
@@ -95,76 +95,79 @@
                             <div class="success-icon">
                                 <i class="fas fa-check-circle"></i>
                             </div>
-                            <h2>Cảm ơn bạn đã liên hệ!</h2>
-                            <p>Chúng tôi đã nhận được thông tin và sẽ phản hồi trong vòng <strong>24 giờ</strong> làm
+                            <h2 data-i18n="contactPage.success.title">Cảm ơn bạn đã liên hệ!</h2>
+                            <p data-i18n="contactPage.success.desc">Chúng tôi đã nhận được thông tin và sẽ phản hồi trong vòng <strong>24 giờ</strong> làm
                                 việc.</p>
-                            <button class="reset-btn-v2" id="contact-reset-btn" type="button">
+                            <button class="reset-btn-v2" id="contact-reset-btn" type="button" data-i18n="contactPage.success.reset">
                                 Gửi liên hệ khác
                             </button>
                         </div>
 
                         <div id="contact-form-container">
                             <div class="form-header-v2">
-                                <h2>Gửi tin nhắn</h2>
-                                <p>Điền thông tin và chúng tôi sẽ liên hệ lại sớm nhất.</p>
+                                <h2 data-i18n="contactPage.form.title">Gửi tin nhắn</h2>
+                                <p data-i18n="contactPage.form.subtitle">Điền thông tin và chúng tôi sẽ liên hệ lại sớm nhất.</p>
                             </div>
 
                             <form id="contact-form" class="contact-form-v2" novalidate>
                                 <div class="form-row-v2">
                                     <div class="form-group-v2">
-                                        <label>Họ và tên <span>*</span></label>
+                                        <label data-i18n="contactPage.form.name">Họ và tên <span>*</span></label>
                                         <input type="text" name="name" id="contact-name" placeholder="Nguyễn Văn A"
-                                            required>
+                                            data-i18n-placeholder="contactPage.form.placeholderName" required>
                                         <span class="error-msg" id="error-name"></span>
                                     </div>
                                     <div class="form-group-v2">
-                                        <label>Công ty</label>
+                                        <label data-i18n="contactPage.form.company">Công ty</label>
                                         <input type="text" name="company" id="contact-company"
-                                            placeholder="Công ty TNHH ABC">
+                                            placeholder="Công ty TNHH ABC"
+                                            data-i18n-placeholder="contactPage.form.placeholderCompany">
                                     </div>
                                 </div>
 
                                 <div class="form-row-v2">
                                     <div class="form-group-v2">
-                                        <label>Email <span>*</span></label>
+                                        <label data-i18n="contactPage.form.email">Email <span>*</span></label>
                                         <input type="email" name="email" id="contact-email"
-                                            placeholder="email@company.com" required>
+                                            placeholder="email@company.com"
+                                            data-i18n-placeholder="contactPage.form.placeholderEmail" required>
                                         <span class="error-msg" id="error-email"></span>
                                     </div>
                                     <div class="form-group-v2">
-                                        <label>Số điện thoại <span>*</span></label>
+                                        <label data-i18n="contactPage.form.phone">Số điện thoại <span>*</span></label>
                                         <input type="tel" name="phone" id="contact-phone" placeholder="0901 234 567"
-                                            required>
+                                            data-i18n-placeholder="contactPage.form.placeholderPhone" required>
                                         <span class="error-msg" id="error-phone"></span>
                                     </div>
                                 </div>
 
                                 <div class="form-group-v2">
-                                    <label>Tiêu đề / Chủ đề</label>
+                                    <label data-i18n="contactPage.form.subject">Tiêu đề / Chủ đề</label>
                                     <select name="subject" id="contact-subject">
-                                        <option value="Tư vấn nền tảng Arito e-Contract">Tư vấn nền tảng Arito
+                                        <option value="Tư vấn nền tảng Arito e-Contract" data-i18n="contactPage.form.subjects[0]">Tư vấn nền tảng Arito
                                             e-Contract</option>
-                                        <option value="Đăng ký trải nghiệm Demo">Đăng ký trải nghiệm Demo</option>
-                                        <option value="Báo giá bản quyền & triển khai">Báo giá bản quyền & triển khai
+                                        <option value="Đăng ký trải nghiệm Demo" data-i18n="contactPage.form.subjects[1]">Đăng ký trải nghiệm Demo</option>
+                                        <option value="Báo giá bản quyền & triển khai" data-i18n="contactPage.form.subjects[2]">Báo giá bản quyền & triển khai
                                         </option>
-                                        <option value="Tích hợp hệ thống (HRM/ERP...)">Tích hợp hệ thống (HRM/ERP...)
+                                        <option value="Tích hợp hệ thống (HRM/ERP...)" data-i18n="contactPage.form.subjects[3]">Tích hợp hệ thống (HRM/ERP...)
                                         </option>
-                                        <option value="Hỗ trợ kỹ thuật & nghiệp vụ">Hỗ trợ kỹ thuật & nghiệp vụ</option>
-                                        <option value="Khác">Khác</option>
+                                        <option value="Hỗ trợ kỹ thuật & nghiệp vụ" data-i18n="contactPage.form.subjects[4]">Hỗ trợ kỹ thuật & nghiệp vụ</option>
+                                        <option value="Khác" data-i18n="contactPage.form.subjects[5]">Khác</option>
                                     </select>
                                 </div>
 
                                 <div class="form-group-v2">
-                                    <label>Nội dung <span>*</span></label>
+                                    <label data-i18n="contactPage.form.message">Nội dung <span>*</span></label>
                                     <textarea name="message" id="contact-message"
                                         placeholder="Mô tả nhu cầu của bạn, số lượng người dùng, quy mô doanh nghiệp…"
+                                        data-i18n-placeholder="contactPage.form.placeholderMessage"
                                         rows="5" required></textarea>
                                     <span class="error-msg" id="error-message"></span>
                                 </div>
 
                                 <button type="submit" class="submit-btn-v2" id="contact-submit-btn">
                                     <i class="fas fa-paper-plane"></i>
-                                    <span>Gửi tin nhắn</span>
+                                    <span data-i18n="contactPage.form.submit">Gửi tin nhắn</span>
                                 </button>
                             </form>
                         </div>
@@ -180,6 +183,7 @@
     <!-- EmailJS SDK (must load before script.js) -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- Scripts -->
+    <script src="translations.js"></script>
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
     <script src="script.js"></script>

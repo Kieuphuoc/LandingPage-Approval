@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const navbarPlaceholder = document.getElementById('navbar-placeholder');
-    const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+  const navbarPlaceholder = document.getElementById('navbar-placeholder');
+  const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
 
-    const navbarHtml = `
+  const navbarHtml = `
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="${isHomePage ? '#' : 'index.html'}" class="logo">
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </button>
           </div>
         </div>
-        <a href="${isHomePage ? '#contact' : 'contact.html'}" class="btn btn-primary" data-i18n="nav.freeTrial">Dùng thử miễn phí</a>
+        <a href="contact.html" class="btn btn-primary" data-i18n="nav.freeTrial">Dùng thử miễn phí</a>
       </div>
       <button class="mobile-menu-btn" id="mobileMenuBtn">
         <span></span><span></span><span></span>
@@ -42,13 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
   </nav>
     `;
 
-    if (navbarPlaceholder) {
-        navbarPlaceholder.innerHTML = navbarHtml;
-    } else {
-        // If no placeholder, prepend to body (fallback for index.html if not updated)
-        const existingNav = document.getElementById('navbar');
-        if (!existingNav) {
-            document.body.insertAdjacentHTML('afterbegin', navbarHtml);
-        }
+  if (navbarPlaceholder) {
+    navbarPlaceholder.innerHTML = navbarHtml;
+  } else {
+    // If no placeholder, prepend to body (fallback for index.html if not updated)
+    const existingNav = document.getElementById('navbar');
+    if (!existingNav) {
+      document.body.insertAdjacentHTML('afterbegin', navbarHtml);
     }
+  }
 });
