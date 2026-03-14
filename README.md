@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  Landing Page Ký Số Trực Tuyến
+=======
+# Landing Page Ký Số Trực Tuyến
+>>>>>>> 3d8385fe346adfcc60cf6120e69e60ab9363e294
 
 ## 📋 Giới thiệu
 
@@ -105,3 +109,13 @@ Thay thế logo trong HTML:
 </a>
 ```
 
+<<<<<<< HEAD
+=======
+## 📄 License
+
+© 2024 SignTrust. All rights reserved.
+
+---
+
+
+>>>>>>> 3d8385fe346adfcc60cf6120e69e60ab9363e294
