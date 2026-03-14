@@ -253,8 +253,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     </a>
                   </li>
                   <li class="elementor-icon-list-item">
-                    <a target="_blank" rel="noopener" href="https://arito.vn/aritoe-Contract">
-                      <span class="elementor-icon-list-text">Aritoe-Contract - Quản lý phê duyệt</span>
+                    <a target="_blank" rel="noopener" href="https://arito.vn/aritoecontract">
+                      <span class="elementor-icon-list-text">AritoeContract - Quản lý phê duyệt</span>
                     </a>
                   </li>
                   <li class="elementor-icon-list-item">

@@ -479,7 +479,7 @@ const translations = {
                 placeholderPhone: "0901 234 567",
                 placeholderMessage: "Mô tả nhu cầu của bạn, số lượng người dùng, quy mô doanh nghiệp…",
                 subjects: [
-                    "Tư vấn nền tảng Arito e-Contract",
+                    "Tư vấn nền tảng Arito eContract",
                     "Đăng ký trải nghiệm Demo",
                     "Báo giá bản quyền & triển khai",
                     "Tích hợp hệ thống (HRM/ERP...)",

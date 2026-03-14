@@ -1,4 +1,4 @@
-# SignTrust - Landing Page Ký Số Trực Tuyến
+ Landing Page Ký Số Trực Tuyến
 
 ## 📋 Giới thiệu
 
@@ -105,12 +105,3 @@ Thay thế logo trong HTML:
 </a>
 ```
 
-## 📄 License
-
-© 2024 SignTrust. All rights reserved.
-
----
-
-**Tác giả:** Antigravity AI  
-**Ngày tạo:** 09/01/2026
-#
