@@ -24,11 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
           </button>
           <div class="lang-dropdown" id="langDropdown">
             <button class="lang-option" data-lang="vi">
-              <span class="lang-flag">🇻🇳</span>
               <span>Tiếng Việt</span>
             </button>
             <button class="lang-option" data-lang="en">
-              <span class="lang-flag">🇬🇧</span>
               <span>English</span>
             </button>
           </div>
